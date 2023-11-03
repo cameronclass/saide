@@ -1,6 +1,7 @@
 html,
 body {
     font-family: $font;
+    background-color: $dark-blue;
 
     &::-webkit-scrollbar {
         display: none;
@@ -111,10 +112,25 @@ button {
     padding: 0 20px;
 }
 
+main {
+    position: relative;
+}
+
 .lines {
+    width: 100%;
+    max-width: 1367px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+
     &__line {
-        width: 1px;
-        height: 100px;
-        border: 1px dotted black;
+        width: 2px;
+        height: 100%;
+        background-image: url(../../assets/images/line-vertical.svg);
+        background-repeat: repeat;
     }
 }
