@@ -21,4 +21,27 @@
         position: relative;
         z-index: 2;
     }
+
+    &__menu {
+        background: #000;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &_block {
+            width: 100%;
+            max-width: 270px;
+            min-height: 400px;
+            height: 100%;
+            border: 3px solid $yellow;
+            border-top-right-radius: 120px;
+            border-bottom-right-radius: 120px;
+            position: relative;
+            left: -3px;
+        }
+
+        &_items {}
+
+        &_item {}
+    }
 }

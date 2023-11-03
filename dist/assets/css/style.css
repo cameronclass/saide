@@ -284,6 +284,21 @@ main {
     max-width: 136px;
     position: relative;
     z-index: 2; }
+  .header__menu {
+    background: #000;
+    width: 100%;
+    display: flex;
+    align-items: center; }
+    .header__menu_block {
+      width: 100%;
+      max-width: 270px;
+      min-height: 400px;
+      height: 100%;
+      border: 3px solid #F09123;
+      border-top-right-radius: 120px;
+      border-bottom-right-radius: 120px;
+      position: relative;
+      left: -3px; }
 
 /* Pages */
 /* Sliders */
