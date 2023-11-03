@@ -1,0 +1,23 @@
+.header {
+    background-color: $dark-blue;
+    position: relative;
+
+    &__gradient {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
+    &__block {
+        padding: 60px 0;
+    }
+
+    &__logo {
+        display: inline-block;
+        max-width: 136px;
+        position: relative;
+        z-index: 2;
+    }
+}
