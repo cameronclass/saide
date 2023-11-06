@@ -13,6 +13,7 @@
 
     &__block {
         padding: 60px 0;
+        margin-bottom: 50px;
     }
 
     &__logo {
@@ -23,16 +24,17 @@
     }
 
     &__menu {
-        background: #000;
         width: 100%;
         display: flex;
         align-items: center;
+        position: relative;
+        z-index: 2;
 
         &_block {
             width: 100%;
-            max-width: 270px;
+            max-width: 100px;
             min-height: 400px;
-            height: 100%;
+            height: 700px;
             border: 3px solid $yellow;
             border-top-right-radius: 120px;
             border-bottom-right-radius: 120px;
@@ -42,6 +44,26 @@
 
         &_items {}
 
-        &_item {}
+        &_item {
+            position: relative;
+            left: -13px;
+        }
+    }
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -36px;
+
+    &__icon {
+        /* background-color: #fff; */
+    }
+
+    &__title {
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
     }
 }

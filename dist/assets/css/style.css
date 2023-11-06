@@ -1,6 +1,7 @@
 /* Helpers */
 /* Template */
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap");
+/* @include font-face(SanFrans, "../fonts/SF/SFProDisplay-Semibold"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 #page-preloader {
   position: fixed;
   left: 0;
@@ -152,7 +153,7 @@
 
 html,
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #12151B; }
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
@@ -171,7 +172,7 @@ a {
     text-decoration: none; }
 
 button {
-  font-family: "Rubik", sans-serif; }
+  font-family: "Poppins", sans-serif; }
   button:focus {
     outline: none;
     border: none; }
@@ -239,6 +240,12 @@ button {
   margin-right: auto;
   padding: 0 20px; }
 
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px; }
+
 main {
   position: relative; }
 
@@ -278,27 +285,44 @@ main {
     left: 0;
     z-index: 2; }
   .header__block {
-    padding: 60px 0; }
+    padding: 60px 0;
+    margin-bottom: 50px; }
   .header__logo {
     display: inline-block;
     max-width: 136px;
     position: relative;
     z-index: 2; }
   .header__menu {
-    background: #000;
     width: 100%;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    position: relative;
+    z-index: 2; }
     .header__menu_block {
       width: 100%;
-      max-width: 270px;
+      max-width: 100px;
       min-height: 400px;
-      height: 100%;
+      height: 700px;
       border: 3px solid #F09123;
       border-top-right-radius: 120px;
       border-bottom-right-radius: 120px;
       position: relative;
       left: -3px; }
+    .header__menu_item {
+      position: relative;
+      left: -13px; }
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -36px; }
+  .menu-item__icon {
+    /* background-color: #fff; */ }
+  .menu-item__title {
+    color: white;
+    font-size: 30px;
+    font-weight: 600; }
 
 /* Pages */
 /* Sliders */
