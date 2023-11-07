@@ -12,15 +12,12 @@
 
 
     &__block {
-        padding: 60px 0;
-        margin-bottom: 50px;
+        padding: 60px 0 20px;
     }
 
     &__logo {
         display: inline-block;
         max-width: 136px;
-        position: relative;
-        z-index: 2;
     }
 
     &__menu {
@@ -31,15 +28,10 @@
         z-index: 2;
 
         &_block {
-            width: 100%;
-            max-width: 100px;
-            min-height: 400px;
+            width: 3px;
             height: 790px;
-            border: 3px solid $yellow;
-            border-top-right-radius: 120px;
-            border-bottom-right-radius: 120px;
-            position: relative;
-            left: -3px;
+            background-color: $yellow;
+            margin-left: 50px;
         }
 
         &_items {
@@ -51,7 +43,7 @@
 
         &_item {
             position: relative;
-            left: -13px;
+            left: -10px;
             width: 100%;
         }
     }
@@ -111,11 +103,12 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
+        gap: 30px;
     }
 
     &__card {
-        width: 300px;
-        border-radius: 20px;
+        width: 30%;
+        border-radius: 18px;
         border: 1px solid $yellow;
         background: var(--Dark-Background, linear-gradient(106deg, #283344 -4.68%, #0B0F15 130.26%));
         display: flex;
@@ -123,9 +116,18 @@
         align-items: center;
         padding: 20px;
         position: relative;
+        overflow: hidden;
+        box-shadow: 0px 0px 28.05737px 0px rgba(255, 162, 23, 0.33) inset, 0px 0px 28.05737px 0px rgba(255, 162, 23, 0.33);
 
-        &::before{
+        &::before {
             content: "";
+            width: 50px;
+            height: 11px;
+            background-color: $yellow;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-bottom-right-radius: 24px;
         }
 
         &_img {
