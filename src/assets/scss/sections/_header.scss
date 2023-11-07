@@ -1,15 +1,6 @@
 .header {
-    background-color: $dark-blue;
     position: relative;
-
-    &__gradient {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-    }
-
+    z-index: 2;
 
     &__block {
         padding: 60px 0 20px;
@@ -23,12 +14,10 @@
     &__menu {
         width: 100%;
         display: flex;
-        align-items: center;
         position: relative;
-        z-index: 2;
 
         &_block {
-            width: 3px;
+            width: 3.5px;
             height: 790px;
             background-color: $yellow;
             margin-left: 50px;
@@ -38,13 +27,18 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            width: 100%;
+            margin-top: 40px;
         }
 
         &_item {
             position: relative;
-            left: -10px;
+            left: -9.8px;
             width: 100%;
+        }
+
+        &_content {
+            margin-left: 100px;
+            margin-top: 40px;
         }
     }
 }
@@ -64,8 +58,6 @@
 
     &__icon {
         width: 55px;
-        /* position: relative; */
-        /* background-color: #fff; */
 
         &_active {
             display: none;
@@ -94,10 +86,6 @@
             left: 9px;
             top: 30px;
         }
-    }
-
-    &__content {
-        margin-left: 100px;
     }
 
     &__cards {

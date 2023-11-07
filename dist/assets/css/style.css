@@ -277,14 +277,8 @@ main {
 
 /* Sections for all pages */
 .header {
-  background-color: #12151B;
-  position: relative; }
-  .header__gradient {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2; }
+  position: relative;
+  z-index: 2; }
   .header__block {
     padding: 60px 0 20px; }
   .header__logo {
@@ -293,11 +287,9 @@ main {
   .header__menu {
     width: 100%;
     display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 2; }
+    position: relative; }
     .header__menu_block {
-      width: 3px;
+      width: 3.5px;
       height: 790px;
       background-color: #F09123;
       margin-left: 50px; }
@@ -305,11 +297,14 @@ main {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      width: 100%; }
+      margin-top: 40px; }
     .header__menu_item {
       position: relative;
-      left: -10px;
+      left: -9.8px;
       width: 100%; }
+    .header__menu_content {
+      margin-left: 100px;
+      margin-top: 40px; }
 
 .menu-item {
   position: relative;
@@ -321,9 +316,7 @@ main {
     position: relative;
     left: -19px; }
   .menu-item__icon {
-    width: 55px;
-    /* position: relative; */
-    /* background-color: #fff; */ }
+    width: 55px; }
     .menu-item__icon_active {
       display: none;
       position: absolute;
@@ -342,8 +335,6 @@ main {
     .menu-item__active .menu-item__block {
       left: 9px;
       top: 30px; }
-  .menu-item__content {
-    margin-left: 100px; }
   .menu-item__cards {
     display: flex;
     flex-wrap: wrap;
