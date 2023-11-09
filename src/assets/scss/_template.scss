@@ -122,23 +122,14 @@ button {
 
 main {
     position: relative;
+    z-index: 2;
 }
 
-.lines {
+.main-bg {
     width: 100%;
-    max-width: 1367px;
-    height: 1000px;
     position: absolute;
-    top: 0;
     left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-around;
-
-    &__line {
-        width: 2px;
-        height: 100%;
-        background-image: url(../../assets/images/line-vertical.svg);
-        background-repeat: repeat;
-    }
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
 }

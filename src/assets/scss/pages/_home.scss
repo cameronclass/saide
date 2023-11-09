@@ -1,0 +1,38 @@
+.main-select {
+
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    &__logo {
+        position: relative;
+
+        &_img {
+            width: 124px;
+        }
+
+        &_circle {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: -90px;
+            left: -50%;
+        }
+    }
+
+    &__left {
+        position: relative;
+        left: 50px;
+        transform: rotateY(180deg);
+    }
+
+    &__right {
+        position: relative;
+        right: 50px;
+    }
+}
