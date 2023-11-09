@@ -45,7 +45,7 @@
 
         &_content {
             width: 76.8%;
-            margin-top: 11vh;
+            margin-top: 13vh;
         }
     }
 }
@@ -100,6 +100,18 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 3vh;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background-color: #FFDDB1;
+            position: absolute;
+            top: 22.55vh;
+            left: 37vh;
+            transform: rotate(45deg);
+        }
     }
 
     &__card {
@@ -112,7 +124,6 @@
         align-items: center;
         padding: 2.5vh;
         position: relative;
-        overflow: hidden;
         transition: 300ms ease;
         cursor: pointer;
         text-align: center;
@@ -124,6 +135,36 @@
 
         &::before {
             content: "";
+            display: inline-block;
+            width: 2.95vh;
+            height: 0.2vh;
+            background-color: #FFDDB1;
+            position: absolute;
+            top: 50%;
+            left: -3.1vh;
+        }
+
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 0.2vh;
+            height: 2.95vh;
+            background-color: #FFDDB1;
+            position: absolute;
+            left: 50%;
+            top: -3.1vh;
+        }
+
+        &:nth-child(5n)::before,
+        &:nth-child(-n+4)::after {
+            display: none;
+        }
+
+        /* &:last-child::after {
+            display: none;
+        } */
+
+        &_badge {
             width: 7vh;
             height: 1.3vh;
             background-color: $yellow;
@@ -131,6 +172,7 @@
             top: 0;
             left: 0;
             border-bottom-right-radius: 24px;
+            border-top-left-radius: 24px;
         }
 
         &_img {
