@@ -307,7 +307,7 @@ main {
       margin: 2% 0; }
     .header__menu_content {
       width: 76.8%;
-      margin-top: 13vh; }
+      margin-top: 12vh; }
 
 .menu-item {
   position: relative;
@@ -344,15 +344,14 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 3vh; }
-    .menu-item__cards::before {
-      content: "";
+    .menu-item__cards_icon {
       display: inline-block;
-      width: 5px;
-      height: 5px;
+      width: 1vh;
+      height: 1vh;
       background-color: #FFDDB1;
       position: absolute;
-      top: 22.55vh;
-      left: 37vh;
+      top: 48%;
+      left: -4vh;
       transform: rotate(45deg); }
   .menu-item__card {
     width: 100%;

@@ -45,7 +45,7 @@
 
         &_content {
             width: 76.8%;
-            margin-top: 13vh;
+            margin-top: 12vh;
         }
     }
 }
@@ -101,15 +101,14 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 3vh;
 
-        &::before {
-            content: "";
+        &_icon {
             display: inline-block;
-            width: 5px;
-            height: 5px;
+            width: 1vh;
+            height: 1vh;
             background-color: #FFDDB1;
             position: absolute;
-            top: 22.55vh;
-            left: 37vh;
+            top: 48%;
+            left: -4vh;
             transform: rotate(45deg);
         }
     }
