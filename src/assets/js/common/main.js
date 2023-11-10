@@ -1,30 +1,21 @@
-$(document).ready(function () {
-  let $preloader = $("#page-preloader");
-  $preloader.fadeOut(1000);
+document.addEventListener("DOMContentLoaded", () => {
+  const menuItems = document.querySelectorAll(".header__menu_item");
 
-  /* $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    if (scroll > 30) {
-      $(".header").addClass(".header__active");
-    } else {
-      $(".header").removeClass(".header__active");
-    }
-  }); */
+  // Добавляем обработчик событий click для каждого элемента
+  menuItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      // Проверяем наличие класса active у других элементов
+      menuItems.forEach(function (otherItem) {
+        if (
+          otherItem !== item &&
+          otherItem.classList.contains("menu-item__active")
+        ) {
+          otherItem.classList.remove("menu-item__active");
+        }
+      });
 
-  /* AOS.init({
-    once: true,
-    anchorPlacement: "bottom-bottom",
-    duration: 800,
+      // Тогглим класс active для текущего элемента
+      this.classList.toggle("menu-item__active");
+    });
   });
-
-  onElementHeightChange(document.body, function () {
-    AOS.refresh();
-  }); */
-
-  /* $("a.go").click(function (e) {
-    e.preventDefault();
-    elementClick = $(this).attr("href");
-    destination = $(elementClick).offset().top;
-    $("body,html").animate({ scrollTop: destination }, 800);
-  }); */
 });
