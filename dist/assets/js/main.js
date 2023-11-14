@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelectorAll(".header__menu_item");e.forEach((function(t){t.addEventListener("click",(function(){e.forEach((function(e){e!==t&&e.classList.contains("menu-item__active")&&e.classList.remove("menu-item__active")})),this.classList.toggle("menu-item__active")}))}))});
