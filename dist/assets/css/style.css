@@ -1,7 +1,8 @@
 /* Helpers */
 /* Template */
 /* @include font-face(SanFrans, "../fonts/SF/SFProDisplay-Semibold"); */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap'); */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700&display=swap");
 #page-preloader {
   position: fixed;
   left: 0;
@@ -153,7 +154,7 @@
 
 html,
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background-color: #0D0F14;
   color: white; }
   html::-webkit-scrollbar,
@@ -173,7 +174,7 @@ a {
     text-decoration: none; }
 
 button {
-  font-family: "Poppins", sans-serif; }
+  font-family: "Roboto Condensed", sans-serif; }
   button:focus {
     outline: none;
     border: none; }
@@ -399,7 +400,7 @@ main {
       position: absolute;
       left: 50%;
       top: -3.1vh; }
-    .menu-item__card:nth-child(5n)::before, .menu-item__card:nth-child(-n+4)::after {
+    .menu-item__card:nth-child(4n + 1)::before, .menu-item__card:nth-child(-n+4)::after {
       display: none; }
     .menu-item__card_badge {
       width: 7vh;
@@ -436,32 +437,46 @@ main {
         width: 1.3vh; }
 
 /* Pages */
-.main-select__block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.main-select {
   width: 100%;
-  height: 100vh; }
-
-.main-select__logo {
-  position: relative; }
-  .main-select__logo_img {
-    width: 124px; }
-  .main-select__logo_circle {
-    width: 250px;
-    height: 250px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .main-select__title {
+    font-size: 35px; }
+  .main-select__bg {
+    background: radial-gradient(50.05% 50.05% at 50% 27.59%, #1A1F28 38.57%, rgba(31, 37, 46, 0) 100%);
+    width: 100%;
+    height: 200vh;
     position: absolute;
-    top: -90px;
-    left: -50%; }
-
-.main-select__left {
-  position: relative;
-  left: 50px;
-  transform: rotateY(180deg); }
-
-.main-select__right {
-  position: relative;
-  right: 50px; }
+    left: 0;
+    top: 0; }
+  .main-select__block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2; }
+  .main-select__logo {
+    position: relative; }
+    .main-select__logo_img {
+      width: 124px; }
+    .main-select__logo_circle {
+      width: 270px;
+      height: 270px;
+      position: absolute;
+      top: -100px;
+      left: -59%; }
+  .main-select__left {
+    position: relative;
+    right: -50px; }
+  .main-select__right {
+    position: relative;
+    left: -50px;
+    transform: rotateY(180deg); }
 
 /* Sliders */
 /* Aos */

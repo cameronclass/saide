@@ -154,7 +154,7 @@
             top: -3.1vh;
         }
 
-        &:nth-child(5n)::before,
+        &:nth-child(4n + 1)::before,
         &:nth-child(-n+4)::after {
             display: none;
         }

@@ -1,12 +1,31 @@
 .main-select {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    &__title {
+        font-size: 35px;
+    }
+
+    &__bg {
+        background: radial-gradient(50.05% 50.05% at 50% 27.59%, #1A1F28 38.57%, rgba(31, 37, 46, 0.00) 100%);
+        width: 100%;
+        height: 200vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 
     &__block {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: 100vh;
+        position: relative;
+        z-index: 2;
     }
 
     &__logo {
@@ -17,22 +36,22 @@
         }
 
         &_circle {
-            width: 250px;
-            height: 250px;
+            width: 270px;
+            height: 270px;
             position: absolute;
-            top: -90px;
-            left: -50%;
+            top: -100px;
+            left: -59%;
         }
     }
 
     &__left {
         position: relative;
-        left: 50px;
-        transform: rotateY(180deg);
+        right: -50px;
     }
 
     &__right {
         position: relative;
-        right: 50px;
+        left: -50px;
+        transform: rotateY(180deg);
     }
 }
