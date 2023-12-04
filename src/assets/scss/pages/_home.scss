@@ -64,8 +64,17 @@
 
     &__line {
         min-width: 150px;
-        background-color: green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
 
+        &_block {
+            width: 3px;
+            height: 100%;
+            background-color: $yellow;
+        }
+
+        &_content {}
     }
 
     &__content {
