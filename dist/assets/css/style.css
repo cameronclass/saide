@@ -538,5 +538,16 @@ main {
     left: -50px;
     transform: rotateY(180deg); }
 
+.content-page__block {
+  display: flex;
+  gap: 30px; }
+
+.content-page__line {
+  min-width: 150px;
+  background-color: green; }
+
+.content-page__content {
+  width: 100%; }
+
 /* Sliders */
 /* Aos */

@@ -55,3 +55,20 @@
         transform: rotateY(180deg);
     }
 }
+
+.content-page {
+    &__block {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__line {
+        min-width: 150px;
+        background-color: green;
+
+    }
+
+    &__content {
+        width: 100%;
+    }
+}
