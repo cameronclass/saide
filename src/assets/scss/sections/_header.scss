@@ -50,6 +50,66 @@
     }
 }
 
+.header-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__logo {
+        width: 120px;
+    }
+
+    &__breadcrumb {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-right: 15px;
+        gap: 15px;
+        font-size: 18px;
+        font-weight: 700;
+
+        &::before {
+            content: "";
+            background-image: url(../../assets/images/breadcrumb.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: flex;
+            align-items: center;
+            width: 30px;
+            height: 11px;
+        }
+
+        &::after {
+            content: "";
+            background-image: url(../../assets/images/breadcrumb.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            width: 30px;
+            height: 11px;
+            top: 50%;
+            left: -20px;
+            transform: rotate(180deg) translateY(50%);
+        }
+
+        &:nth-child(2)::after {
+            display: none;
+        }
+    }
+
+
+}
+
+
 .menu-item {
     position: relative;
     display: flex;

@@ -149,3 +149,22 @@ main {
         top: -25%;
     }
 }
+
+.lines {
+    width: 100%;
+    max-width: 1367px;
+    /* height: 4000px; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+
+    &__line {
+        width: 2px;
+        height: 100%;
+        background-image: url(../../assets/images/line-vertical.svg);
+        background-repeat: repeat;
+    }
+}
