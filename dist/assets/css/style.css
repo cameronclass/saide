@@ -232,6 +232,18 @@ button {
     outline: none;
     border: none; }
 
+.btn-primary {
+  display: flex;
+  background-color: #F09123;
+  padding: 10px 55px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  transition: 300ms ease; }
+  .btn-primary:hover {
+    background-color: #ba6a0d; }
+
 .svg-icon {
   fill: white; }
 
@@ -275,7 +287,7 @@ main {
 .lines {
   width: 100%;
   max-width: 1367px;
-  /* height: 4000px; */
+  height: 10000px;
   position: absolute;
   top: 0;
   left: 50%;
@@ -337,7 +349,7 @@ main {
 
 .header-page {
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 20px; }
   .header-page__block {
     display: flex;
     align-items: center;
@@ -496,7 +508,43 @@ main {
       .menu-item__card_icon_img {
         width: 1.3vh; }
 
+.footer {
+  padding-top: 40px;
+  padding-bottom: 100px; }
+  .footer__logo {
+    width: 120px; }
+  .footer__menu {
+    display: flex;
+    gap: 50px; }
+    .footer__menu_title {
+      font-size: 20px;
+      font-weight: 700; }
+    .footer__menu_links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 20px; }
+    .footer__menu_link {
+      font-size: 15px;
+      font-weight: 300; }
+  .footer__contact {
+    display: flex;
+    align-items: center;
+    flex-direction: column; }
+  .footer__number {
+    margin-top: 30px;
+    font-size: 40px; }
+  .footer__social {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; }
+    .footer__social_link {
+      width: 48px;
+      height: 48px; }
+
 /* Pages */
+/* Menu Page */
 .main-select {
   width: 100%;
   height: 100vh;
@@ -538,6 +586,17 @@ main {
     left: -50px;
     transform: rotateY(180deg); }
 
+/* Content page */
+.content-bg {
+  background: linear-gradient(180deg, #1F252E 0%, rgba(31, 37, 46, 0) 100%);
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
+
+.content-over {
+  position: relative;
+  z-index: 2; }
+
 .content-page__block {
   display: flex;
   gap: 30px; }
@@ -551,9 +610,25 @@ main {
     width: 3px;
     height: 100%;
     background-color: #F09123; }
+  .content-page__line_active {
+    width: 50px;
+    position: relative;
+    left: -3px; }
+  .content-page__line_icon {
+    position: absolute;
+    left: 20px;
+    top: 142px; }
+  .content-page__line_content {
+    margin-top: 50px;
+    position: relative; }
 
 .content-page__content {
-  width: 100%; }
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .content-page__content_img {
+    width: 100%;
+    max-width: 300px; }
 
 /* Sliders */
 /* Aos */

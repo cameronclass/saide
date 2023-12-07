@@ -101,6 +101,21 @@ button {
     }
 }
 
+.btn-primary {
+    display: flex;
+    background-color: $yellow;
+    padding: 10px 55px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 300ms ease;
+
+    &:hover {
+        background-color: darken($color: $yellow, $amount: 15);
+    }
+}
+
 .svg-icon {
     fill: white;
 }
@@ -153,7 +168,7 @@ main {
 .lines {
     width: 100%;
     max-width: 1367px;
-    /* height: 4000px; */
+    height: 10000px;
     position: absolute;
     top: 0;
     left: 50%;
