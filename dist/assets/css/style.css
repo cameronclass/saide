@@ -327,7 +327,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     position: relative; }
-    .header__menu_block {
+    .header__menu_line {
       width: 0.15%;
       height: auto;
       background-color: #F09123;
