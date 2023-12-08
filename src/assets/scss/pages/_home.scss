@@ -57,6 +57,30 @@
         left: -50px;
         transform: rotateY(180deg);
     }
+
+    &__main {
+        position: relative;
+        z-index: 2;
+        opacity: 1;
+
+
+        &:hover {
+            opacity: 0;
+            transition: 300ms ease;
+        }
+    }
+
+    &__cover {
+        position: absolute;
+
+        &_left {
+            left: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+    }
 }
 
 

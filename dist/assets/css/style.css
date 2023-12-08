@@ -585,6 +585,19 @@ main {
     position: relative;
     left: -50px;
     transform: rotateY(180deg); }
+  .main-select__main {
+    position: relative;
+    z-index: 2;
+    opacity: 1; }
+    .main-select__main:hover {
+      opacity: 0;
+      transition: 300ms ease; }
+  .main-select__cover {
+    position: absolute; }
+    .main-select__cover_left {
+      left: 0; }
+    .main-select__cover_right {
+      right: 0; }
 
 /* Content page */
 .content-bg {
