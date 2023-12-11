@@ -426,6 +426,38 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 3vh; }
+    .menu-item__cards_active {
+      display: flex;
+      gap: 0; }
+    .menu-item__cards_item {
+      width: 100%;
+      position: relative;
+      /* &::before {
+                content: "";
+                display: inline-block;
+                width: 2.95vh;
+                height: 0.2vh;
+                background-color: #FFDDB1;
+                position: absolute;
+                top: 50%;
+                left: -3.1vh;
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 0.2vh;
+                height: 2.95vh;
+                background-color: #FFDDB1;
+                position: absolute;
+                left: 50%;
+                top: -3.1vh;
+            }
+
+            &:nth-child(4n + 1)::before,
+            &:nth-child(-n+4)::after {
+                display: none;
+            } */ }
     .menu-item__cards_icon {
       display: inline-block;
       width: 1vh;
@@ -449,31 +481,23 @@ main {
     cursor: pointer;
     text-align: center;
     line-height: 1.2;
-    /* &:last-child::after {
-            display: none;
+    /* &_active {
+            background: transparent;
+            border: none;
+            padding: 0;
+            display: block;
+
+            &:hover {
+                box-shadow: none;
+            }
+
+            .menu-item__card_badge,
+            .menu-item__card_icon {
+                display: none;
+            }
         } */ }
     .menu-item__card:hover {
       box-shadow: 0px 0px 28.05737px 0px rgba(255, 162, 23, 0.33) inset, 0px 0px 28.05737px 0px rgba(255, 162, 23, 0.33); }
-    .menu-item__card::before {
-      content: "";
-      display: inline-block;
-      width: 2.95vh;
-      height: 0.2vh;
-      background-color: #FFDDB1;
-      position: absolute;
-      top: 50%;
-      left: -3.1vh; }
-    .menu-item__card::after {
-      content: "";
-      display: inline-block;
-      width: 0.2vh;
-      height: 2.95vh;
-      background-color: #FFDDB1;
-      position: absolute;
-      left: 50%;
-      top: -3.1vh; }
-    .menu-item__card:nth-child(4n + 1)::before, .menu-item__card:nth-child(-n+4)::after {
-      display: none; }
     .menu-item__card_badge {
       width: 7vh;
       height: 1.3vh;

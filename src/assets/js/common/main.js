@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* Главное меню */
   const menuItems = document.querySelectorAll(".header__menu_item");
 
   // Добавляем обработчик событий click для каждого элемента
@@ -18,32 +19,50 @@ document.addEventListener("DOMContentLoaded", () => {
       this.classList.toggle("menu-item__active");
     });
   });
+  /* Главное меню */
 
-  // Получаем все элементы с классом .menu-item__card
-  const menuItemsInside = document.querySelectorAll(
-    ".menu-item__cards>.menu-item__card"
-  );
+  /* Второе меню */
 
-  // Функция, которая будет добавлять класс active и скрывать другие элементы
-  function toggleActiveClass() {
-    // Добавляем класс active текущему элементу
-    this.classList.toggle("menu-item__card_active");
+  // Получаем все элементы с классом .menu-item__cards_item
+  const cardsItems = document.querySelectorAll(".menu-item__cards_item");
 
-    // Проверяем, есть ли у текущего элемента класс active
-    var isActive = this.classList.contains("menu-item__card_active");
+  // Функция, которая будет добавлять/удалять классы menu-item__cards_item_active и d-none
+  function toggleActiveCardsItem() {
+    // Добавляем/удаляем класс menu-item__cards_item_active текущему элементу
+    this.classList.toggle("menu-item__cards_item_active");
 
-    // Скрываем/показываем остальные элементы в зависимости от наличия класса active
-    menuItemsInside.forEach(function (menuItem) {
-      if (menuItem !== this) {
-        menuItem.classList.toggle("d-none", isActive);
+    // Получаем родительский элемент .menu-item__cards
+    var cards = this.closest(".menu-item__cards");
+
+    // Переключаем класс .menu-item__cards_active для родительского элемента
+    if (cards) {
+      cards.classList.toggle(
+        "menu-item__cards_active",
+        cards.querySelector(".menu-item__cards_item_active") !== null
+      );
+    }
+
+    // Скрываем/показываем все остальные элементы с классом .menu-item__cards_item
+    cardsItems.forEach(function (item) {
+      if (item !== this) {
+        item.classList.toggle("d-none");
       }
     }, this);
+
+    // Переключаем класс .d-none для первого элемента .menu-item__card
+    var firstCard = this.querySelector(".menu-item__card");
+    if (firstCard) {
+      firstCard.classList.toggle("d-none");
+    }
+
+    var firstCards = this.querySelector(".menu-item__cards");
+    if (firstCards) {
+      firstCards.classList.toggle("d-none");
+    }
   }
 
-  // Назначаем обработчик события click для каждого элемента меню
-  menuItemsInside.forEach(function (menuItem) {
-    menuItem.addEventListener("click", toggleActiveClass);
+  // Назначаем обработчик события click для каждого элемента .menu-item__cards_item
+  cardsItems.forEach(function (cardsItem) {
+    cardsItem.addEventListener("click", toggleActiveCardsItem);
   });
-
-  toggleActiveClass();
 });

@@ -161,6 +161,43 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 3vh;
 
+        &_active {
+            display: flex;
+            gap: 0;
+        }
+
+        &_item {
+            width: 100%;
+            position: relative;
+
+            /* &::before {
+                content: "";
+                display: inline-block;
+                width: 2.95vh;
+                height: 0.2vh;
+                background-color: #FFDDB1;
+                position: absolute;
+                top: 50%;
+                left: -3.1vh;
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 0.2vh;
+                height: 2.95vh;
+                background-color: #FFDDB1;
+                position: absolute;
+                left: 50%;
+                top: -3.1vh;
+            }
+
+            &:nth-child(4n + 1)::before,
+            &:nth-child(-n+4)::after {
+                display: none;
+            } */
+        }
+
         &_icon {
             display: inline-block;
             width: 1vh;
@@ -171,6 +208,7 @@
             left: -4vh;
             transform: rotate(45deg);
         }
+
     }
 
     &__card {
@@ -191,37 +229,6 @@
         &:hover {
             box-shadow: 0px 0px 28.05737px 0px rgba(255, 162, 23, 0.33) inset, 0px 0px 28.05737px 0px rgba(255, 162, 23, 0.33);
         }
-
-        &::before {
-            content: "";
-            display: inline-block;
-            width: 2.95vh;
-            height: 0.2vh;
-            background-color: #FFDDB1;
-            position: absolute;
-            top: 50%;
-            left: -3.1vh;
-        }
-
-        &::after {
-            content: "";
-            display: inline-block;
-            width: 0.2vh;
-            height: 2.95vh;
-            background-color: #FFDDB1;
-            position: absolute;
-            left: 50%;
-            top: -3.1vh;
-        }
-
-        &:nth-child(4n + 1)::before,
-        &:nth-child(-n+4)::after {
-            display: none;
-        }
-
-        /* &:last-child::after {
-            display: none;
-        } */
 
         &_badge {
             width: 7vh;
@@ -265,5 +272,21 @@
                 width: 1.3vh;
             }
         }
+
+        /* &_active {
+            background: transparent;
+            border: none;
+            padding: 0;
+            display: block;
+
+            &:hover {
+                box-shadow: none;
+            }
+
+            .menu-item__card_badge,
+            .menu-item__card_icon {
+                display: none;
+            }
+        } */
     }
 }
