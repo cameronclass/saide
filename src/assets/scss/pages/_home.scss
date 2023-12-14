@@ -109,7 +109,14 @@
         min-width: 150px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
+
+        &_flex {
+            min-width: 150px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
         &_block {
             width: 3px;

@@ -27,7 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardsItems = document.querySelectorAll(".menu-item__cards_item");
 
   // Функция, которая будет добавлять/удалять классы menu-item__cards_item_active и d-none
-  function toggleActiveCardsItem() {
+  function toggleActiveCardsItem(event) {
+    // Останавливаем всплытие события, чтобы избежать обработки события на внешних родителях
+    event.stopPropagation();
+
     // Добавляем/удаляем класс menu-item__cards_item_active текущему элементу
     this.classList.toggle("menu-item__cards_item_active");
 
