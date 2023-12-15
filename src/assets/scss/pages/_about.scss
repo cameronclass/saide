@@ -1,0 +1,151 @@
+.content-page {
+
+
+    &__block {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+        width: 100%;
+        height: max-content;
+    }
+
+    &__nav {
+        min-width: 280px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        padding-bottom: 0px;
+    }
+
+    &__menu {
+        min-width: 150px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &_block {
+            width: 3px;
+            height: 100%;
+            background-color: $yellow;
+        }
+
+        &_active {
+            width: 50px;
+            position: relative;
+            left: -3px;
+        }
+
+        &_icon {
+            position: absolute;
+            left: 20px;
+            top: 142px;
+        }
+
+        &_content {
+            margin-top: 50px;
+            position: relative;
+        }
+    }
+
+    &__page {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+
+        h2 {
+            font-size: 45px;
+            text-align: left;
+            max-width: 250px;
+            line-height: 1.2;
+        }
+    }
+
+    &__advantages {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    &__content {
+        margin-top: 30px;
+
+        h3 {
+            font-size: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3.6px;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+}
+
+.advantage-card {
+    color: $yellow;
+    border-radius: 15px;
+    border: 1px solid $yellow;
+    background: $dark-grey;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 224px;
+
+    &__block {
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 64px;
+        font-weight: 900;
+        font-family: 'Inter', sans-serif;
+        line-height: 1;
+    }
+
+    &__card {
+        font-size: 16px;
+        line-height: 1;
+    }
+}
+
+.certificates {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__card {
+        width: 100%;
+        max-width: 220px;
+        height: 300px;
+        border-radius: 15px;
+        border: 1px solid $yellow;
+        background: $dark-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.group-title {
+    font-size: 40px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

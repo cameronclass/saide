@@ -86,7 +86,8 @@
 
 /* Content page */
 .content-bg {
-    background: linear-gradient(180deg, #1F252E 0%, rgba(31, 37, 46, 0.00) 100%);
+    /* background: linear-gradient(180deg, #1F252E 0%, rgba(31, 37, 46, 0.00) 100%); */
+    background: #0D0F14;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -97,59 +98,3 @@
     z-index: 2;
 }
 
-.content-page {
-
-
-    &__block {
-        display: flex;
-        gap: 30px;
-    }
-
-    &__line {
-        min-width: 150px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-        &_flex {
-            min-width: 150px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        &_block {
-            width: 3px;
-            height: 100%;
-            background-color: $yellow;
-        }
-
-        &_active {
-            width: 50px;
-            position: relative;
-            left: -3px;
-        }
-
-        &_icon {
-            position: absolute;
-            left: 20px;
-            top: 142px;
-        }
-
-        &_content {
-            margin-top: 50px;
-            position: relative;
-        }
-    }
-
-    &__content {
-        width: 100%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-
-        &_img {
-            width: 100%;
-            max-width: 300px;
-        }
-    }
-}
