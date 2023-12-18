@@ -35,33 +35,27 @@
     }
 
     &__menu {
-        min-width: 150px;
+        min-width: 250px;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding-left: 45px;
 
         &_block {
             width: 3px;
             height: 100%;
             background-color: $yellow;
-        }
 
-        &_active {
-            width: 50px;
-            position: relative;
-            left: -3px;
-        }
-
-        &_icon {
-            position: absolute;
-            left: 20px;
-            top: 142px;
         }
 
         &_content {
             margin-top: 50px;
             position: relative;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
         }
     }
 
@@ -166,4 +160,83 @@
     text-transform: uppercase;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.content-menu-item {
+    position: relative;
+    left: -27px;
+
+    &-active {
+        left: 0;
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__img {
+        position: relative;
+
+        &_active {
+            width: 50px;
+            position: relative;
+            left: -3px;
+        }
+
+        &_icon {
+            position: absolute;
+            left: 20px;
+            top: 144px;
+        }
+    }
+
+    &__icon {
+        &_img {
+            width: 50px;
+        }
+    }
+
+    &__submenu {
+        position: relative;
+        width: 100%;
+        display: flex;
+
+        &_main {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        &_block {
+            position: absolute;
+            top: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 7px;
+        }
+
+        &_item {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            padding-bottom: 5px;
+            letter-spacing: 1.2px;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+
+            &:hover {
+                border-bottom: 2px solid #F09123
+            }
+
+            &.active {
+                border-bottom: 2px solid #F09123;
+                font-weight: 700;
+            }
+        }
+    }
+
 }

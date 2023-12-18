@@ -2,7 +2,7 @@
 /* Template */
 /* @include font-face(SanFrans, "../fonts/SF/SFProDisplay-Semibold"); */
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap'); */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto+Condensed:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Roboto+Condensed:wght@300;400;500;700&display=swap");
 #page-preloader {
   position: fixed;
   left: 0;
@@ -657,26 +657,23 @@ main {
   padding-bottom: 0px; }
 
 .content-page__menu {
-  min-width: 150px;
+  min-width: 250px;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  padding-left: 45px; }
   .content-page__menu_block {
     width: 3px;
     height: 100%;
     background-color: #F09123; }
-  .content-page__menu_active {
-    width: 50px;
-    position: relative;
-    left: -3px; }
-  .content-page__menu_icon {
-    position: absolute;
-    left: 20px;
-    top: 142px; }
   .content-page__menu_content {
     margin-top: 50px;
-    position: relative; }
+    position: relative;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; }
 
 .content-page__page {
   width: 100%;
@@ -757,6 +754,57 @@ main {
   text-transform: uppercase;
   margin-top: 40px;
   margin-bottom: 40px; }
+
+.content-menu-item {
+  position: relative;
+  left: -27px; }
+  .content-menu-item-active {
+    left: 0; }
+  .content-menu-item__block {
+    display: flex;
+    align-items: center;
+    gap: 20px; }
+  .content-menu-item__img {
+    position: relative; }
+    .content-menu-item__img_active {
+      width: 50px;
+      position: relative;
+      left: -3px; }
+    .content-menu-item__img_icon {
+      position: absolute;
+      left: 20px;
+      top: 144px; }
+  .content-menu-item__icon_img {
+    width: 50px; }
+  .content-menu-item__submenu {
+    position: relative;
+    width: 100%;
+    display: flex; }
+    .content-menu-item__submenu_main {
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1; }
+    .content-menu-item__submenu_block {
+      position: absolute;
+      top: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 7px; }
+    .content-menu-item__submenu_item {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1;
+      padding-bottom: 5px;
+      letter-spacing: 1.2px;
+      display: inline-block;
+      border-bottom: 2px solid transparent; }
+      .content-menu-item__submenu_item:hover {
+        border-bottom: 2px solid #F09123; }
+      .content-menu-item__submenu_item.active {
+        border-bottom: 2px solid #F09123;
+        font-weight: 700; }
 
 /* Sliders */
 /* Aos */
