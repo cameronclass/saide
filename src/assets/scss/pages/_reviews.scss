@@ -1,0 +1,83 @@
+.reviews {
+    &__menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__item {
+        border-radius: 15px;
+        border: 1px solid $yellow;
+        background: $dark-grey;
+        padding: 25px;
+
+        &_text {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        &_block {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        &_category {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            &_tag {
+                border-radius: 5px;
+                line-height: 1;
+                padding: 3px 10px;
+                color: $dark-blue;
+                font-weight: 700;
+                font-size: 14px;
+
+                &.marketing-tag {
+                    background-color: $yellow;
+                }
+
+                &.dev-tag {
+                    background-color: $blue;
+                }
+
+                &.log-tag {
+                    background-color: $green;
+                }
+            }
+
+            &_service {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        &_more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 14px;
+
+            &_icon{
+                width: 9px;
+            }
+        }
+
+        &_author {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}

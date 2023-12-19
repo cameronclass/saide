@@ -2,15 +2,33 @@
 
 <body>
 
-    {{> body }}
+    <div class="content-bg">
+
+        <div class="content-over">
+
+            <div class="header-bg">
+                <div class="header-bg__gradient1"></div>
+                <div class="header-bg__gradient2"></div>
+                <img src="assets/images/bg.svg" alt="">
+            </div>
+
+            {{> body }}
+
+        </div>
+
+        <div class="lines">
+            <div class="lines__line"></div>
+            <div class="lines__line"></div>
+            <div class="lines__line"></div>
+            <div class="lines__line"></div>
+            <div class="lines__line"></div>
+        </div>
+
+    </div>
+
+
 
     {{> footer }}
-
-    <!-- <div class="main-bg">
-        <div class="main-bg__overlay">
-            <img class="main-bg__img" src="assets/images/bg.svg" alt="">
-        </div>
-    </div> -->
 
 
     <script src="assets/js/app.js"></script>
