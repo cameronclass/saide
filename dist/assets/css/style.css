@@ -664,7 +664,7 @@ main {
   justify-content: center;
   padding-left: 45px; }
   .content-page__menu_block {
-    width: 3px;
+    width: 2px;
     height: 100%;
     background-color: #F09123; }
   .content-page__menu_content {
@@ -673,7 +673,7 @@ main {
     min-width: 260px;
     display: flex;
     flex-direction: column;
-    gap: 25px; }
+    gap: 15px; }
 
 .content-page__page {
   width: 100%;
@@ -686,26 +686,25 @@ main {
   align-items: center;
   height: 250px; }
   .content-page__title h2 {
-    font-size: 45px;
+    font-size: 40px;
     text-align: left;
     max-width: 250px;
     line-height: 1.2; }
 
 .content-page__content h3 {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3.6px; }
 
 .content-page__content p {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300; }
 
 .advantages {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 28px;
   margin-bottom: 30px; }
   .advantages-card {
     color: #F09123;
@@ -757,31 +756,33 @@ main {
 
 .content-menu-item {
   position: relative;
-  left: -27px; }
+  left: -20px; }
   .content-menu-item-active {
-    left: 0; }
+    left: 0;
+    margin-bottom: 30px; }
   .content-menu-item__block {
     display: flex;
     align-items: center;
-    gap: 20px; }
+    gap: 15px; }
   .content-menu-item__img {
     position: relative; }
     .content-menu-item__img_active {
-      width: 50px;
+      width: 38px;
       position: relative;
-      left: -3px; }
+      left: -2.7px; }
     .content-menu-item__img_icon {
       position: absolute;
-      left: 20px;
-      top: 144px; }
+      left: 15px;
+      top: 110px;
+      width: 38px; }
   .content-menu-item__icon_img {
-    width: 50px; }
+    width: 38px; }
   .content-menu-item__submenu {
     position: relative;
     width: 100%;
     display: flex; }
     .content-menu-item__submenu_main {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       text-transform: uppercase;
       line-height: 1; }
@@ -793,7 +794,7 @@ main {
       align-items: flex-start;
       gap: 7px; }
     .content-menu-item__submenu_item {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 1;
       padding-bottom: 5px;

@@ -43,10 +43,9 @@
         padding-left: 45px;
 
         &_block {
-            width: 3px;
+            width: 2px;
             height: 100%;
             background-color: $yellow;
-
         }
 
         &_content {
@@ -55,7 +54,7 @@
             min-width: 260px;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 15px;
         }
     }
 
@@ -72,7 +71,7 @@
         height: 250px;
 
         h2 {
-            font-size: 45px;
+            font-size: 40px;
             text-align: left;
             max-width: 250px;
             line-height: 1.2;
@@ -82,14 +81,14 @@
     &__content {
 
         h3 {
-            font-size: 50px;
+            font-size: 40px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3.6px;
         }
 
         p {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 300;
         }
     }
@@ -98,8 +97,7 @@
 .advantages {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 30px;
+    gap: 28px;
     margin-bottom: 30px;
 
     &-card {
@@ -164,37 +162,39 @@
 
 .content-menu-item {
     position: relative;
-    left: -27px;
+    left: -20px;
 
     &-active {
         left: 0;
+        margin-bottom: 30px;
     }
 
     &__block {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
     }
 
     &__img {
         position: relative;
 
         &_active {
-            width: 50px;
+            width: 38px;
             position: relative;
-            left: -3px;
+            left: -2.7px;
         }
 
         &_icon {
             position: absolute;
-            left: 20px;
-            top: 144px;
+            left: 15px;
+            top: 110px;
+            width: 38px;
         }
     }
 
     &__icon {
         &_img {
-            width: 50px;
+            width: 38px;
         }
     }
 
@@ -204,7 +204,7 @@
         display: flex;
 
         &_main {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 700;
             text-transform: uppercase;
             line-height: 1;
@@ -220,7 +220,7 @@
         }
 
         &_item {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             line-height: 1;
             padding-bottom: 5px;
