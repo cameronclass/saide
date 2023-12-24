@@ -20,17 +20,24 @@ a {
     transition: 300ms ease;
 
     &:hover {
-        color: darken($color: white, $amount: 20);
+        color: $yellow;
         text-decoration: none;
     }
 }
 
 button {
     font-family: $font;
+    color: white;
+    transition: 300ms ease;
 
     &:focus {
         outline: none;
         border: none;
+    }
+
+    &:hover {
+        color: $yellow;
+        text-decoration: none;
     }
 }
 
