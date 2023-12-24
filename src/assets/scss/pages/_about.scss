@@ -27,20 +27,27 @@
     }
 
     &__nav {
-        min-width: 280px;
+        max-width: 290px;
         display: flex;
         flex-wrap: wrap;
         padding-top: 50px;
         padding-bottom: 0px;
     }
 
+    &__page {
+        width: 100%;
+        max-width: 750px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
     &__menu {
-        min-width: 250px;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-left: 45px;
+        padding-left: 30px;
 
         &_block {
             width: 2px;
@@ -51,27 +58,23 @@
         &_content {
             margin-top: 50px;
             position: relative;
-            min-width: 260px;
             display: flex;
             flex-direction: column;
             gap: 15px;
+            width: 95%;
         }
     }
 
-    &__page {
-        width: 100%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
+
 
     &__title {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 250px;
+        height: 235px;
 
-        h2 {
-            font-size: 40px;
+        &_text {
+            font-size: 37px;
             text-align: left;
             max-width: 250px;
             line-height: 1.2;
@@ -81,14 +84,14 @@
     &__content {
 
         h3 {
-            font-size: 40px;
+            font-size: 35px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 3.6px;
         }
 
         p {
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
         }
     }
@@ -97,35 +100,33 @@
 .advantages {
     display: flex;
     flex-wrap: wrap;
-    gap: 28px;
-    margin-bottom: 30px;
+    gap: 2%;
+    margin-bottom: 20px;
 
     &-card {
         color: $yellow;
         border-radius: 15px;
         border: 1px solid $yellow;
         background: $dark-grey;
-        padding: 25px;
+        padding: 15px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 224px;
+        width: 23.5%;
 
         &__block {
             text-align: center;
         }
 
         &__title {
-            font-size: 64px;
+            font-size: 45px;
             font-weight: 900;
             font-family: 'Inter', sans-serif;
             line-height: 1;
         }
 
         &__text {
-            margin-top: 10px;
-            font-size: 16px;
+            margin-top: 5px;
+            font-size: 13px;
             line-height: 1.4;
         }
     }
@@ -135,14 +136,13 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    gap: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     &__card {
-        width: 100%;
-        max-width: 220px;
-        height: 300px;
+        width: 23.5%;
+        height: 250px;
         border-radius: 15px;
         border: 1px solid $yellow;
         background: $dark-grey;
@@ -153,11 +153,11 @@
 }
 
 .group-title {
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 2.4px;
     text-transform: uppercase;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .content-menu-item {
@@ -204,7 +204,7 @@
         display: flex;
 
         &_main {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
             line-height: 1;
