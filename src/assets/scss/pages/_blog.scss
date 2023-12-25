@@ -74,7 +74,7 @@
             margin-top: 20px;
             margin-bottom: 20px;
 
-            &_btn{
+            &_btn {
                 display: flex;
                 align-items: center;
                 gap: 10px;
@@ -248,5 +248,129 @@
     &-tag {
         font-size: 13px;
         line-height: 1;
+    }
+}
+
+.question-block {
+    border-radius: 15px;
+    border: 1px solid white;
+    background: linear-gradient(109deg, #283344 -45.08%, #0B0F15 129.76%);
+    padding: 20px;
+
+    &__title {
+
+
+        &_text {
+            display: flex;
+            width: min-content;
+            gap: 20px;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        &_first {}
+
+        &_divide {
+            font-size: 68px;
+            position: relative;
+            top: -6px;
+        }
+
+        &_last {}
+    }
+
+    &__subtitle {
+        font-size: 19px;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &__form {
+        margin-bottom: 20px;
+
+        &_title {
+            font-size: 13px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        &_block {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    &__contacts {
+        &_title {
+            font-size: 13px;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        &_block {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        &_link {
+            padding: 5px 30px;
+            font-weight: 400;
+            font-size: 13px;
+            border-radius: 10px;
+            border: 1px solid white;
+            box-shadow: 0px 0px 4.3px 0px white;
+
+            &.link-vk {
+                border-color: #07F;
+                box-shadow: 0px 0px 3px 0px #07F;
+
+                &:hover {
+                    color: #07F;
+                }
+            }
+
+            &.link-whatsapp {
+                border-color: #F09123;
+                box-shadow: 0px 0px 3px 0px #F09123;
+
+                &:hover {
+                    color: #F09123;
+                }
+            }
+
+            &.link-telegram {
+                border-color: #08C;
+                box-shadow: 0px 0px 3px 0px #08C;
+
+                &:hover {
+                    color: #08C;
+                }
+            }
+        }
+    }
+}
+
+.email-sub {
+    max-width: 200px;
+    position: relative;
+    top: 280px;
+
+    &__title {
+        font-size: 18px;
+        letter-spacing: 1.44px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 15px;
     }
 }

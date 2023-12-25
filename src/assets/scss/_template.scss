@@ -96,6 +96,34 @@ button {
     }
 }
 
+.main-input {
+    border-radius: 10px;
+    background: $blue-2;
+    color: white;
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 14px;
+
+    &::placeholder {
+        color: rgba(100, 108, 120, 1);
+        opacity: 1;
+    }
+}
+
+.main-btn {
+    border-radius: 10px;
+    color: white;
+    background: $yellow;
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 13px;
+
+    &:hover{
+        color: white;
+        background-color: darken($color: $yellow, $amount: 10);
+    }
+}
+
 .svg-icon {
     fill: white;
 }
