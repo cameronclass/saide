@@ -78,4 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
       accordionItem[i].classList.toggle("active");
     });
   }
+
+  /* Blog dropdown */
+  const blogMoreButton = document.querySelector(".blog-page__menu_more_js");
+  const blogMoreContent = document.querySelector(".blog-page__menu_more_drop");
+
+  blogMoreButton.addEventListener("click", () => {
+    blogMoreContent.classList.toggle("active");
+  });
 });

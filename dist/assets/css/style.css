@@ -966,17 +966,22 @@ main {
   .blog-page__menu_more {
     position: absolute;
     right: 0;
+    border: 1px solid white;
+    padding: 2px 7px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    border: 1px solid white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    gap: 5px; }
+    align-items: flex-start; }
     .blog-page__menu_more_link {
       font-weight: 400;
       font-size: 14px; }
     .blog-page__menu_more_icon {
       width: 15px; }
+    .blog-page__menu_more_drop {
+      display: none;
+      flex-direction: column; }
+      .blog-page__menu_more_drop.active {
+        display: flex; }
 
 .blog-page__articles_block {
   display: flex;
