@@ -316,5 +316,32 @@
                 display: none;
             }
         } */
+
+        &_prev {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            &_block {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+            }
+
+            &_div {
+                width: 100%;
+                height: 7vh;
+                border-radius: 4px;
+                opacity: 0.2;
+                background: #FFF;
+            }
+
+            &_text {
+                font-size: 2vh;
+                font-weight: 700;
+            }
+        }
     }
 }
