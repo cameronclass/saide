@@ -68,4 +68,14 @@ document.addEventListener("DOMContentLoaded", () => {
   cardsItems.forEach(function (cardsItem) {
     cardsItem.addEventListener("click", toggleActiveCardsItem);
   });
+
+  /* accordion */
+  const accordionItem = document.getElementsByClassName("accordion-js__item");
+  const accordionBtn = document.getElementsByClassName("accordion-js__head");
+
+  for (let i = 0; i < accordionBtn.length; i++) {
+    accordionBtn[i].addEventListener("click", function () {
+      accordionItem[i].classList.toggle("active");
+    });
+  }
 });

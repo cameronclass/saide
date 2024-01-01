@@ -70,7 +70,7 @@
             font-weight: 500;
             font-size: 14px;
 
-            &_icon{
+            &_icon {
                 width: 9px;
             }
         }
@@ -78,6 +78,63 @@
         &_author {
             font-size: 18px;
             font-weight: 700;
+        }
+    }
+}
+
+.review-ask {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--White, #FFF);
+    background: linear-gradient(109deg, #283344 -45.08%, #0B0F15 129.76%);
+    padding: 20px;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    &__input {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__text {
+        width: 65%;
+
+        .main-textarea{
+            height: 100%;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        .main-btn {
+            width: 100%;
+            max-width: 200px;
         }
     }
 }
