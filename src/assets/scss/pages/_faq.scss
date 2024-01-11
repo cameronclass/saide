@@ -15,9 +15,12 @@
     }
 
     &__item {
-        margin-bottom: 20px;
-        &:nth-child(n+2) {
-            margin-top: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $yellow;
+
+        &:last-child {
+            border-bottom: none;
         }
     }
 
@@ -55,6 +58,7 @@
         height: 0;
         padding: 0 20px;
         transition: 300ms all;
+        font-weight: 300;
     }
 
     &__item.active &__body {
