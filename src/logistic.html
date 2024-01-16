@@ -3,9 +3,9 @@ layout: wisetao
 title: Logistic
 ---
 <div class="main-wall">
-    <img src="assets/images/logistic-main.png" alt="">
+    <img class="main-wall__img" src="assets/images/logistic-main.png" alt="">
+    <div class="main-wall__overlay"></div>
     <div class="main-wall__content">
-
         <div class="main-wall__block">
             <div class="main-wall__logo">
                 <div class="container d-flex">
@@ -30,7 +30,6 @@ title: Logistic
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 <main class="container">
@@ -109,7 +108,24 @@ title: Logistic
 
                 <div class="content-page__content">
                     <div class="logistic-page">
-                        
+                        <div class="logistic-calc">
+                            <div class="logistic-calc__tabs">
+                                <div class="logistic-calc__tabs_block">
+                                    <button class="logistic-calc__tab">Карго</button>
+                                    <button class="logistic-calc__tab">Таможенный</button>
+                                    <button class="logistic-calc__tab">Сравнение</button>
+                                </div>
+                            </div>
+                            <div class="logistic-calc__where">
+                                <select class="selectpicker" data-live-search="true">
+                                    <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                                </select>
+                            </div>
+                            <div class="logistic-calc__param"></div>
+                            <div class="logistic-calc__ship"></div>
+                        </div>
                     </div>
                 </div>
             </div>
