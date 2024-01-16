@@ -17,6 +17,7 @@
 
     &__block {
         display: flex;
+        justify-content: space-between;
         gap: 30px;
     }
 
@@ -36,7 +37,7 @@
 
     &__page {
         width: 100%;
-        max-width: 780px;
+        max-width: 850px;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -101,7 +102,10 @@
 
     &__content {}
 
-    &__more {}
+    &__more {
+        width: 100%;
+        max-width: 200px;
+    }
 }
 
 .advantages {
