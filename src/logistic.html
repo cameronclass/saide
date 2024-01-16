@@ -111,20 +111,118 @@ title: Logistic
                         <div class="logistic-calc">
                             <div class="logistic-calc__tabs">
                                 <div class="logistic-calc__tabs_block">
-                                    <button class="logistic-calc__tab">Карго</button>
+                                    <button class="logistic-calc__tab tab-active">Карго</button>
                                     <button class="logistic-calc__tab">Таможенный</button>
                                     <button class="logistic-calc__tab">Сравнение</button>
                                 </div>
                             </div>
                             <div class="logistic-calc__where">
-                                <select class="selectpicker" data-live-search="true">
-                                    <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-                                    <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                                    <option data-tokens="frosting">Sugar, Spice and all things nice</option>
-                                </select>
+                                <div class="logistic-calc__where_block">
+                                    <div class="logistic-calc__where_from">
+                                        <div class="logistic-calc__where_label">Откуда</div>
+                                        <select class="selectpicker" data-live-search="true" data-width="100%" disabled>
+                                            <option>Гуанчжоу</option>
+                                        </select>
+                                    </div>
+                                    <div class="logistic-calc__where_arrow">
+                                        <img src="assets/images/icons/calc-arrow.svg" alt="">
+                                    </div>
+                                    <div class="logistic-calc__where_to">
+                                        <div class="logistic-calc__where_label">Куда</div>
+                                        <select class="selectpicker" data-live-search="true" data-width="100%">
+                                            <option>Хэйхэ</option>
+                                            <option>Гуанчжоу</option>
+                                            <option>Гуанчжоу</option>
+                                        </select>
+                                    </div>
+                                    <div class="logistic-calc__where_check">
+                                        <div class="checkbox-wrapper-4">
+                                            <input class="inp-cbx" id="morning" type="checkbox" />
+                                            <label class="cbx" for="morning">
+                                                <span>
+                                                    <svg width="12px" height="10px">
+                                                        <use xlink:href="#check-4"></use>
+                                                    </svg>
+                                                    <svg class="inline-svg">
+                                                        <symbol id="check-4" viewbox="0 0 12 10">
+                                                            <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                        </symbol>
+                                                    </svg>
+                                                </span>
+                                                <span>Только доставка (без выкупа)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="logistic-calc__param"></div>
-                            <div class="logistic-calc__ship"></div>
+                            <div class="logistic-calc__param">
+                                <h4 class="logistic-calc__title">Параметры груза</h4>
+
+                                <div class="logistic-calc__param_block">
+                                    <div class="logistic-calc__param_group">
+                                        <div class="logistic-calc__input_label">Общий Объем</div>
+                                        <div class="logistic-calc__input">
+                                            <input type="tel" class="logistic-calc__input_text">
+                                            <span class="logistic-calc__input_type">м <span class="logistic-calc__input_type_num">3</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="logistic-calc__param_group">
+                                        <div class="logistic-calc__input_label">Общий Вес</div>
+                                        <div class="logistic-calc__input">
+                                            <input type="tel" class="logistic-calc__input_text">
+                                            <span class="logistic-calc__input_type">кг</span>
+                                        </div>
+                                    </div>
+                                    <div class="logistic-calc__param_group">
+                                        <div class="logistic-calc__input_label">Макс. габарит</div>
+                                        <div class="logistic-calc__input">
+                                            <input type="tel" class="logistic-calc__input_text">
+                                            <span class="logistic-calc__input_type">см</span>
+                                        </div>
+                                    </div>
+                                    <div class="logistic-calc__param_group">
+                                        <div class="logistic-calc__input_label">Кол-во мест</div>
+                                        <div class="logistic-calc__input">
+                                            <input type="tel" class="logistic-calc__input_text">
+                                        </div>
+                                    </div>
+                                    <div class="logistic-calc__param_group">
+                                        <div class="logistic-calc__input_label">Общая стоимость</div>
+                                        <div class="logistic-calc__input">
+                                            <input type="tel" class="logistic-calc__input_text">
+                                            <span class="logistic-calc__input_type">$</span>
+                                        </div>
+                                    </div>
+                                    <div class="logistic-calc__param_group">
+                                        <div class="logistic-calc__input_label">Категория груза</div>
+                                        <div class="logistic-calc__input">
+                                            <select class="selectpicker" data-width="100%">
+                                                <option>Хэйхэ</option>
+                                                <option>Гуанчжоу</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkbox-wrapper-4">
+                                    <input class="inp-cbx" id="brend" type="checkbox" />
+                                    <label class="cbx" for="brend">
+                                        <span>
+                                            <svg width="12px" height="10px">
+                                                <use xlink:href="#check-4"></use>
+                                            </svg>
+                                            <svg class="inline-svg">
+                                                <symbol id="check-4" viewbox="0 0 12 10">
+                                                    <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                                                </symbol>
+                                            </svg>
+                                        </span>
+                                        <span>Бренд</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="logistic-calc__ship">
+                                <h4 class="logistic-calc__title">Расценки по видам доставки</h4>
+                            </div>
                         </div>
                     </div>
                 </div>

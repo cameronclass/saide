@@ -169,6 +169,14 @@
         font-size: 2.5vh;
         font-weight: 600;
         width: 78%;
+        text-transform: uppercase;
+        transition: ease 300ms;
+        transform-origin: left;
+
+        &:hover {
+            transform: scale(1.2);
+            color: $yellow;
+        }
     }
 
     &__active {

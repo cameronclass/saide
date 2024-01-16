@@ -5,7 +5,7 @@
     overflow: hidden;
     z-index: 3;
 
-    &__overlay{
+    &__overlay {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -23,7 +23,7 @@
         left: 0;
     }
 
-    &__img{
+    &__img {
         position: absolute;
         z-index: 1;
     }
@@ -76,5 +76,296 @@
             width: 20px;
             margin-top: 20px;
         }
+    }
+}
+
+.logistic-page {}
+
+.logistic-calc {
+    border-radius: 25px;
+    padding: 20px;
+    border: 1px solid #2F363E;
+    background: linear-gradient(265deg, #141A24 5.67%, #151C26 101.65%, #273242 105.95%);
+    margin-bottom: 100px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: 0 0 20px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            margin-right: 10px;
+            background-color: $yellow;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+
+        &_block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            border: 1px solid #2F363E;
+            padding: 10px;
+            gap: 15px;
+        }
+    }
+
+    &__tab {
+        padding: 5px 40px;
+        border-radius: 8px;
+
+        font-weight: 700;
+        font-size: 20px;
+
+        &.tab-active {
+            border: 1px solid #4F545C;
+            background: #232933;
+        }
+    }
+
+    &__where {
+        &_block {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 25px;
+        }
+
+        &_from,
+        &_to {
+            width: 100%;
+            max-width: 180px;
+            position: relative;
+        }
+
+        &_check {
+            margin-left: 10px;
+        }
+
+        &_arrow {}
+
+        &_label {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 10px;
+            position: absolute;
+            top: -25px;
+        }
+    }
+
+    &__param {
+        margin-top: 50px;
+
+        &_block {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+        &_group {
+            width: 100%;
+            max-width: 150px;
+        }
+    }
+
+    &__ship{
+        margin-top: 50px;
+    }
+
+    &__input {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        position: relative;
+
+        &_label {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        &_text {
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 15px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            background: var(--Second-blue, #2F3743);
+        }
+
+        &_type {
+            position: absolute;
+            right: 0;
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #5A667D;
+            border-radius: 0 10px 10px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: $yellow;
+
+            &_num {
+                position: relative;
+                top: -3px;
+                left: 2px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+/* Select */
+.bootstrap-select>.dropdown-toggle {
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 10px;
+    background: var(--Second-blue, #2F3743);
+
+    &:focus {
+        outline: none !important;
+        outline-offset: 0;
+        box-shadow: none;
+    }
+}
+
+
+
+
+/* Check Box */
+.checkbox-wrapper-4 {
+    display: flex;
+}
+
+.checkbox-wrapper-4 * {
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper-4 .cbx {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.checkbox-wrapper-4 .cbx:not(:last-child) {
+    margin-right: 6px;
+}
+
+
+.checkbox-wrapper-4 .cbx span {
+    float: left;
+    vertical-align: middle;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:first-child {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border-radius: 7px;
+    transform: scale(1);
+    border: 2px solid $yellow;
+    transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-4 .cbx span:first-child svg {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: 16px;
+    transition: all 0.3s ease;
+    transition-delay: 0.1s;
+    transform: translate3d(0, 0, 0);
+}
+
+.checkbox-wrapper-4 .cbx span:last-child {
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.checkbox-wrapper-4 .cbx:hover span:first-child {
+    border-color: $yellow;
+}
+
+.checkbox-wrapper-4 .inp-cbx {
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child {
+    background: $yellow;
+    border-color: $yellow;
+    animation: wave-4 0.4s ease;
+}
+
+.checkbox-wrapper-4 .inp-cbx:checked+.cbx span:first-child svg {
+    stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper-4 .inline-svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+@media screen and (max-width: 640px) {
+    .checkbox-wrapper-4 .cbx {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+@-moz-keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@-o-keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes wave-4 {
+    50% {
+        transform: scale(0.9);
     }
 }
