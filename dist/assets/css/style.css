@@ -1513,6 +1513,17 @@ main {
       max-width: 150px; }
   .logistic-calc__ship {
     margin-top: 50px; }
+    .logistic-calc__ship_block {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px; }
+    .logistic-calc__ship_type {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px; }
+    .logistic-calc__ship_card {
+      width: 24%; }
   .logistic-calc__input {
     display: flex;
     gap: 20px;
@@ -1521,7 +1532,7 @@ main {
     .logistic-calc__input_label {
       font-weight: 700;
       font-size: 14px;
-      margin-bottom: 8px; }
+      margin-bottom: 4px; }
     .logistic-calc__input_text {
       border-radius: 10px;
       font-size: 14px;
@@ -1548,6 +1559,28 @@ main {
         top: -3px;
         left: 2px;
         font-size: 14px; }
+
+.ship-card__head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 77px;
+  gap: 10px;
+  border-radius: 15px;
+  padding: 15px 20px;
+  background: var(--Second-blue, #2F3743);
+  margin-bottom: 10px; }
+  .ship-card__head_img {
+    width: 50px; }
+  .ship-card__head_text {
+    font-weight: 700;
+    text-align: center; }
+
+.ship-card__price {
+  margin-top: 15px;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Poppins", sans-serif; }
 
 /* Select */
 .bootstrap-select > .dropdown-toggle {
