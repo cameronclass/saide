@@ -768,10 +768,10 @@ main {
   margin-bottom: 20px; }
   .advantages-card {
     color: #F09123;
-    border-radius: 15px;
+    border-radius: 12px;
     border: 1px solid #F09123;
     background: #232933;
-    padding: 15px;
+    padding: 20px 15px;
     display: flex;
     justify-content: center;
     width: 23.5%; }
@@ -1693,6 +1693,199 @@ main {
 @keyframes wave-4 {
   50% {
     transform: scale(0.9); } }
+
+/* Log Ship */
+.logistic-shipping__block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.logistic-shipping__card {
+  width: 48%;
+  margin-bottom: 4%;
+  border-radius: 15px;
+  border: 1px solid #FFF;
+  background: linear-gradient(114deg, #0D1323 2.6%, #0d1323 96.39%), lightgray 155.879px 84.956px/80.298% 75% no-repeat;
+  position: relative;
+  padding: 30px;
+  overflow: hidden; }
+  .logistic-shipping__card_block {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+  .logistic-shipping__card_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover; }
+  .logistic-shipping__card_title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px; }
+  .logistic-shipping__card_text {
+    font-weight: 500;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
+  .logistic-shipping__card_link {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 10px; }
+    .logistic-shipping__card_link_icon {
+      width: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.477); }
+
+/* Log Blog */
+.logistic-blog {
+  margin-top: 50px; }
+  .logistic-blog__block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; }
+  .logistic-blog__card {
+    width: 30.5%;
+    margin-bottom: 30px; }
+    .logistic-blog__card_block {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #F09123; }
+    .logistic-blog__card_overlay {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(180deg, #15191f6b 25.06%, rgba(0, 0, 0, 0) 42.45%, rgba(0, 1, 1, 0.2) 59.83%, #12161b7d 101.07%); }
+    .logistic-blog__card_tags {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      z-index: 3; }
+    .logistic-blog__card_tag {
+      font-weight: 400;
+      font-size: 14px; }
+    .logistic-blog__card_title {
+      display: flex;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical; }
+
+/* Timeline */
+.timeline {
+  position: relative; }
+  .timeline__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px; }
+    .timeline__block::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 63px;
+      width: 2px;
+      height: 100%;
+      background-color: #D9D9D9; }
+  .timeline__card {
+    display: flex; }
+    .timeline__card_head {
+      width: 100%;
+      max-width: 100px;
+      display: flex;
+      align-items: center; }
+    .timeline__card_title {
+      font-size: 20px;
+      font-weight: 700;
+      width: 55px; }
+    .timeline__card_dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #D9D9D9; }
+    .timeline__card_content {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.2; }
+  .timeline__more {
+    margin-left: 100px; }
+
+/* More btn */
+.more-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px; }
+  .more-btn__text {
+    font-size: 14px; }
+  .more-btn__img {
+    width: 10px; }
+
+/* Partners */
+.partners__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  padding: 0 25px 25px;
+  border: 1px solid white;
+  background: #0D0F14; }
+
+.partners__img {
+  height: 50px; }
+
+.partners__item {
+  margin-top: 30px;
+  width: 23%;
+  margin-bottom: 20px; }
+
+.logistic-reviews {
+  margin-top: 60px; }
+  .logistic-reviews__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .logistic-reviews__card {
+    width: 31.5%;
+    border-radius: 12px;
+    border: 1px solid white;
+    background: var(--Dark-Background, linear-gradient(106deg, #283344 -4.68%, #0B0F15 130.26%));
+    padding: 20px;
+    font-size: 14px;
+    margin-bottom: 20px; }
+    .logistic-reviews__card_text {
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 10;
+      -webkit-box-orient: vertical; }
+    .logistic-reviews__card_block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 15px; }
+    .logistic-reviews__card_author {
+      font-weight: 700; }
+    .logistic-reviews__card_category {
+      font-weight: 400; }
 
 /* Sliders */
 /* Aos */
