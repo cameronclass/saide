@@ -1,11 +1,81 @@
-.position-relative{
-    position: relative;
-}
-.position-absolute{
+.lines {
+    width: 100%;
+    max-width: 1367px;
+    height: 10000px;
     position: absolute;
-}
-.z-index{
-    z-index: 5;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+
+    &__line {
+        width: 2px;
+        height: 100%;
+        background-image: url(../../assets/images/line-vertical.svg);
+        background-repeat: repeat;
+    }
 }
 
+.group-title {
+    font-size: 30px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 
+.advantages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin-bottom: 20px;
+
+    &-card {
+        color: $yellow;
+        border-radius: 12px;
+        border: 1px solid $yellow;
+        background: $dark-grey;
+        padding: 20px 15px;
+        display: flex;
+        justify-content: center;
+        width: 23.5%;
+
+        &__block {
+            text-align: center;
+        }
+
+        &__title {
+            font-size: 45px;
+            font-weight: 900;
+            font-family: 'Inter', sans-serif;
+            line-height: 1;
+        }
+
+        &__text {
+            margin-top: 5px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+    }
+}
+
+.certificates {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &__card {
+        width: 23.5%;
+        height: 250px;
+        border-radius: 15px;
+        border: 1px solid $yellow;
+        background: $dark-grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
