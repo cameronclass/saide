@@ -1,6 +1,9 @@
 .footer {
     padding-top: 20px;
     padding-bottom: 80px;
+    position: relative;
+    z-index: 5;
+    background: linear-gradient(180deg, rgba(13, 15, 20, 0.00) 0%, #0D0F14 10.42%, #0D0F14 100%);
 
     &__logo {
         width: 97px;
