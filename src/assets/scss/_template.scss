@@ -364,18 +364,19 @@ button {
     top: 0;
     z-index: 5;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 
     &__logo {
         width: 110px;
-        margin: 25px;
+        margin: 24px 20px 0;
         visibility: hidden;
     }
 
     &__block {
         display: flex;
         width: 100%;
-        margin-top: 240px;
+        height: 100%;
+        margin-top: 155px;
         position: relative;
     }
 
@@ -392,7 +393,7 @@ button {
         &_block {
             width: 20px;
             height: 0;
-            padding: 25px 20px;
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -421,7 +422,7 @@ button {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
-        padding: 20px;
+        padding: 10px 20px;
 
         &_drop {
             display: flex;
@@ -437,8 +438,9 @@ button {
             &_link {
                 display: none;
                 font-size: 18px;
-                font-weight: 700;
                 text-transform: uppercase;
+                font-weight: 700;
+                transition: none;
 
                 &.active {
                     display: block;
@@ -453,11 +455,9 @@ button {
             transform-origin: left;
 
             &.active {
-                margin-top: 100px;
+                margin-top: 70px;
                 display: flex;
                 align-items: center;
-                /* transform: none;
-                transform-origin: inherit; */
             }
         }
 
@@ -483,5 +483,46 @@ button {
         border: 1px solid $yellow;
         border-bottom: none;
         background: linear-gradient(180deg, #1F252E 50%, #0D0F14);
+
+        .page-menu__logo {
+            visibility: visible;
+        }
+
+        .page-menu__menu_item {
+            display: flex;
+            transform: none;
+        }
+
+        .page-menu__menu_item.active {
+            align-items: flex-start;
+            flex-direction: column;
+            margin-top: 0;
+        }
+
+
+
+        .page-menu__menu_drop_link {
+            display: block;
+            text-transform: none;
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        .page-menu__menu_link.active::after {
+            display: none;
+        }
+
+        .page-menu__menu_link.active {
+            color: white;
+        }
+
+        .page-menu__menu_drop.active {
+            margin: 15px 10px;
+        }
+
+        .page-menu__menu_drop_link.active {
+            font-weight: 700;
+        }
+
     }
 }
