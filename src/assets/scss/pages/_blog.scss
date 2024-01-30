@@ -72,11 +72,6 @@
     }
 
     &__articles {
-        &_block {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 3%;
-        }
 
         &_more {
             display: flex;
@@ -91,9 +86,6 @@
             }
         }
     }
-
-    &__header {}
-
 }
 
 .blog-article {
@@ -104,6 +96,11 @@
 
     &.blog-33 {
         width: 31.3%;
+        margin-bottom: 3%;
+    }
+
+    &.blog-25 {
+        width: 23%;
         margin-bottom: 3%;
     }
 
@@ -181,6 +178,7 @@
         border: 1px solid $yellow;
         overflow: hidden;
         background: linear-gradient(106deg, #283344 -4.68%, #0B0F15 130.26%);
+        height: 220px;
 
         &__img {
             width: 50%;
@@ -230,7 +228,7 @@
         }
 
         &__text {
-            margin-top: 30px;
+            margin-top: 15px;
             font-size: 15px;
             display: -webkit-box;
             -webkit-line-clamp: 3;

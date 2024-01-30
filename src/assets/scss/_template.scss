@@ -464,7 +464,7 @@ button {
             visibility: hidden;
             transform: rotate(90deg);
             transform-origin: left;
-            transition: 200ms ease;
+            transition: 400ms ease-in-out;
 
             &.active {
                 margin-top: 70px;
