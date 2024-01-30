@@ -6,6 +6,7 @@
         display: flex;
         justify-content: flex-start;
         height: 15vh;
+
     }
 
     &__logo {
@@ -20,6 +21,7 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        z-index: 2;
 
         &_line {
             width: 0.15%;
