@@ -200,6 +200,8 @@ button {
     &__page {
         width: 75%;
         margin-bottom: 50px;
+        position: relative;
+        z-index: 6;
     }
 
     &__menu {
@@ -261,16 +263,21 @@ button {
     &__content {
         display: flex;
         justify-content: space-between;
-        gap: 30px;
+        gap: 20px;
+        flex-wrap: wrap;
 
         &_left {
             width: 100%;
-            max-width: 850px;
+            max-width: 750px;
         }
 
         &_right {
             width: 100%;
-            max-width: 220px;
+            max-width: 240px;
+        }
+
+        &_center {
+            width: 100%;
         }
     }
 }
