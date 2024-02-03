@@ -1,5 +1,1 @@
-@@include("libs/jquery.js")
-@@include("libs/popper.js")
-@@include("libs/bootstrap.js")
-@@include("libs/dropdown.js")
-@@include("libs/aos.js")
+

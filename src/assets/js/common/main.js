@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* Blog dropdown */
-  const blogMoreButton = document.querySelector(".blog-page__menu_more_js");
-  const blogMoreContent = document.querySelector(".blog-page__menu_more_drop");
+  const reviewMoreBtn = document.querySelector(".marketing-review__more");
+  const reviewMoreText = document.querySelector(".marketing-review__text");
 
-  blogMoreButton.addEventListener("click", () => {
-    blogMoreContent.classList.toggle("active");
+  reviewMoreBtn.addEventListener("click", () => {
+    reviewMoreText.classList.toggle("active");
+    reviewMoreBtn.classList.toggle("active");
   });
 });
