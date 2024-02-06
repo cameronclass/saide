@@ -79,11 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const reviewMoreBtn = document.querySelector(".marketing-review__more");
+  const reviewMoreBtn = document.querySelectorAll(".marketing-review__more");
   const reviewMoreText = document.querySelector(".marketing-review__text");
 
-  reviewMoreBtn.addEventListener("click", () => {
-    reviewMoreText.classList.toggle("active");
-    reviewMoreBtn.classList.toggle("active");
+  reviewMoreBtn.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("active");
+      item.closest(reviewMoreText).classList.toggle("active");
+    });
   });
 });
