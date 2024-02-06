@@ -152,6 +152,19 @@
   100% {
     -moz-transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg); } }
 
+.calc-btn {
+  color: white;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #F09123;
+  text-transform: uppercase;
+  padding: 5px 25px;
+  font-weight: 700;
+  font-size: 18px; }
+  .calc-btn:hover {
+    color: white;
+    background-color: #8a4e09; }
+
 html,
 body {
   font-family: "Roboto Condensed", sans-serif;
@@ -2140,6 +2153,8 @@ button {
     .marketing-service__text {
       font-size: 15px; }
   .marketing-review {
+    position: relative; }
+  .marketing-review-card {
     padding: 15px;
     border: 1px solid #f09123;
     border-radius: 15px;
@@ -2149,7 +2164,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 12px; }
-    .marketing-review__category {
+    .marketing-review-card__category {
       border-radius: 5px 0px 15px 0px;
       background: #f09123;
       position: absolute;
@@ -2158,33 +2173,203 @@ button {
       padding: 4px 20px;
       font-weight: 700;
       color: #0D0F14; }
-    .marketing-review__name {
+    .marketing-review-card__name {
       text-align: right;
       font-weight: 700;
       font-size: 14px; }
-    .marketing-review__text {
+    .marketing-review-card__text {
       font-size: 14px;
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical; }
-      .marketing-review__text.active {
+      .marketing-review-card__text.active {
         overflow: auto;
         display: inherit; }
-    .marketing-review__bottom {
+    .marketing-review-card__bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: 14px; }
-    .marketing-review__more {
+    .marketing-review-card__more {
       display: flex;
       align-items: center;
       gap: 5px; }
-      .marketing-review__more_icon {
+      .marketing-review-card__more_icon {
         width: 10px; }
-      .marketing-review__more.active .marketing-review__more_icon {
+      .marketing-review-card__more.active .marketing-review__more_icon {
         transform: rotate(180deg); }
+  .marketing-review-links__title {
+    position: absolute;
+    top: -45px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase; }
+  .marketing-review-links__block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+  .marketing-review-links__item {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #F09123;
+    background-color: #11161F;
+    color: white;
+    font-weight: 700;
+    font-family: "Inter", sans-serif; }
+    .marketing-review-links__item.google:hover {
+      border-color: #4285F4;
+      background-color: #4285F4;
+      color: white; }
+    .marketing-review-links__item.otzovik:hover {
+      border-color: #CE2557;
+      background-color: #CE2557;
+      color: white; }
+    .marketing-review-links__item.yandex:hover {
+      border-color: #F0B723;
+      background-color: #F0B723;
+      color: black; }
 
+.case {
+  position: relative;
+  margin-bottom: 80px; }
+  .case__block {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid white;
+    background-color: #11161F; }
+  .case .swiper-button-next,
+  .case .swiper-rtl .swiper-button-prev {
+    right: -40px; }
+  .case .swiper-button-prev,
+  .case .swiper-rtl .swiper-button-next {
+    left: -40px; }
+  .case .swiper-pagination {
+    width: auto;
+    padding: 15px 20px;
+    bottom: -48px;
+    background-color: #2F3743;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .case .swiper-pagination-bullet {
+    background-color: #D9D9D9;
+    opacity: 1; }
+  .case .swiper-pagination-bullet-active {
+    width: 25px;
+    border-radius: 5px; }
+
+.caseSwiper .swiper-wrapper {
+  align-items: center; }
+  .caseSwiper .swiper-wrapper .swiper-slide {
+    border-right: 1px solid white;
+    cursor: pointer; }
+
+.caseSwiper .swiper-slide-thumb-active {
+  background-color: #F09123; }
+
+.caseSwiper-thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 80px;
+  padding: 0px 30px; }
+  .caseSwiper-thumb__icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain; }
+  .caseSwiper-thumb__text {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1; }
+
+.caseSwiper-card {
+  border-top: 1px solid white;
+  display: flex;
+  align-items: center; }
+  .caseSwiper-card__img {
+    width: 100%;
+    max-width: 400px; }
+    .caseSwiper-card__img_item {
+      height: 280px;
+      object-fit: cover; }
+  .caseSwiper-card__content {
+    width: 100%;
+    padding: 20px; }
+
+.casePagination {
+  display: flex;
+  justify-content: center; }
+
+/* .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
 /* Sliders */
 /* Aos */

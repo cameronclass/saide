@@ -1,0 +1,15 @@
+.calc-btn {
+    color: white;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: $yellow;
+    text-transform: uppercase;
+    padding: 5px 25px;
+    font-weight: 700;
+    font-size: 18px;
+
+    &:hover {
+        color: white;
+        background-color: darken($color: $yellow, $amount: 25);
+    }
+}
