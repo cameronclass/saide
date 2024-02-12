@@ -42,182 +42,317 @@
 
 
     <header class="header">
-        <div class="menu-container">
+        <div class="container">
             <div class="header__block">
                 <a href="index.html" class="header__logo">
                     <img src="assets/images/logo.svg" alt="logo">
                 </a>
+                <div class="header__block_bg"></div>
             </div>
         </div>
     </header>
 
-    <main class="menu-container">
-        <div class="header__menu">
-            <div class="header__menu_line"></div>
-            <div class="header__menu_items">
-                <div class="header__menu_item menu-item menu-item__active">
-                    <img class="menu-item__icon_active" src="assets/images/icons/menu-active-icon.svg" alt="">
-                    <div class="menu-item__block">
-                        <span class="menu-item__icon ">
-                            <img src="assets/images/icons/menu-icon.svg" alt="">
-                        </span>
-                        <span class="menu-item__title">О Нас</span>
-                    </div>
-                </div>
-                <div class="header__menu_item menu-item">
-                    <img class="menu-item__icon_active" src="assets/images/icons/menu-active-icon.svg" alt="">
-                    <div class="menu-item__block">
-                        <span class="menu-item__icon ">
-                            <img src="assets/images/icons/menu-icon.svg" alt="">
-                        </span>
-                        <span class="menu-item__title">Дизайн</span>
-                    </div>
-                </div>
-                <div class="header__menu_item menu-item">
-                    <img class="menu-item__icon_active" src="assets/images/icons/menu-active-icon.svg" alt="">
-                    <div class="menu-item__block">
-                        <span class="menu-item__icon ">
-                            <img src="assets/images/icons/menu-icon.svg" alt="">
-                        </span>
-                        <span class="menu-item__title">Маркетинг</span>
-                    </div>
-                </div>
-                <div class="header__menu_item menu-item">
-                    <img class="menu-item__icon_active" src="assets/images/icons/menu-active-icon.svg" alt="">
-                    <div class="menu-item__block">
-                        <span class="menu-item__icon ">
-                            <img src="assets/images/icons/menu-icon.svg" alt="">
-                        </span>
-                        <span class="menu-item__title">Консалтинг</span>
-                    </div>
-                </div>
-                <div class="header__menu_item menu-item">
-                    <img class="menu-item__icon_active" src="assets/images/icons/menu-active-icon.svg" alt="">
-                    <div class="menu-item__block">
-                        <span class="menu-item__icon ">
-                            <img src="assets/images/icons/menu-icon.svg" alt="">
-                        </span>
-                        <span class="menu-item__title">Переводы</span>
-                    </div>
-                </div>
-                <div class="header__menu_item menu-item">
-                    <img class="menu-item__icon_active" src="assets/images/icons/menu-active-icon.svg" alt="">
-                    <div class="menu-item__block">
-                        <span class="menu-item__icon ">
-                            <img src="assets/images/icons/menu-icon.svg" alt="">
-                        </span>
-                        <a href="logistic.html" class="menu-item__title">Логистика</a>
-                    </div>
-                </div>
-            </div>
-            <div class="header__menu_content">
+    <main class="main-menu">
+        <div class="container">
+            <div class="main-menu__block">
 
-                <div class="menu-item__cards">
-                    <!-- Один пункт -->
-                    <div class="menu-item__cards_item">
+                <div class="main-menu__main">
+                    <div class="main-menu__main_list">
+                        <button class="main-menu__main_link active" data-menu="about">О нас</button>
+                        <button class="main-menu__main_link" data-menu="develop">Разработка</button>
+                        <button class="main-menu__main_link" data-menu="design">Дизайн</button>
+                        <button class="main-menu__main_link" data-menu="marketing">Маркейтинг</button>
+                        <button class="main-menu__main_link" data-menu="consulting">Консалтинг</button>
+                        <button class="main-menu__main_link" data-menu="transfer">Переводы</button>
+                        <a href="logistic.html" class="main-menu__main_link">логистика</a>
+                    </div>
+                    <div class="main-menu__main_divide"></div>
+                </div>
 
-                        <div class="menu-item__card">
-                            <div class="menu-item__card_badge"></div>
-                            <div class="menu-item__card_img">
-                                <img src="assets/images/icons/warehouse.svg" alt="">
-                            </div>
-                            <div class="menu-item__card_title">История компании</div>
-                            <div class="menu-item__card_icon">
-                                <img class="menu-item__card_icon_img" src="assets/images/icons/arrow-right.svg" alt="">
-                            </div>
+                <div class="main-menu__second">
+
+                    <div class="main-menu-item active" data-menu-content="about">
+
+                        <div class="main-menu-item__cards">
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/company_history.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">История компании</span>
+                            </a>
+                            <a href="blog.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/blog.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Блог</span>
+                            </a>
+                            <a href="faq.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/faq.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">FAQ</span>
+                            </a>
+                            <a href="reviews.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/testimonials.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Отзывы</span>
+                            </a>
+                            <a href="contacts.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/contacts.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Контакты</span>
+                            </a>
                         </div>
 
-                        <div class="menu-item__cards d-none">
-                            <button class="menu-item__card_prev">
-                                <div class="menu-item__card_prev_block">
-                                    <span class="menu-item__card_prev_div"></span>
-                                    <span class="menu-item__card_prev_div"></span>
-                                    <span class="menu-item__card_prev_div"></span>
-                                    <span class="menu-item__card_prev_div"></span>
-                                </div>
-                                <div class="menu-item__card_prev_text">
-                                    Назад
-                                </div>
-                                <div class="menu-item__card_prev_block">
-                                    <span class="menu-item__card_prev_div"></span>
-                                    <span class="menu-item__card_prev_div"></span>
-                                    <span class="menu-item__card_prev_div"></span>
-                                    <span class="menu-item__card_prev_div"></span>
-                                </div>
+                    </div>
+
+                    <div class="main-menu-item" data-menu-content="develop">
+
+                        <div class="main-menu-item__cards">
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/websites_development.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Создание сайтов</span>
+                            </a>
+                            <a href="blog.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/mobile_app.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Мобильные приложения</span>
+                            </a>
+                            <a href="faq.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/license.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">ICP Лицензия</span>
+                            </a>
+                            <a href="reviews.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/hosting.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Хостинг в Китае</span>
+                            </a>
+                            <a href="contacts.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/Registration_domain.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Регистрация <br> домена в Китае</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="main-menu-item" data-menu-content="design">
+
+                        <div class="main-menu-item__cards">
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/photo_studio.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Фотостудия</span>
+                            </a>
+                            <a href="blog.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/development_unique_design.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Разработка <br>уникального дизайна</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="main-menu-item" data-menu-content="marketing">
+
+                        <div class="main-menu-item__cards">
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/baidu_promotion.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Продвижение в BAIDU и на поисковых сервисах</span>
+                            </a>
+                            <button class="main-menu-item__card" data-drop="smm">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/smm.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">SMM</span>
                             </button>
-                            <a href="about.html" class="menu-item__card">
-                                <div class="menu-item__card_badge"></div>
-                                <div class="menu-item__card_img">
-                                    <img src="assets/images/icons/warehouse.svg" alt="">
-                                </div>
-                                <div class="menu-item__card_title">История компании</div>
-                                <div class="menu-item__card_icon">
-                                    <img class="menu-item__card_icon_img" src="assets/images/icons/arrow-right.svg" alt="">
-                                </div>
+                            <a href="faq.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/atl_btl.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">ATL/BTL маркетинг</span>
                             </a>
-                            <a href="about.html" class="menu-item__card">
-                                <div class="menu-item__card_badge"></div>
-                                <div class="menu-item__card_img">
-                                    <img src="assets/images/icons/warehouse.svg" alt="">
-                                </div>
-                                <div class="menu-item__card_title">Блог</div>
-                                <div class="menu-item__card_icon">
-                                    <img class="menu-item__card_icon_img" src="assets/images/icons/arrow-right.svg" alt="">
-                                </div>
+                            <a href="reviews.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/celebrities.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">PR кампании в Китае</span>
+                            </a>
+                            <a href="contacts.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/TransactionSupport.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">MICE, деловые туры в Китай, выставки</span>
+                            </a>
+                            <a href="contacts.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/e_commerce.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">E-Commerce</span>
+                            </a>
+                        </div>
+
+                        <div class="main-menu-item__dropdown">
+                            <div class="main-menu-item__dropdown_block" data-drop-content="smm">
+                                <a href="#" class="main-menu-item__dropdown_item">
+                                    <span class="main-menu-item__dropdown_item_block">
+                                        <span class="main-menu-item__dropdown_item_badge"></span>
+                                    <span class="main-menu-item__dropdown_item_title">Продвижение в Baidu Maps, Qyer, Dianping</span>
+                                    </span>
+                                    <span class="main-menu-item__dropdown_item_icon">
+                                        <img src="assets/images/icons/arrow-right.svg" alt="">
+                                    </span>
+                                </a>
+                                <a href="#" class="main-menu-item__dropdown_item">
+                                    <span class="main-menu-item__dropdown_item_block">
+                                        <span class="main-menu-item__dropdown_item_badge"></span>
+                                    <span class="main-menu-item__dropdown_item_title">Контекстная реклама в Baidu</span>
+                                    </span>
+                                    <span class="main-menu-item__dropdown_item_icon">
+                                        <img src="assets/images/icons/arrow-right.svg" alt="">
+                                    </span>
+                                </a>
+                                <a href="#" class="main-menu-item__dropdown_item">
+                                    <span class="main-menu-item__dropdown_item_block">
+                                        <span class="main-menu-item__dropdown_item_badge"></span>
+                                    <span class="main-menu-item__dropdown_item_title">Контекстная реклама в Baidu</span>
+                                    </span>
+                                    <span class="main-menu-item__dropdown_item_icon">
+                                        <img src="assets/images/icons/arrow-right.svg" alt="">
+                                    </span>
+                                </a>
+                                <a href="#" class="main-menu-item__dropdown_item">
+                                    <span class="main-menu-item__dropdown_item_block">
+                                        <span class="main-menu-item__dropdown_item_badge"></span>
+                                    <span class="main-menu-item__dropdown_item_title">Контекстная реклама в Baidu</span>
+                                    </span>
+                                    <span class="main-menu-item__dropdown_item_icon">
+                                        <img src="assets/images/icons/arrow-right.svg" alt="">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="main-menu-item" data-menu-content="consulting">
+
+                        <div class="main-menu-item__cards">
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/company_registration.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Регистрация компании в Китае</span>
+                            </a>
+                            <a href="blog.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/market_research.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Маркетинговые исследования в Китае</span>
+                            </a>
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/brand_protection.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Защита бренда в Китае</span>
+                            </a>
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/accountant.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Бухгалтерское сопровождение</span>
+                            </a>
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/verification_suppliers.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Проверка поставщиков в Китае</span>
+                            </a>
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/account_opening.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Открытие счета в Китае</span>
                             </a>
                         </div>
 
                     </div>
-                    <!-- Один Пункт  -->
 
-                    <a href="blog.html" class="menu-item__cards_item">
-                        <div class="menu-item__card">
-                            <div class="menu-item__card_badge"></div>
-                            <div class="menu-item__card_img">
-                                <img src="assets/images/icons/warehouse.svg" alt="">
-                            </div>
-                            <div class="menu-item__card_title">Блог</div>
-                            <div class="menu-item__card_icon">
-                                <img class="menu-item__card_icon_img" src="assets/images/icons/arrow-right.svg" alt="">
-                            </div>
+                    <div class="main-menu-item" data-menu-content="transfer">
+
+                        <div class="main-menu-item__cards">
+                            <a href="about.html" class="main-menu-item__card">
+                                <span class="main-menu-item__card_badge"></span>
+                                <span class="main-menu-item__card_badge2"></span>
+                                <span class="main-menu-item__card_img">
+                                    <img src="assets/images/menu/Translator.svg" alt="">
+                                </span>
+                                <span class="main-menu-item__card_title">Языковая адаптация вашего бизнеса</span>
+                            </a>
                         </div>
-                    </a>
-                    <a href="faq.html" class="menu-item__cards_item">
-                        <div class="menu-item__card">
-                            <div class="menu-item__card_badge"></div>
-                            <div class="menu-item__card_img">
-                                <img src="assets/images/icons/warehouse.svg" alt="">
-                            </div>
-                            <div class="menu-item__card_title">FAQ</div>
-                            <div class="menu-item__card_icon">
-                                <img class="menu-item__card_icon_img" src="assets/images/icons/arrow-right.svg" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="reviews.html" class="menu-item__cards_item">
-                        <div class="menu-item__card">
-                            <div class="menu-item__card_badge"></div>
-                            <div class="menu-item__card_img">
-                                <img src="assets/images/icons/warehouse.svg" alt="">
-                            </div>
-                            <div class="menu-item__card_title">Отзывы</div>
-                            <div class="menu-item__card_icon">
-                                <img class="menu-item__card_icon_img" src="assets/images/icons/arrow-right.svg" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <a href="contacts.html" class="menu-item__cards_item">
-                        <div class="menu-item__card">
-                            <div class="menu-item__card_badge"></div>
-                            <div class="menu-item__card_img">
-                                <img src="assets/images/icons/warehouse.svg" alt="">
-                            </div>
-                            <div class="menu-item__card_title">Контакты</div>
-                            <div class="menu-item__card_icon">
-                                <img class="menu-item__card_icon_img" src="assets/images/icons/arrow-right.svg" alt="">
-                            </div>
-                        </div>
-                    </a>
+
+                    </div>
 
                 </div>
 

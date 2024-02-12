@@ -1,74 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* Главное меню */
-  const menuItems = document.querySelectorAll(".header__menu_item");
-
-  // Добавляем обработчик событий click для каждого элемента
-  menuItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      // Проверяем наличие класса active у других элементов
-      menuItems.forEach(function (otherItem) {
-        if (
-          otherItem !== item &&
-          otherItem.classList.contains("menu-item__active")
-        ) {
-          otherItem.classList.remove("menu-item__active");
-        }
-      });
-
-      // Тогглим класс active для текущего элемента
-      this.classList.toggle("menu-item__active");
-    });
-  });
-  /* Главное меню */
-
-  /* Второе меню */
-
-  // Получаем все элементы с классом .menu-item__cards_item
-  const cardsItems = document.querySelectorAll(".menu-item__cards_item");
-
-  // Функция, которая будет добавлять/удалять классы menu-item__cards_item_active и d-none
-  function toggleActiveCardsItem(event) {
-    // Останавливаем всплытие события, чтобы избежать обработки события на внешних родителях
-    event.stopPropagation();
-
-    // Добавляем/удаляем класс menu-item__cards_item_active текущему элементу
-    this.classList.toggle("menu-item__cards_item_active");
-
-    // Получаем родительский элемент .menu-item__cards
-    var cards = this.closest(".menu-item__cards");
-
-    // Переключаем класс .menu-item__cards_active для родительского элемента
-    if (cards) {
-      cards.classList.toggle(
-        "menu-item__cards_active",
-        cards.querySelector(".menu-item__cards_item_active") !== null
-      );
-    }
-
-    // Скрываем/показываем все остальные элементы с классом .menu-item__cards_item
-    cardsItems.forEach(function (item) {
-      if (item !== this) {
-        item.classList.toggle("d-none");
-      }
-    }, this);
-
-    // Переключаем класс .d-none для первого элемента .menu-item__card
-    var firstCard = this.querySelector(".menu-item__card");
-    if (firstCard) {
-      firstCard.classList.toggle("d-none");
-    }
-
-    var firstCards = this.querySelector(".menu-item__cards");
-    if (firstCards) {
-      firstCards.classList.toggle("d-none");
-    }
-  }
-
-  // Назначаем обработчик события click для каждого элемента .menu-item__cards_item
-  cardsItems.forEach(function (cardsItem) {
-    cardsItem.addEventListener("click", toggleActiveCardsItem);
-  });
-
   /* accordion */
   const accordionItem = document.getElementsByClassName("accordion-js__item");
   const accordionBtn = document.getElementsByClassName("accordion-js__head");
@@ -89,24 +19,97 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* Главный экран меню svg cover */
   let menuLeft = document.querySelector(".main-select__menu_left");
   let menuRight = document.querySelector(".main-select__menu_right");
   let svgLeft = document.querySelector(".svg-left");
   let svgRight = document.querySelector(".svg-right");
 
-  menuLeft.addEventListener("mouseenter", function () {
-    svgLeft.classList.add("active");
-  });
-
-  menuLeft.addEventListener("mouseleave", function () {
-    svgLeft.classList.remove("active");
-  });
-
-  menuRight.addEventListener("mouseenter", function () {
-    svgRight.classList.add("active");
-  });
-
-  menuRight.addEventListener("mouseleave", function () {
-    svgRight.classList.remove("active");
-  });
+  if (menuLeft)
+    menuLeft.addEventListener("mouseenter", function () {
+      svgLeft.classList.add("active");
+    });
+  if (menuLeft)
+    menuLeft.addEventListener("mouseleave", function () {
+      svgLeft.classList.remove("active");
+    });
+  if (menuRight)
+    menuRight.addEventListener("mouseenter", function () {
+      svgRight.classList.add("active");
+    });
+  if (menuRight)
+    menuRight.addEventListener("mouseleave", function () {
+      svgRight.classList.remove("active");
+    });
 });
+
+// Функция для активации меню
+function activateMenu() {
+  // Удаляем класс "active" у всех элементов с классом "main-menu-item" и "main-menu-item__dropdown_block"
+  document.querySelectorAll(".main-menu-item").forEach(function (item) {
+    item.classList.remove("active");
+  });
+
+  // Получаем все элементы с классом "main-menu__main_link" и "main-menu-item__card"
+  var menuItems = document.querySelectorAll(
+    ".main-menu__main_link, .main-menu-item__card"
+  );
+
+  // Перебираем все найденные элементы
+  menuItems.forEach(function (item) {
+    // Проверяем, имеет ли элемент класс "active"
+    if (item.classList.contains("active")) {
+      // Получаем значение соответствующего атрибута
+      var attributeValue = item.getAttribute(
+        item.classList.contains("main-menu__main_link")
+          ? "data-menu"
+          : "data-drop"
+      );
+
+      // Находим элементы с классом "main-menu-item" и "main-menu-item__dropdown_block" и соответствующим атрибутом
+      var relatedItems = document.querySelectorAll(
+        '[data-menu-content="' +
+          attributeValue +
+          '"], [data-drop-content="' +
+          attributeValue +
+          '"]'
+      );
+
+      // Перебираем найденные элементы и добавляем им класс "active"
+      relatedItems.forEach(function (relatedItem) {
+        relatedItem.classList.add("active");
+      });
+    }
+  });
+}
+
+// Функция для обработки клика по элементам меню
+function handleClick(event) {
+  // Получаем ссылку, на которую было произведено нажатие
+  var target = event.target;
+
+  // Проверяем, что нажатый элемент - элемент меню с классом "main-menu__main_link" или "main-menu-item__card"
+  if (
+    target.classList.contains("main-menu__main_link") ||
+    target.classList.contains("main-menu-item__card")
+  ) {
+    // Удаляем класс "active" у всех элементов с классом "main-menu__main_link" и "main-menu-item__card"
+    document
+      .querySelectorAll(".main-menu__main_link, .main-menu-item__card")
+      .forEach(function (item) {
+        item.classList.remove("active");
+      });
+
+    // Добавляем класс "active" только к нажатому элементу меню
+    target.classList.add("active");
+
+    // Вызываем функцию активации меню
+    activateMenu();
+  }
+}
+
+// Добавляем обработчик события клика по всему документу
+document.addEventListener("click", handleClick);
+
+// Вызываем функцию активации меню при загрузке страницы
+activateMenu();
