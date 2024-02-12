@@ -1162,6 +1162,18 @@ button {
       .main-select__menu_right .main-select__menu_item:nth-child(7) {
         position: relative;
         left: -60px; }
+  .main-select__from {
+    position: absolute;
+    left: -230px;
+    z-index: 5;
+    font-size: 30px;
+    font-weight: 700; }
+  .main-select__to {
+    position: absolute;
+    right: -230px;
+    z-index: 5;
+    font-size: 30px;
+    font-weight: 700; }
 
 .reviews__menu {
   display: flex;

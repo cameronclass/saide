@@ -229,4 +229,20 @@
             }
         }
     }
+
+    &__from {
+        position: absolute;
+        left: -230px;
+        z-index: 5;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    &__to {
+        position: absolute;
+        right: -230px;
+        z-index: 5;
+        font-size: 30px;
+        font-weight: 700;
+    }
 }
