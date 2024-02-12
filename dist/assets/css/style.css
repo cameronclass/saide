@@ -1065,97 +1065,146 @@ button {
       height: 48px; }
 
 /* Pages */
-/* Menu Page */
-/* .main-select {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.main-select {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .main-select__logo {
+    position: relative;
+    z-index: 2; }
+    .main-select__logo_img {
+      width: 108px; }
+    .main-select__logo_text {
+      font-weight: 300;
+      font-size: 14px;
+      margin-top: 4px; }
+  .main-select__circle {
     position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
-
-
-
-    &__title {
-        font-size: 35px;
-    }
-
-    &__bg {
-        background: radial-gradient(50.05% 50.05% at 50% 27.59%, #1A1F28 38.57%, rgba(31, 37, 46, 0.00) 100%);
-        width: 100%;
-        height: 200vh;
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-
-    &__block {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-    }
-
-    &__logo {
-        position: relative;
-
-        &_img {
-            width: 124px;
-        }
-
-        &_circle {
-            width: 270px;
-            height: 270px;
-            position: absolute;
-            top: -100px;
-            left: -59%;
-        }
-    }
-
-    &__left {
-        position: relative;
-        right: -50px;
-    }
-
-    &__right {
-        position: relative;
-        left: -50px;
-        transform: rotateY(180deg);
-    }
-
-    &__main {
-        position: relative;
-        z-index: 2;
-        opacity: 1;
-
-
-        &:hover {
-            opacity: 0;
-            transition: 300ms ease;
-        }
-    }
-
-    &__cover {
-        position: absolute;
-
-        &_left {
-            left: 0;
-        }
-
-        &_right {
-            right: 0;
-        }
-    }
-} */
-.main-select {
-  position: relative; }
-  .main-select__logo {
+    align-items: center; }
+    .main-select__circle_line {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1px;
+      z-index: 1;
+      height: 600px; }
+    .main-select__circle_1, .main-select__circle_2, .main-select__circle_3, .main-select__circle_4, .main-select__circle_5 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .main-select__circle_1 {
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background-color: #1e232c;
+      box-shadow: 0 0 150px 150px #1e232c; }
+      .main-select__circle_1 .svg-left.active {
+        stop-color: #F09123; }
+      .main-select__circle_1 .svg-right.active {
+        stop-color: #F09123; }
+    .main-select__circle_2 {
+      width: 320px;
+      background: #1e232c;
+      border-radius: 50%;
+      z-index: 2; }
+    .main-select__circle_3 {
+      width: 280px; }
+    .main-select__circle_4 {
+      width: 260px; }
+    .main-select__circle_5 {
+      width: 240px; }
+  .main-select__menu {
     position: absolute;
-    top: 0; }
-    .main-select__logo_img {
-      width: 100px; }
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between; }
+    .main-select__menu_item {
+      width: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: 300ms ease; }
+    .main-select__menu_link {
+      padding-bottom: 5px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent; }
+      .main-select__menu_link:hover {
+        color: white;
+        border-bottom: 1px solid white; }
+    .main-select__menu_left, .main-select__menu_right {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px; }
+      .main-select__menu_left:hover .main-select__menu_item, .main-select__menu_right:hover .main-select__menu_item {
+        visibility: visible;
+        opacity: 1; }
+    .main-select__menu_left {
+      text-align: right;
+      padding-right: 230px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(1) {
+        position: relative;
+        right: -90px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(2) {
+        position: relative;
+        right: -60px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(3) {
+        position: relative;
+        right: -30px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(4) {
+        position: relative;
+        right: -10px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(5) {
+        position: relative;
+        right: 0; }
+      .main-select__menu_left .main-select__menu_item:nth-child(6) {
+        position: relative;
+        right: -10px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(7) {
+        position: relative;
+        right: -30px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(8) {
+        position: relative;
+        right: -60px; }
+      .main-select__menu_left .main-select__menu_item:nth-child(9) {
+        position: relative;
+        right: -90px; }
+    .main-select__menu_right {
+      text-align: left;
+      padding-left: 230px; }
+      .main-select__menu_right .main-select__menu_item:nth-child(1) {
+        position: relative;
+        left: -60px; }
+      .main-select__menu_right .main-select__menu_item:nth-child(2) {
+        position: relative;
+        left: -30px; }
+      .main-select__menu_right .main-select__menu_item:nth-child(3) {
+        position: relative;
+        left: -10px; }
+      .main-select__menu_right .main-select__menu_item:nth-child(4) {
+        position: relative;
+        left: 0; }
+      .main-select__menu_right .main-select__menu_item:nth-child(5) {
+        position: relative;
+        left: -10px; }
+      .main-select__menu_right .main-select__menu_item:nth-child(6) {
+        position: relative;
+        left: -30px; }
+      .main-select__menu_right .main-select__menu_item:nth-child(7) {
+        position: relative;
+        left: -60px; }
 
 .reviews__menu {
   display: flex;

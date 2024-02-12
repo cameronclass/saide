@@ -88,4 +88,25 @@ document.addEventListener("DOMContentLoaded", () => {
       item.closest(reviewMoreText).classList.toggle("active");
     });
   });
+
+  let menuLeft = document.querySelector(".main-select__menu_left");
+  let menuRight = document.querySelector(".main-select__menu_right");
+  let svgLeft = document.querySelector(".svg-left");
+  let svgRight = document.querySelector(".svg-right");
+
+  menuLeft.addEventListener("mouseenter", function () {
+    svgLeft.classList.add("active");
+  });
+
+  menuLeft.addEventListener("mouseleave", function () {
+    svgLeft.classList.remove("active");
+  });
+
+  menuRight.addEventListener("mouseenter", function () {
+    svgRight.classList.add("active");
+  });
+
+  menuRight.addEventListener("mouseleave", function () {
+    svgRight.classList.remove("active");
+  });
 });
