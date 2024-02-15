@@ -41,75 +41,60 @@ document.addEventListener("DOMContentLoaded", () => {
     menuRight.addEventListener("mouseleave", function () {
       svgRight.classList.remove("active");
     });
-});
 
-// Функция для активации меню
-function activateMenu() {
-  // Удаляем класс "active" у всех элементов с классом "main-menu-item" и "main-menu-item__dropdown_block"
-  document.querySelectorAll(".main-menu-item").forEach(function (item) {
-    item.classList.remove("active");
-  });
+  // Получаем все кнопки меню
+  let menuButtons = document.querySelectorAll(".main-menu__main_link");
+  let menuInsideButtons = document.querySelectorAll("[data-drop]");
 
-  // Получаем все элементы с классом "main-menu__main_link" и "main-menu-item__card"
-  var menuItems = document.querySelectorAll(
-    ".main-menu__main_link, .main-menu-item__card"
-  );
-
-  // Перебираем все найденные элементы
-  menuItems.forEach(function (item) {
-    // Проверяем, имеет ли элемент класс "active"
-    if (item.classList.contains("active")) {
-      // Получаем значение соответствующего атрибута
-      var attributeValue = item.getAttribute(
-        item.classList.contains("main-menu__main_link")
-          ? "data-menu"
-          : "data-drop"
-      );
-
-      // Находим элементы с классом "main-menu-item" и "main-menu-item__dropdown_block" и соответствующим атрибутом
-      var relatedItems = document.querySelectorAll(
-        '[data-menu-content="' +
-          attributeValue +
-          '"], [data-drop-content="' +
-          attributeValue +
-          '"]'
-      );
-
-      // Перебираем найденные элементы и добавляем им класс "active"
-      relatedItems.forEach(function (relatedItem) {
-        relatedItem.classList.add("active");
-      });
-    }
-  });
-}
-
-// Функция для обработки клика по элементам меню
-function handleClick(event) {
-  // Получаем ссылку, на которую было произведено нажатие
-  var target = event.target;
-
-  // Проверяем, что нажатый элемент - элемент меню с классом "main-menu__main_link" или "main-menu-item__card"
-  if (
-    target.classList.contains("main-menu__main_link") ||
-    target.classList.contains("main-menu-item__card")
-  ) {
-    // Удаляем класс "active" у всех элементов с классом "main-menu__main_link" и "main-menu-item__card"
-    document
-      .querySelectorAll(".main-menu__main_link, .main-menu-item__card")
-      .forEach(function (item) {
+  // Добавляем обработчик события клика для каждой кнопки
+  menuButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      menuButtons.forEach((item) => {
         item.classList.remove("active");
       });
+      // Получаем значение атрибута "data-menu" кнопки
+      let menuValue = button.getAttribute("data-menu");
+      // Получаем все блоки меню
+      let menuItems = document.querySelectorAll(".main-menu-item");
+      // Перебираем все блоки меню
+      menuItems.forEach(function (item) {
+        // Получаем значение атрибута "data-menu-content" блока
+        var itemValue = item.getAttribute("data-menu-content");
 
-    // Добавляем класс "active" только к нажатому элементу меню
-    target.classList.add("active");
+        // Если значение атрибутов совпадает, добавляем класс "active" обоим элементам
+        if (menuValue === itemValue) {
+          button.classList.add("active");
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    });
+  });
 
-    // Вызываем функцию активации меню
-    activateMenu();
-  }
-}
+  // Добавляем обработчик события клика для каждой кнопки
+  menuInsideButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      menuInsideButtons.forEach((item) => {
+        item.classList.remove("active");
+      });
+      // Получаем значение атрибута "data-menu" кнопки
+      let menuValue = button.getAttribute("data-menu");
+      // Получаем все блоки меню
+      let menuItems = document.querySelectorAll("[data-drop-content]");
+      // Перебираем все блоки меню
+      menuItems.forEach(function (item) {
+        // Получаем значение атрибута "data-menu-content" блока
+        var itemValue = item.getAttribute("data-menu-content");
 
-// Добавляем обработчик события клика по всему документу
-document.addEventListener("click", handleClick);
-
-// Вызываем функцию активации меню при загрузке страницы
-activateMenu();
+        // Если значение атрибутов совпадает, добавляем класс "active" обоим элементам
+        if (menuValue === itemValue) {
+          button.classList.add("active");
+          item.classList.add("active");
+        } else {
+          item.classList.remove("active");
+        }
+      });
+    });
+  });
+});
