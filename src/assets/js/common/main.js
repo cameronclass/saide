@@ -97,4 +97,60 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+  /* Main Selection */
+  const mainSelectLinks = document.querySelectorAll(".main-select__menu_link");
+  const jsGoIndex = document.querySelector(".js-go-index");
+  const firstMenu = document.querySelector(".js-main-menu");
+  const secondMenu = document.querySelector(".js-second-menu");
+
+  mainSelectLinks.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      firstMenu.classList.remove("active");
+      secondMenu.classList.add("active");
+    });
+  });
+
+  jsGoIndex.addEventListener("click", () => {
+    firstMenu.classList.add("active");
+    secondMenu.classList.remove("active");
+  });
+
+  const buttons = document.querySelectorAll(".main-menu__main_link");
+  const links = document.querySelectorAll(".main-select__menu_link");
+  const contents = document.querySelectorAll("[data-menu-content]");
+
+  function handleHashChange() {
+    const hash = window.location.hash.substring(1);
+    buttons.forEach((button) => {
+      const menuValue = button.getAttribute("data-menu");
+      if (hash === menuValue) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
+    });
+
+    contents.forEach((content) => {
+      const contentValue = content.getAttribute("data-menu-content");
+      if (hash === contentValue) {
+        content.classList.add("active");
+      } else {
+        content.classList.remove("active");
+      }
+    });
+
+    if (hash && secondMenu) {
+      firstMenu.classList.remove("active");
+      secondMenu.classList.add("active");
+    } else if (secondMenu) {
+      firstMenu.classList.add("active");
+      secondMenu.classList.remove("active");
+    }
+  }
+
+  window.addEventListener("hashchange", handleHashChange);
+
+  // Вызываем функцию обработки хэша для первичной установки активного класса
+  handleHashChange();
 });

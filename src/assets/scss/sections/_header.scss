@@ -314,3 +314,19 @@
         }
     }
 }
+
+.js-main-menu {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.js-second-menu {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

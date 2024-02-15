@@ -517,7 +517,7 @@ button {
       visibility: hidden;
       transform: rotate(90deg);
       transform-origin: left;
-      transition: 400ms ease-in-out; }
+      /* transition: 400ms ease-in-out; */ }
       .page-menu__menu_item.active {
         margin-top: 70px;
         display: flex;
@@ -542,7 +542,8 @@ button {
     .page-menu:hover .page-menu__menu_item {
       display: flex;
       transform: none;
-      visibility: visible; }
+      visibility: visible;
+      opacity: 1; }
     .page-menu:hover .page-menu__menu_item.active {
       align-items: flex-start;
       flex-direction: column;
@@ -982,6 +983,16 @@ button {
           box-shadow: 0px 0px 15px 0px rgba(255, 162, 23, 0.33) inset, 0px 0px 15px 0px rgba(255, 162, 23, 0.33); }
           .main-menu-item__dropdown_item:hover .main-menu-item__dropdown_item_icon {
             opacity: 1; }
+
+.js-main-menu {
+  display: none; }
+  .js-main-menu.active {
+    display: block; }
+
+.js-second-menu {
+  display: none; }
+  .js-second-menu.active {
+    display: block; }
 
 .footer {
   padding-top: 20px;

@@ -465,7 +465,7 @@ button {
             visibility: hidden;
             transform: rotate(90deg);
             transform-origin: left;
-            transition: 400ms ease-in-out;
+            /* transition: 400ms ease-in-out; */
 
             &.active {
                 margin-top: 70px;
@@ -499,10 +499,12 @@ button {
         background: linear-gradient(180deg, #1F252E 50%, #0D0F14);
         z-index: 10;
 
+
         .page-menu__menu_item {
             display: flex;
             transform: none;
             visibility: visible;
+            opacity: 1;
         }
 
         .page-menu__menu_item.active {
