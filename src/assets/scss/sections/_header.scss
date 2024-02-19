@@ -229,19 +229,25 @@
 
         &__dropdown {
             width: 100%;
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(6, 1fr);
 
             &_block {
+                display: flex;
+                visibility: hidden;
+                opacity: 0;
+                flex-direction: column;
+                gap: 10px;
                 /* display: none;
-                flex-direction: column; */
-                display: none;
                 grid-template-columns: repeat(6, 1fr);
                 grid-template-rows: repeat(4, 1fr);
-                gap: 15px;
-                grid-auto-flow: column;
+                grid-auto-flow: column; */
 
 
                 &.active {
-                    display: grid;
+                    opacity: 1;
+                    visibility: visible;
                     width: 100%;
                 }
             }
