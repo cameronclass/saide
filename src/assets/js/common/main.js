@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
   // Получаем все кнопки меню
-  let menuButtons = document.querySelectorAll(".main-menu__main_link");
+  let menuButtons = document.querySelectorAll("[data-menu]");
   let menuInsideButtons = document.querySelectorAll("[data-drop]");
 
   // Добавляем обработчик события клика для каждой кнопки
@@ -79,13 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.remove("active");
       });
       // Получаем значение атрибута "data-menu" кнопки
-      let menuValue = button.getAttribute("data-menu");
+      let menuValue = button.getAttribute("data-drop");
       // Получаем все блоки меню
       let menuItems = document.querySelectorAll("[data-drop-content]");
       // Перебираем все блоки меню
       menuItems.forEach(function (item) {
         // Получаем значение атрибута "data-menu-content" блока
-        var itemValue = item.getAttribute("data-menu-content");
+        var itemValue = item.getAttribute("data-drop-content");
 
         // Если значение атрибутов совпадает, добавляем класс "active" обоим элементам
         if (menuValue === itemValue) {
