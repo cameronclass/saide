@@ -331,15 +331,9 @@
     }
 }
 
-.js-main-menu {
-    display: none;
-
-    &.active {
-        display: block;
-    }
-}
-
-.js-second-menu {
+.js-main-menu,
+.js-left-menu,
+.js-right-menu {
     display: none;
 
     &.active {

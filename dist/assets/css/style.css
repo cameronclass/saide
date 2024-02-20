@@ -999,14 +999,13 @@ button {
           .main-menu-item__dropdown_item:hover .main-menu-item__dropdown_item_icon {
             opacity: 1; }
 
-.js-main-menu {
+.js-main-menu,
+.js-left-menu,
+.js-right-menu {
   display: none; }
-  .js-main-menu.active {
-    display: block; }
-
-.js-second-menu {
-  display: none; }
-  .js-second-menu.active {
+  .js-main-menu.active,
+  .js-left-menu.active,
+  .js-right-menu.active {
     display: block; }
 
 .footer {

@@ -1,2 +1,3 @@
-@@include("libs.js")
-@@include("main.js")
+@@include("libs/swiper.js")
+@@include("common/main.js")
+@@include("common/menu.js")
