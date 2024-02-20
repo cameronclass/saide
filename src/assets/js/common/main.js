@@ -99,25 +99,42 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* Main Selection */
-  const mainSelectLinks = document.querySelectorAll(".main-select__menu_link");
-  const jsGoIndex = document.querySelector(".js-go-index");
+  const mainSelectLinksRight = document.querySelectorAll(
+    ".main-select__menu_right .main-select__menu_link"
+  );
+  const mainSelectLinksLeft = document.querySelectorAll(
+    ".main-select__menu_left .main-select__menu_link"
+  );
+  const jsGoIndex = document.querySelectorAll(".js-go-index");
   const firstMenu = document.querySelector(".js-main-menu");
   const secondMenu = document.querySelector(".js-second-menu");
+  const thirdMenu = document.querySelector(".js-third-menu");
 
-  mainSelectLinks.forEach((item) => {
+  mainSelectLinksRight.forEach((item) => {
     item.addEventListener("click", (e) => {
       firstMenu.classList.remove("active");
       secondMenu.classList.add("active");
+      thirdMenu.classList.remove("active");
     });
   });
 
-  jsGoIndex.addEventListener("click", () => {
-    firstMenu.classList.add("active");
-    secondMenu.classList.remove("active");
+  mainSelectLinksLeft.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      firstMenu.classList.remove("active");
+      secondMenu.classList.remove("active");
+      thirdMenu.classList.add("active");
+    });
+  });
+
+  jsGoIndex.forEach((item) => {
+    item.addEventListener("click", () => {
+      firstMenu.classList.add("active");
+      secondMenu.classList.remove("active");
+      thirdMenu.classList.remove("active");
+    });
   });
 
   const buttons = document.querySelectorAll(".main-menu__main_link");
-  const links = document.querySelectorAll(".main-select__menu_link");
   const contents = document.querySelectorAll("[data-menu-content]");
 
   function handleHashChange() {
