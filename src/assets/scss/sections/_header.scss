@@ -262,35 +262,23 @@
                     border-radius: 10px;
                     border: 1px solid $yellow;
                     background: linear-gradient(126.81deg, rgb(40, 51, 68) -4.391%, rgb(11, 15, 21) 129.872%);
-                    padding: 20px 10px;
+                    padding: 7px;
                     text-align: center;
-                    font-weight: 700;
-                    font-size: 14px;
+                    font-weight: 500;
+                    font-size: 12px;
                     line-height: 1.2;
                     position: relative;
                     overflow: hidden;
-                    height: 74px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                }
-
-                &_badge {
-                    width: 50px;
-                    height: 12px;
-                    background-color: $yellow;
-                    border-radius: 20px;
-                    position: absolute;
-                    top: -6px;
-                    left: 50%;
-                    transform: translateX(-50%);
                 }
 
                 &_title {
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
-                    -webkit-line-clamp: 2;
+                    -webkit-line-clamp: 1;
                     -webkit-box-orient: vertical;
                 }
 

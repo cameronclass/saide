@@ -947,31 +947,21 @@ button {
           border-radius: 10px;
           border: 1px solid #F09123;
           background: linear-gradient(126.81deg, #283344 -4.391%, #0b0f15 129.872%);
-          padding: 20px 10px;
+          padding: 7px;
           text-align: center;
-          font-weight: 700;
-          font-size: 14px;
+          font-weight: 500;
+          font-size: 12px;
           line-height: 1.2;
           position: relative;
           overflow: hidden;
-          height: 74px;
           display: flex;
           align-items: center;
           justify-content: center; }
-        .main-menu-item__dropdown_item_badge {
-          width: 50px;
-          height: 12px;
-          background-color: #F09123;
-          border-radius: 20px;
-          position: absolute;
-          top: -6px;
-          left: 50%;
-          transform: translateX(-50%); }
         .main-menu-item__dropdown_item_title {
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 1;
           -webkit-box-orient: vertical; }
         .main-menu-item__dropdown_item_icon {
           position: absolute;
