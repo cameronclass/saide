@@ -35,27 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  function updateMenuState() {
-    var hash = window.location.hash.substring(1);
-    var buttons = document.querySelectorAll("[data-menu]");
-    var contents = document.querySelectorAll("[data-menu-content]");
+  /* Var */
 
-    buttons.forEach(function (button) {
+  /* Второй уровень */
+  function updateMenuState() {
+    var hashMenu = window.location.hash.substring(1);
+    var buttonsMenu = document.querySelectorAll("[data-menu]");
+    var contentsMenu = document.querySelectorAll("[data-menu-content]");
+    buttonsMenu.forEach(function (button) {
       var dataMenu = button.getAttribute("data-menu");
-      if (hash === dataMenu) {
+      if (hashMenu === dataMenu) {
         button.classList.add("active");
-        /* var parentSecondaryMenu = button.closest(".js-secondary-menu");
-      if (parentSecondaryMenu) {
-        parentSecondaryMenu.classList.add("active");
-      } */
       } else {
         button.classList.remove("active");
       }
     });
 
-    contents.forEach(function (content) {
+    contentsMenu.forEach(function (content) {
       var dataMenuContent = content.getAttribute("data-menu-content");
-      if (hash === dataMenuContent) {
+      if (hashMenu === dataMenuContent) {
         content.classList.add("active");
       } else {
         content.classList.remove("active");
@@ -70,9 +68,31 @@ document.addEventListener("DOMContentLoaded", () => {
       var dataMenu = button.getAttribute("data-menu");
       window.location.hash = dataMenu;
       updateMenuState();
+      contentsLayer.classList.remove("active");
     });
   });
 
-  // Вызываем функцию updateMenuState() один раз, чтобы установить состояние меню при загрузке страницы
   updateMenuState();
+
+  /* Третий уровень */
+  function updateDropState() {
+    let buttonsLayer = document.querySelectorAll("[data-drop]");
+    let contentsLayer = document.querySelectorAll("[data-drop-content]");
+    buttonsLayer.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var dropValue = button.getAttribute("data-drop");
+
+        contentsLayer.forEach(function (content) {
+          var dropContentValue = content.getAttribute("data-drop-content");
+          if (dropValue === dropContentValue) {
+            content.classList.add("active");
+          } else {
+            content.classList.remove("active");
+          }
+        });
+      });
+    });
+  }
+
+  updateDropState(); // Вызываем функцию один раз, чтобы установить начальное состояние
 });
