@@ -253,7 +253,7 @@
                 opacity: 0;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(7, 1fr);
+                grid-template-rows: repeat(7, minmax(44px, max-content));
                 grid-auto-flow: column;
                 gap: 10px;
 
@@ -274,7 +274,7 @@
                     border-radius: 10px;
                     border: 1px solid $yellow;
                     background: linear-gradient(126.81deg, rgb(40, 51, 68) -4.391%, rgb(11, 15, 21) 129.872%);
-                    padding: 10px;
+                    padding: 5px 10px;
                     text-align: center;
                     font-weight: 500;
                     font-size: 12px;
@@ -287,10 +287,11 @@
                 }
 
                 &_title {
+                    height: auto;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     display: -webkit-box;
-                    -webkit-line-clamp: 1;
+                    -webkit-line-clamp: 3;
                     -webkit-box-orient: vertical;
                 }
 
@@ -340,3 +341,14 @@
         display: block;
     }
 }
+
+.js-left-menu {
+    .main-menu__main {
+        max-width: 230px;
+    }
+}
+
+/* .line-3 {
+    height: 48px;
+    -webkit-line-clamp: 3;
+} */

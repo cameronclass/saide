@@ -3,6 +3,7 @@ body {
     font-family: $font;
     background-color: $dark-blue;
     color: white;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar {
         display: none;
