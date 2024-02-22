@@ -96,3 +96,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateDropState(); // Вызываем функцию один раз, чтобы установить начальное состояние
 });
+
+// Функция для удаления класса при изменении адресной строки
+function removeClassOnPopstate(className) {
+  window.addEventListener("popstate", function () {
+    // Получаем все элементы, к которым нужно применить удаление класса
+    var elementsData = document.querySelectorAll("[data-drop-content]");
+
+    // Перебираем найденные элементы
+    elementsData.forEach(function (element) {
+      // Удаляем класс
+      element.classList.remove("active");
+    });
+  });
+}
+
+// Пример использования функции
+removeClassOnPopstate();
