@@ -5,6 +5,11 @@
     z-index: 5;
     background: linear-gradient(180deg, rgba(13, 15, 20, 0.00) 0%, #0D0F14 10.42%, #0D0F14 100%);
 
+    &__block {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__logo {
         width: 97px;
     }
@@ -18,7 +23,7 @@
             font-weight: 700;
         }
 
-        &_links{
+        &_links {
             display: flex;
             flex-direction: column;
             gap: 7px;
@@ -41,6 +46,14 @@
         margin-top: 30px;
         font-size: 35px;
         font-weight: 900;
+
+        @include laptop {
+            font-size: 30px;
+        }
+
+        @include netbook {
+            font-size: 26px;
+        }
     }
 
     &__social {

@@ -259,11 +259,18 @@ button {
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        flex-wrap: wrap;
+
+        @include laptop {
+            flex-wrap: wrap;
+        }
 
         &_left {
             width: 100%;
             max-width: 750px;
+
+            @include laptop {
+                max-width: 100%;
+            }
         }
 
         &_right {
@@ -362,6 +369,10 @@ button {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @include laptop {
+        display: none;
+    }
 }
 
 /* Menu */
