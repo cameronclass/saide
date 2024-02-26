@@ -35,6 +35,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* js */
+  const mainSelectFrom = document.querySelector(".main-select__from");
+  const mainSelectTo = document.querySelector(".main-select__to");
+
+  mainSelectFrom.addEventListener("click", (e) => {
+    mainMenuJs.classList.remove("active");
+    leftMenuJs.classList.add("active");
+    rightMenuJS.classList.remove("active");
+  });
+
+  mainSelectTo.addEventListener("click", (e) => {
+    mainMenuJs.classList.remove("active");
+    leftMenuJs.classList.remove("active");
+    rightMenuJS.classList.add("active");
+  });
+
   /* Var */
 
   /* Второй уровень */

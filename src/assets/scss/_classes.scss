@@ -52,6 +52,10 @@
             font-weight: 900;
             font-family: 'Inter', sans-serif;
             line-height: 1;
+
+            @include laptop {
+                font-size: 30px;
+            }
         }
 
         &__text {
