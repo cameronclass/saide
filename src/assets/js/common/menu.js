@@ -11,45 +11,49 @@ document.addEventListener("DOMContentLoaded", () => {
   const leftMenuJs = document.querySelector(".js-left-menu");
   const rightMenuJS = document.querySelector(".js-right-menu");
 
-  mainSelectLinksRight.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      mainMenuJs.classList.remove("active");
-      leftMenuJs.classList.remove("active");
-      rightMenuJS.classList.add("active");
+  if (mainSelectLinksRight)
+    mainSelectLinksRight.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        mainMenuJs.classList.remove("active");
+        leftMenuJs.classList.remove("active");
+        rightMenuJS.classList.add("active");
+      });
     });
-  });
 
-  mainSelectLinksLeft.forEach((item) => {
-    item.addEventListener("click", (e) => {
+  if (mainSelectLinksLeft)
+    mainSelectLinksLeft.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        mainMenuJs.classList.remove("active");
+        leftMenuJs.classList.add("active");
+        rightMenuJS.classList.remove("active");
+      });
+    });
+
+  if (jsGoIndex)
+    jsGoIndex.forEach((item) => {
+      item.addEventListener("click", () => {
+        mainMenuJs.classList.add("active");
+        leftMenuJs.classList.remove("active");
+        rightMenuJS.classList.remove("active");
+      });
+    });
+
+  /* Tablet */
+  const mainSelectFrom = document.querySelector(".main-select__from");
+  const mainSelectTo = document.querySelector(".main-select__to");
+
+  if (mainSelectFrom)
+    mainSelectFrom.addEventListener("click", (e) => {
       mainMenuJs.classList.remove("active");
       leftMenuJs.classList.add("active");
       rightMenuJS.classList.remove("active");
     });
-  });
-
-  jsGoIndex.forEach((item) => {
-    item.addEventListener("click", () => {
-      mainMenuJs.classList.add("active");
+  if (mainSelectTo)
+    mainSelectTo.addEventListener("click", (e) => {
+      mainMenuJs.classList.remove("active");
       leftMenuJs.classList.remove("active");
-      rightMenuJS.classList.remove("active");
+      rightMenuJS.classList.add("active");
     });
-  });
-
-  /* js */
-  const mainSelectFrom = document.querySelector(".main-select__from");
-  const mainSelectTo = document.querySelector(".main-select__to");
-
-  mainSelectFrom.addEventListener("click", (e) => {
-    mainMenuJs.classList.remove("active");
-    leftMenuJs.classList.add("active");
-    rightMenuJS.classList.remove("active");
-  });
-
-  mainSelectTo.addEventListener("click", (e) => {
-    mainMenuJs.classList.remove("active");
-    leftMenuJs.classList.remove("active");
-    rightMenuJS.classList.add("active");
-  });
 
   /* Var */
 
@@ -111,21 +115,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   updateDropState(); // Вызываем функцию один раз, чтобы установить начальное состояние
-});
 
-// Функция для удаления класса при изменении адресной строки
-function removeClassOnPopstate(className) {
-  window.addEventListener("popstate", function () {
-    // Получаем все элементы, к которым нужно применить удаление класса
-    var elementsData = document.querySelectorAll("[data-drop-content]");
+  // Функция для удаления класса при изменении адресной строки
+  function removeClassOnPopstate(className) {
+    window.addEventListener("popstate", function () {
+      // Получаем все элементы, к которым нужно применить удаление класса
+      var elementsData = document.querySelectorAll("[data-drop-content]");
 
-    // Перебираем найденные элементы
-    elementsData.forEach(function (element) {
-      // Удаляем класс
-      element.classList.remove("active");
+      // Перебираем найденные элементы
+      elementsData.forEach(function (element) {
+        // Удаляем класс
+        element.classList.remove("active");
+      });
     });
-  });
-}
+  }
 
-// Пример использования функции
-removeClassOnPopstate();
+  // Пример использования функции
+  removeClassOnPopstate();
+
+  // Получаем все кнопки
+  let dataInButton = document.querySelectorAll("[data-in-menu]");
+
+  if (dataInButton)
+    // Перебираем каждую кнопку
+    dataInButton.forEach(function (button) {
+      // Добавляем обработчик события клика
+      button.addEventListener("click", function () {
+        // Получаем значение data-in-menu для текущей кнопки
+        var menuAttr = this.getAttribute("data-in-menu");
+
+        // Получаем все div'ы с классом page-menu__menu_drop
+        const dataInContent = document.querySelectorAll("[data-in-content]");
+
+        // Перебираем каждый div
+        dataInContent.forEach(function (div) {
+          // Получаем значение data-in-content для текущего div'а
+          var contentAttr = div.getAttribute("data-in-content");
+
+          // Если значения совпадают, добавляем класс active обоим элементам
+          if (menuAttr === contentAttr) {
+            button.classList.toggle("active");
+            div.classList.toggle("active");
+          } /* else {
+            // Иначе удаляем класс active, если он был ранее добавлен
+            button.classList.remove("active");
+            div.classList.remove("active");
+          } */
+        });
+      });
+    });
+});

@@ -267,11 +267,7 @@ button {
 
         &_left {
             width: 100%;
-            max-width: 750px;
-
-            @include laptop {
-                max-width: 100%;
-            }
+            max-width: 100%;
         }
 
         &_right {

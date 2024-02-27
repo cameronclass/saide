@@ -10,7 +10,7 @@
     top: 0;
     z-index: 5;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
     &__logo {
         width: 110px;
@@ -21,8 +21,9 @@
         display: flex;
         width: 100%;
         height: 100%;
-        margin-top: 155px;
-        position: relative;
+        margin-top: 250px;
+        position: absolute;
+        max-width: 260px;
     }
 
     &__dot {
@@ -61,24 +62,27 @@
     }
 
     &__menu {
-        position: fixed;
-        left: 42px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 14px;
         padding: 5px 20px;
+        max-width: 215px;
+        line-height: 1.1;
+        margin-left: 42px;
+        overflow-y: auto;
+        height: 65vh;
+        position: fixed;
 
         &_drop {
-            display: flex;
+            display: none;
             align-items: flex-start;
             flex-direction: column;
-            gap: 6px;
-            margin-left: 15px;
-            margin-top: 10px;
+            gap: 14px;
+            margin: 15px;
 
             &.active {
-                margin: 0 20px 0;
+                display: flex;
             }
 
             &_link {
@@ -97,6 +101,8 @@
 
         &_item {
             display: none;
+            flex-direction: column;
+            align-items: flex-start;
             visibility: hidden;
             transform: rotate(90deg);
             transform-origin: left;
@@ -117,11 +123,11 @@
             color: #686E79;
 
             &.active {
-                color: #686E79;
+                color: white;
 
                 &::after {
                     content: ">";
-                    display: inline-block;
+                    display: none;
                     margin-left: 15px;
                 }
             }
@@ -142,7 +148,7 @@
             opacity: 1;
         }
 
-        .page-menu__menu_item.active {
+        .page-menu__menu_item._active {
             align-items: flex-start;
             flex-direction: column;
             margin-top: 0;
@@ -155,19 +161,19 @@
             font-size: 16px;
         }
 
-        .page-menu__menu_link.active::after {
+        .page-menu__menu_link._active::after {
             display: none;
         }
 
-        .page-menu__menu_link.active {
+        .page-menu__menu_link._active {
             color: white;
         }
 
-        .page-menu__menu_drop.active {
+        .page-menu__menu_drop._active {
             margin: 5px 10px;
         }
 
-        .page-menu__menu_drop_link.active {
+        .page-menu__menu_drop_link._active {
             font-weight: 700;
             color: $yellow;
             border-bottom: 2px solid;
