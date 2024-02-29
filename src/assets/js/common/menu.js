@@ -55,15 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
       rightMenuJS.classList.add("active");
     });
 
-  /* Var */
+  /* let */
 
   /* Второй уровень */
   function updateMenuState() {
-    var hashMenu = window.location.hash.substring(1);
-    var buttonsMenu = document.querySelectorAll("[data-menu]");
-    var contentsMenu = document.querySelectorAll("[data-menu-content]");
+    let hashMenu = window.location.hash.substring(1);
+    let buttonsMenu = document.querySelectorAll("[data-menu]");
+    let contentsMenu = document.querySelectorAll("[data-menu-content]");
     buttonsMenu.forEach(function (button) {
-      var dataMenu = button.getAttribute("data-menu");
+      let dataMenu = button.getAttribute("data-menu");
       if (hashMenu === dataMenu) {
         button.classList.add("active");
       } else {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     contentsMenu.forEach(function (content) {
-      var dataMenuContent = content.getAttribute("data-menu-content");
+      let dataMenuContent = content.getAttribute("data-menu-content");
       if (hashMenu === dataMenuContent) {
         content.classList.add("active");
       } else {
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("[data-menu]").forEach(function (button) {
     button.addEventListener("click", function () {
-      var dataMenu = button.getAttribute("data-menu");
+      let dataMenu = button.getAttribute("data-menu");
       window.location.hash = dataMenu;
       updateMenuState();
       contentsLayer.classList.remove("active");
@@ -100,10 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let contentsLayer = document.querySelectorAll("[data-drop-content]");
     buttonsLayer.forEach(function (button) {
       button.addEventListener("click", function () {
-        var dropValue = button.getAttribute("data-drop");
+        let dropValue = button.getAttribute("data-drop");
 
         contentsLayer.forEach(function (content) {
-          var dropContentValue = content.getAttribute("data-drop-content");
+          let dropContentValue = content.getAttribute("data-drop-content");
           if (dropValue === dropContentValue) {
             content.classList.add("active");
           } else {
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function removeClassOnPopstate(className) {
     window.addEventListener("popstate", function () {
       // Получаем все элементы, к которым нужно применить удаление класса
-      var elementsData = document.querySelectorAll("[data-drop-content]");
+      let elementsData = document.querySelectorAll("[data-drop-content]");
 
       // Перебираем найденные элементы
       elementsData.forEach(function (element) {
@@ -133,25 +133,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // Пример использования функции
   removeClassOnPopstate();
 
-  // Получаем все кнопки
+  /* Внутреннее меню */
   let dataInButton = document.querySelectorAll("[data-in-menu]");
+  let dataInLevelButton = document.querySelectorAll("[data-in-level]");
 
   if (dataInButton)
-    // Перебираем каждую кнопку
     dataInButton.forEach(function (button) {
-      // Добавляем обработчик события клика
       button.addEventListener("click", function () {
-        // Получаем все div'ы с классом page-menu__menu_drop
         const dataInContent = document.querySelectorAll("[data-in-content]");
-        // Удаляем класс active у всех элементов с атрибутами data-in-menu и data-in-content
         dataInButton.forEach(function (btn) {
           btn.classList.remove("active");
+          btn.parentElement.classList.remove("active");
         });
         dataInContent.forEach(function (div) {
           div.classList.remove("active");
         });
 
-        // Получаем все кнопки
         let dataInLevelButton = document.querySelectorAll("[data-in-level]");
         let dataInLevelDrop = document.querySelectorAll(
           "[data-in-level-content]"
@@ -162,29 +159,20 @@ document.addEventListener("DOMContentLoaded", () => {
         dataInLevelDrop.forEach(function (div) {
           div.classList.remove("active");
         });
-        // Получаем значение data-in-menu для текущей кнопки
-        var menuAttr = this.getAttribute("data-in-menu");
 
-        // Перебираем каждый div
+        let menuAttr = this.getAttribute("data-in-menu");
+
         dataInContent.forEach(function (div) {
-          // Получаем значение data-in-content для текущего div'а
-          var contentAttr = div.getAttribute("data-in-content");
+          let contentAttr = div.getAttribute("data-in-content");
 
-          // Если значения совпадают, добавляем класс active обоим элементам
           if (menuAttr === contentAttr) {
             button.classList.toggle("active");
+            button.parentElement.classList.toggle("active");
             div.classList.toggle("active");
-          } /* else {
-            // Иначе удаляем класс active, если он был ранее добавлен
-            button.classList.remove("active");
-            div.classList.remove("active");
-          } */
+          }
         });
       });
     });
-
-  // Получаем все кнопки
-  let dataInLevelButton = document.querySelectorAll("[data-in-level]");
 
   if (dataInLevelButton)
     // Перебираем каждую кнопку
@@ -198,21 +186,23 @@ document.addEventListener("DOMContentLoaded", () => {
         // Удаляем класс active у всех элементов с атрибутами data-in-menu и data-in-content
         dataInLevelButton.forEach(function (btn) {
           btn.classList.remove("active");
+          btn.parentElement.classList.remove("active");
         });
         dataInLevelDrop.forEach(function (div) {
           div.classList.remove("active");
         });
 
         // Получаем значение data-in-menu для текущей кнопки
-        var menuAttr = this.getAttribute("data-in-level");
+        let menuAttr = this.getAttribute("data-in-level");
 
         // Перебираем каждый div
         dataInLevelDrop.forEach(function (div) {
-          var contentAttr = div.getAttribute("data-in-level-content");
+          let contentAttr = div.getAttribute("data-in-level-content");
 
           // Если значения совпадают, добавляем класс active обоим элементам
           if (menuAttr === contentAttr) {
             button.classList.toggle("active");
+            button.parentElement.classList.toggle("active");
             div.classList.toggle("active");
           }
         });
