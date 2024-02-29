@@ -141,11 +141,29 @@ document.addEventListener("DOMContentLoaded", () => {
     dataInButton.forEach(function (button) {
       // Добавляем обработчик события клика
       button.addEventListener("click", function () {
-        // Получаем значение data-in-menu для текущей кнопки
-        var menuAttr = this.getAttribute("data-in-menu");
-
         // Получаем все div'ы с классом page-menu__menu_drop
         const dataInContent = document.querySelectorAll("[data-in-content]");
+        // Удаляем класс active у всех элементов с атрибутами data-in-menu и data-in-content
+        dataInButton.forEach(function (btn) {
+          btn.classList.remove("active");
+        });
+        dataInContent.forEach(function (div) {
+          div.classList.remove("active");
+        });
+
+        // Получаем все кнопки
+        let dataInLevelButton = document.querySelectorAll("[data-in-level]");
+        let dataInLevelDrop = document.querySelectorAll(
+          "[data-in-level-content]"
+        );
+        dataInLevelButton.forEach(function (div) {
+          div.classList.remove("active");
+        });
+        dataInLevelDrop.forEach(function (div) {
+          div.classList.remove("active");
+        });
+        // Получаем значение data-in-menu для текущей кнопки
+        var menuAttr = this.getAttribute("data-in-menu");
 
         // Перебираем каждый div
         dataInContent.forEach(function (div) {
@@ -161,6 +179,42 @@ document.addEventListener("DOMContentLoaded", () => {
             button.classList.remove("active");
             div.classList.remove("active");
           } */
+        });
+      });
+    });
+
+  // Получаем все кнопки
+  let dataInLevelButton = document.querySelectorAll("[data-in-level]");
+
+  if (dataInLevelButton)
+    // Перебираем каждую кнопку
+    dataInLevelButton.forEach(function (button) {
+      // Добавляем обработчик события клика
+      button.addEventListener("click", function () {
+        // Получаем все div'ы с классом page-menu__menu_drop
+        const dataInLevelDrop = document.querySelectorAll(
+          "[data-in-level-content]"
+        );
+        // Удаляем класс active у всех элементов с атрибутами data-in-menu и data-in-content
+        dataInLevelButton.forEach(function (btn) {
+          btn.classList.remove("active");
+        });
+        dataInLevelDrop.forEach(function (div) {
+          div.classList.remove("active");
+        });
+
+        // Получаем значение data-in-menu для текущей кнопки
+        var menuAttr = this.getAttribute("data-in-level");
+
+        // Перебираем каждый div
+        dataInLevelDrop.forEach(function (div) {
+          var contentAttr = div.getAttribute("data-in-level-content");
+
+          // Если значения совпадают, добавляем класс active обоим элементам
+          if (menuAttr === contentAttr) {
+            button.classList.toggle("active");
+            div.classList.toggle("active");
+          }
         });
       });
     });
