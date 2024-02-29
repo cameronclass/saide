@@ -1,6 +1,6 @@
 /* Menu */
 .page-menu {
-    width: 300px;
+    width: 320px;
     height: 100%;
     border-radius: 0px 72px 0px 0px;
     border: 1px solid transparent;
@@ -23,7 +23,7 @@
         height: 100%;
         margin-top: 250px;
         position: absolute;
-        max-width: 300px;
+        max-width: 320px;
     }
 
     &__dot {
@@ -68,12 +68,27 @@
         gap: 14px;
         padding: 5px 20px;
         width: 100%;
-        max-width: 255px;
+        max-width: 275px;
         line-height: 1.1;
         margin-left: 42px;
         overflow-y: auto;
         height: 65vh;
         position: fixed;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: none;
+            background: $dark-blue;
+            border-radius: 2px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $yellow;
+            border-radius: 2px;
+        }
 
         &_drop {
             display: none;
