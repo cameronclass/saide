@@ -807,7 +807,7 @@ button {
       .page-menu__menu_drop.active {
         display: flex; }
       .page-menu__menu_drop_link {
-        display: block;
+        display: none;
         text-align: left;
         font-size: 16px;
         text-transform: capitalize;
@@ -885,6 +885,8 @@ button {
       opacity: 1; }
     .page-menu:hover .page-menu__menu_drop.active {
       display: flex; }
+    .page-menu:hover .page-menu__menu_drop_link {
+      display: block; }
     .page-menu:hover .page-menu__inside_block.active {
       display: flex; }
     .page-menu:hover .page-menu__inside {
