@@ -1,0 +1,1 @@
+let caseSwiperUp=new Swiper(".caseSwiperUp",{loop:!1,spaceBetween:0,freeMode:!0,watchSlidesProgress:!0,pagination:{el:".case .swiper-pagination",clickable:!0},navigation:{nextEl:".case .swiper-button-next",prevEl:".case .swiper-button-prev"}});

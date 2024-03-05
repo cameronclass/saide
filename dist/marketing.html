@@ -31,8 +31,7 @@
     <meta name="msapplication-navbutton-color" content="#000">
     <meta name="apple-mobile-web-app-status-bar-style" content="#000">
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/libs.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/app.css">
     <!-- Js -->
     <script src="assets/js/app.js"></script>
     <title>Маркетинг</title>
@@ -71,7 +70,7 @@
                                     <div class="page-menu__menu_item">
                                         <button data-in-menu="about" class="page-menu__menu_link">О нас</button>
                                         <div data-in-content="about" class="page-menu__menu_drop">
-                                            <a class="page-menu__menu_drop_link" href="about.html">История компании</a>
+                                            <a class="page-menu__menu_drop_link active" href="about.html">История компании</a>
                                             <a class="page-menu__menu_drop_link" href="blog.html">Блог</a>
                                             <a class="page-menu__menu_drop_link" href="faq.html">FAQ</a>
                                             <a class="page-menu__menu_drop_link" href="reviews.html">Отзывы</a>
@@ -289,123 +288,193 @@
                                     <!-- Кейсы -->
                                     <h3 class="group-title">Наши Кейсы</h3>
                                     <div class="case" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
-                                        <div class="case__block">
-                                            <div thumbsSlider="" class="swiper caseSwiper">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-thumb">
-                                                            <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
-                                                            <div class="caseSwiper-thumb__text">Задача</div>
+                                        <div class="swiper caseSwiperUp">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="case-block">
+                                                        <div class="case-tabs">
+                                                            <button class="tab-btn active case-tabs__btn" content-id="1">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/Purpose.svg">
+                                                                <div class="case-tabs__text">Задача</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="2">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/basic_requirements.svg">
+                                                                <div class="case-tabs__text">Основные требования</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="3">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/solution.svg">
+                                                                <div class="case-tabs__text">Решение</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="4">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/result.svg">
+                                                                <div class="case-tabs__text">Результат</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="5">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/complexity.svg">
+                                                                <div class="case-tabs__text">Сложность</div>
+                                                            </button>
                                                         </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-thumb">
-                                                            <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
-                                                            <div class="caseSwiper-thumb__text">Основные требования</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-thumb">
-                                                            <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
-                                                            <div class="caseSwiper-thumb__text">Решение</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-thumb">
-                                                            <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
-                                                            <div class="caseSwiper-thumb__text">Результат</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-thumb">
-                                                            <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
-                                                            <div class="caseSwiper-thumb__text">Сложность</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-thumb">
-                                                            <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
-                                                            <div class="caseSwiper-thumb__text">Задача</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="swiper caseSwiper2">
-                                                <div class="swiper-wrapper">
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-card">
-                                                            <div class="caseSwiper-card__img">
-                                                                <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                        <div class="case-tabs-content">
+                                                            <div class="content show" id="1">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ipsam accusamus vel magnam ipsa, nemo perferendis omnis ea quod fugit laboriosam qui voluptates voluptatum consequuntur consectetur repellendus nesciunt quis sit architecto. Odit eum quo maiores repellendus nesciunt, debitis hic sequi eius nemo illum, sit exercitationem qui error ducimus dicta dolorem dignissimos consequuntur doloribus temporibus asperiores ex! Velit corrupti enim dolorum vitae unde, ullam voluptatum sed saepe! Eos libero in ipsa laboriosam hic modi cumque eligendi quae, similique, ab nulla soluta ipsum numquam est ducimus quod tempora recusandae vero magnam. Deserunt, earum sequi. Numquam iusto nisi dolores illo. Nemo, quibusdam animi!</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="caseSwiper-card__content">
-                                                                <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                            <div class="content" id="2">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ad eveniet maiores nobis qui culpa enim deserunt quisquam porro fugit.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-card">
-                                                            <div class="caseSwiper-card__img">
-                                                                <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                            <div class="content" id="3">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ipsam accusamus vel magnam ipsa, nemo perferendis omnis ea quod fugit laboriosam qui voluptates voluptatum consequuntur consectetur repellendus nesciunt quis sit architecto. Odit eum quo maiores repellendus nesciunt, debitis hic sequi eius nemo illum, sit exercitationem qui error ducimus dicta dolorem dignissimos consequuntur doloribus temporibus asperiores ex! Velit corrupti enim dolorum vitae unde, ullam voluptatum sed saepe! Eos libero in ipsa laboriosam hic modi cumque eligendi quae, similique, ab nulla soluta ipsum numquam est ducimus quod tempora recusandae vero magnam. Deserunt, earum sequi. Numquam iusto nisi dolores illo. Nemo, quibusdam animi!</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="caseSwiper-card__content">
-                                                                <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                            <div class="content" id="4">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate mollitia quod praesentium autem soluta est tenetur quam dolorem suscipit commodi?
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-card">
-                                                            <div class="caseSwiper-card__img">
-                                                                <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
-                                                            </div>
-                                                            <div class="caseSwiper-card__content">
-                                                                <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-card">
-                                                            <div class="caseSwiper-card__img">
-                                                                <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
-                                                            </div>
-                                                            <div class="caseSwiper-card__content">
-                                                                <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-card">
-                                                            <div class="caseSwiper-card__img">
-                                                                <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
-                                                            </div>
-                                                            <div class="caseSwiper-card__content">
-                                                                <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-slide">
-                                                        <div class="caseSwiper-card">
-                                                            <div class="caseSwiper-card__img">
-                                                                <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
-                                                            </div>
-                                                            <div class="caseSwiper-card__content">
-                                                                <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                            <div class="content" id="5">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ipsam accusamus vel magnam ipsa, nemo perferendis omnis ea quod fugit laboriosam qui voluptates voluptatum consequuntur consectetur repellendus nesciunt quis sit architecto. Odit eum quo maiores repellendus nesciunt, debitis hic sequi eius nemo illum, sit exercitationem qui error ducimus dicta dolorem dignissimos consequuntur doloribus temporibus asperiores ex! Velit corrupti enim dolorum vitae unde, ullam voluptatum sed saepe! Eos libero in ipsa laboriosam hic modi cumque eligendi quae, similique, ab nulla soluta ipsum numquam est ducimus quod tempora recusandae vero magnam. Deserunt, earum sequi. Numquam iusto nisi dolores illo. Nemo, quibusdam animi!</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-
+                                                <div class="swiper-slide">
+                                                    <div class="case-block">
+                                                        <div class="case-tabs">
+                                                            <button class="tab-btn active case-tabs__btn" content-id="11">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/Purpose.svg">
+                                                                <div class="case-tabs__text">Задача</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="22">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/basic_requirements.svg">
+                                                                <div class="case-tabs__text">Основные требования</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="33">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/solution.svg">
+                                                                <div class="case-tabs__text">Решение</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="44">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/result.svg">
+                                                                <div class="case-tabs__text">Результат</div>
+                                                            </button>
+                                                            <button class="tab-btn case-tabs__btn" content-id="55">
+                                                                <img class="case-tabs__icon" src="assets/images/icons/marketing/complexity.svg">
+                                                                <div class="case-tabs__text">Сложность</div>
+                                                            </button>
+                                                        </div>
+                                                        <div class="case-tabs-content">
+                                                            <div class="content show" id="11">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ipsam accusamus vel magnam ipsa, nemo perferendis omnis ea quod fugit laboriosam qui voluptates voluptatum consequuntur consectetur repellendus nesciunt quis sit architecto. Odit eum quo maiores repellendus nesciunt, debitis hic sequi eius nemo illum, sit exercitationem qui error ducimus dicta dolorem dignissimos consequuntur doloribus temporibus asperiores ex! Velit corrupti enim dolorum vitae unde, ullam voluptatum sed saepe! Eos libero in ipsa laboriosam hic modi cumque eligendi quae, similique, ab nulla soluta ipsum numquam est ducimus quod tempora recusandae vero magnam. Deserunt, earum sequi. Numquam iusto nisi dolores illo. Nemo, quibusdam animi!</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="content" id="22">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo ad eveniet maiores nobis qui culpa enim deserunt quisquam porro fugit.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="content" id="33">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ipsam accusamus vel magnam ipsa, nemo perferendis omnis ea quod fugit laboriosam qui voluptates voluptatum consequuntur consectetur repellendus nesciunt quis sit architecto. Odit eum quo maiores repellendus nesciunt, debitis hic sequi eius nemo illum, sit exercitationem qui error ducimus dicta dolorem dignissimos consequuntur doloribus temporibus asperiores ex! Velit corrupti enim dolorum vitae unde, ullam voluptatum sed saepe! Eos libero in ipsa laboriosam hic modi cumque eligendi quae, similique, ab nulla soluta ipsum numquam est ducimus quod tempora recusandae vero magnam. Deserunt, earum sequi. Numquam iusto nisi dolores illo. Nemo, quibusdam animi!</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="content" id="44">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate mollitia quod praesentium autem soluta est tenetur quam dolorem suscipit commodi?
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="content" id="55">
+                                                                <div class="tabs-card">
+                                                                    <div class="tabs-card__img">
+                                                                        <img class="tabs-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                    </div>
+                                                                    <div class="tabs-card__content">
+                                                                        <div class="js-read-smore" data-read-smore-words="90">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, ipsam accusamus vel magnam ipsa, nemo perferendis omnis ea quod fugit laboriosam qui voluptates voluptatum consequuntur consectetur repellendus nesciunt quis sit architecto. Odit eum quo maiores repellendus nesciunt, debitis hic sequi eius nemo illum, sit exercitationem qui error ducimus dicta dolorem dignissimos consequuntur doloribus temporibus asperiores ex! Velit corrupti enim dolorum vitae unde, ullam voluptatum sed saepe! Eos libero in ipsa laboriosam hic modi cumque eligendi quae, similique, ab nulla soluta ipsum numquam est ducimus quod tempora recusandae vero magnam. Deserunt, earum sequi. Numquam iusto nisi dolores illo. Nemo, quibusdam animi!</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="swiper-button-next"></div>
                                         <div class="swiper-button-prev"></div>
-
                                         <div class="casePagination">
                                             <div class="swiper-pagination"></div>
                                         </div>
                                     </div>
-
-
 
                                     <!-- Отзывы -->
                                     <h3 class="group-title mt-5">Отзывы</h3>
@@ -468,7 +537,6 @@
                                         </div>
                                     </div>
 
-
                                     <div class="question-block">
                                         <div class="question-block__title">
                                             <div class="question-block__title_text">
@@ -501,31 +569,99 @@
                         </div>
 
 
-                        <script>
-                            var caseSwiper = new Swiper(".caseSwiper", {
-                                loop: true,
-                                spaceBetween: 0,
-                                slidesPerView: 5,
-                                freeMode: true,
-                                watchSlidesProgress: true,
 
-                            });
-                            var caseSwiper2 = new Swiper(".caseSwiper2", {
-                                loop: true,
-                                spaceBetween: 0,
-                                navigation: {
-                                    nextEl: ".swiper-button-next",
-                                    prevEl: ".swiper-button-prev",
-                                },
-                                thumbs: {
-                                    swiper: caseSwiper,
-                                },
-                                pagination: {
-                                    el: ".case .swiper-pagination",
-                                    clickable: true,
-                                },
-                            });
-                        </script>
+                        <!--  <div class="swiper-slide">
+                                                    <div class="case__block">
+                                                        <div thumbsSlider="" class="swiper caseSwiper">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-thumb">
+                                                                        <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
+                                                                        <div class="caseSwiper-thumb__text">Задача</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-thumb">
+                                                                        <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
+                                                                        <div class="caseSwiper-thumb__text">Основные требования</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-thumb">
+                                                                        <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
+                                                                        <div class="caseSwiper-thumb__text">Решение</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-thumb">
+                                                                        <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
+                                                                        <div class="caseSwiper-thumb__text">Результат</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-thumb">
+                                                                        <img class="caseSwiper-thumb__icon" src="assets/images/icons/warehouse.svg">
+                                                                        <div class="caseSwiper-thumb__text">Сложность</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper caseSwiper2">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-card">
+                                                                        <div class="caseSwiper-card__img">
+                                                                            <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="caseSwiper-card__content">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-card">
+                                                                        <div class="caseSwiper-card__img">
+                                                                            <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="caseSwiper-card__content">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-card">
+                                                                        <div class="caseSwiper-card__img">
+                                                                            <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="caseSwiper-card__content">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-card">
+                                                                        <div class="caseSwiper-card__img">
+                                                                            <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="caseSwiper-card__content">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <div class="caseSwiper-card">
+                                                                        <div class="caseSwiper-card__img">
+                                                                            <img class="caseSwiper-card__img_item" src="assets/images/blog/1.jpg" alt="">
+                                                                        </div>
+                                                                        <div class="caseSwiper-card__content">
+                                                                            <p>Здесь мы собрали отзывы наших клиентов, которые нас радуют и помогают достигать новых вершин. Количество интернет-пользователей Китая достигает 1 млрд человек и, при всём многообразии его интернет-пространства, львиную долю в нем занимают социальные сети. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми. Когда-то бывшие мессенджеры, они сегодня представляют собой целые экосистемы, где стандартный функционал тесно переплетается с онлайн-платежами, ритейлом и играми.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
 
                     </div>
                 </div>
