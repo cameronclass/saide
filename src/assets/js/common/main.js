@@ -42,30 +42,34 @@ if (menuRight)
   });
 
 /* Tabs */
-const tabButtons = document.querySelectorAll(".tab-btn");
 
-tabButtons.forEach((tab) => {
-  tab.addEventListener("click", () => tabClicked(tab));
+const caseBlock = document.querySelectorAll(".case-block");
+
+caseBlock.forEach((item) => {
+  item.addEventListener("click", function (event) {
+    // Удаляем класс "active" со всех .tab-btn внутри текущего .case-block
+    item.querySelectorAll(".tab-btn").forEach((tabBtn) => {
+      tabBtn.classList.remove("active");
+    });
+
+    if (event.target.classList.contains("tab-btn")) {
+      event.target.classList.add("active");
+
+      let tabId = event.target.getAttribute("content-id");
+
+      let tabContent = item.querySelectorAll(".content");
+
+      tabContent.forEach((content) => {
+        content.classList.remove("show");
+
+        let contentID = content.getAttribute("id");
+        if (tabId === contentID) {
+          content.classList.add("show");
+        }
+      });
+    }
+  });
 });
-
-function tabClicked(tab) {
-  tabButtons.forEach((tab) => {
-    tab.classList.remove("active");
-  });
-  tab.classList.add("active");
-
-  const contents = document.querySelectorAll(".content");
-
-  contents.forEach((content) => {
-    content.classList.remove("show");
-  });
-
-  const contentId = tab.getAttribute("content-id");
-  const contentSelected = document.getElementById(contentId);
-
-  contentSelected.classList.add("show");
-  //console.log(contentId)
-}
 
 // Init JS
 const ReadSmore = window.readSmore;
