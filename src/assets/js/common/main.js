@@ -64,7 +64,7 @@ caseBlock.forEach((item) => {
 
       let tabId = target.getAttribute("content-id");
 
-      let tabContent = document.querySelectorAll(".content");
+      let tabContent = item.querySelectorAll(".content");
 
       tabContent.forEach((content) => {
         content.classList.remove("show");
