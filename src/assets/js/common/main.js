@@ -47,17 +47,24 @@ const caseBlock = document.querySelectorAll(".case-block");
 
 caseBlock.forEach((item) => {
   item.addEventListener("click", function (event) {
-    // Удаляем класс "active" со всех .tab-btn внутри текущего .case-block
-    item.querySelectorAll(".tab-btn").forEach((tabBtn) => {
-      tabBtn.classList.remove("active");
-    });
+    let target = event.target;
 
-    if (event.target.classList.contains("tab-btn")) {
-      event.target.classList.add("active");
+    // Проверяем, имеет ли элемент класс "tab-btn" или его родительские элементы
+    while (target !== item && !target.classList.contains("tab-btn")) {
+      target = target.parentElement;
+    }
 
-      let tabId = event.target.getAttribute("content-id");
+    if (target.classList.contains("tab-btn")) {
+      // Удаляем класс "active" со всех .tab-btn внутри текущего .case-block
+      item.querySelectorAll(".tab-btn").forEach((tabBtn) => {
+        tabBtn.classList.remove("active");
+      });
 
-      let tabContent = item.querySelectorAll(".content");
+      target.classList.add("active");
+
+      let tabId = target.getAttribute("content-id");
+
+      let tabContent = document.querySelectorAll(".content");
 
       tabContent.forEach((content) => {
         content.classList.remove("show");
