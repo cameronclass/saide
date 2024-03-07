@@ -418,3 +418,50 @@
 
     &__title {}
 }
+
+.normal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    &-bordered {
+        padding: 20px;
+        border: 1px solid rgb(240, 145, 35);
+        border-radius: 15px;
+    }
+
+    &__img {
+        height: 90px;
+        object-fit: contain;
+    }
+
+    &__text {}
+
+    &__title{
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__lists {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__list {
+        position: relative;
+        text-align: center;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: rgb(126, 143, 154);
+            background: linear-gradient(90deg, rgba(126, 143, 154, 0.43323266806722693) 0%, rgba(126, 143, 154, 1) 20%, rgba(126, 143, 154, 1) 80%, rgba(126, 143, 154, 0.43323266806722693) 100%);
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+    }
+}
