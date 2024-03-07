@@ -21,6 +21,11 @@
             height: 80px;
             box-shadow: 0 0 100px 100px #1f252ee6;
             background: linear-gradient(180.00deg, rgb(31, 37, 46), rgba(31, 37, 46, 0.9) 66.146%);
+
+            @include mobile {
+                background: transparent;
+                box-shadow: none;
+            }
         }
     }
 

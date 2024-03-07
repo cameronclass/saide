@@ -340,3 +340,81 @@
 .read-more.is-inline+span {
     margin-left: 0.25em
 }
+
+
+
+/* Translate Card */
+.translate-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.translate-card {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(100, 108, 120);
+    border-radius: 15px;
+    background: linear-gradient(131.87deg, rgb(32, 41, 55) -4.798%, rgb(16, 21, 30) 96.772%);
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        max-width: calc(100% - 120px);
+        line-height: 1.2;
+    }
+
+    &__icon {
+        width: 120px;
+        height: 90px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgb(103, 111, 123);
+        border-bottom-left-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.active {
+            background-color: $yellow;
+        }
+
+        &_img {
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        &_circle {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        &_title {
+            font-weight: 400;
+        }
+    }
+
+    &__title {}
+}

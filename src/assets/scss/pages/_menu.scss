@@ -588,6 +588,10 @@
     background: rgb(31, 37, 46);
     background: linear-gradient(180deg, rgba(31, 37, 46, 0) 0%, rgba(31, 37, 46, 0.9206276260504201) 25%, rgba(31, 37, 46, 1) 75%, rgba(31, 37, 46, 0) 100%);
 
+    @include mobile {
+        background: transparent;
+    }
+
     &__block {
         display: flex;
         justify-content: space-between;
@@ -609,6 +613,7 @@
 
         @include mobile {
             max-width: 100%;
+            height: 80%;
         }
 
 
@@ -658,6 +663,39 @@
                         background: $yellow;
                     }
                 }
+
+                
+            }
+
+            @include mobile {
+                padding: 10px 5px;
+                font-size: 24px;
+                text-transform: uppercase;
+                width: 100%;
+                position: relative;
+
+                &.active::after,
+                &::after {
+                    content: "\276F";
+                    font-size: 24px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+
+                &.active::after {
+                    content: "\276F";
+                    font-size: 24px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    background: transparent;
+                    width: auto;
+                    height: auto;
+                    bottom: auto;
+                }
             }
 
 
@@ -689,6 +727,15 @@
 
         &.active {
             display: flex;
+
+            @include mobile {
+                position: absolute;
+                top: 0;
+                left: 5%;
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto;
+            }
         }
 
         &__block {
@@ -701,6 +748,10 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
             gap: 15px;
+
+            @include mobile {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         &__card {
@@ -897,6 +948,42 @@
 
         @include laptop {
             max-width: 100%;
+        }
+    }
+}
+
+
+.main-bg {
+    width: 100%;
+    background: linear-gradient(180deg, #1F252E 0%, rgba(31, 37, 46, 0.90) 66.15%);
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include mobile {
+        box-shadow: 0px 9px 10px 0px rgba(0, 0, 0, 0.05);
+        background: linear-gradient(131.87deg, rgb(32, 41, 55) -6.869%, rgb(16, 21, 30) 91.72%);
+    }
+
+    &__overlay {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        background: radial-gradient(50.05% 50.05% at 50% 27.59%, rgba(31, 37, 46, 0.00) 100%);
+    }
+
+    &__img {
+        width: 100%;
+        height: 100vh;
+        opacity: 0.05;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+
+        @include mobile {
+            display: none;
         }
     }
 }
