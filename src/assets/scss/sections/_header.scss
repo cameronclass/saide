@@ -9,6 +9,10 @@
         height: 20vh;
         padding-left: 50px;
 
+        @include mobile {
+            padding-left: 0;
+        }
+
         &_bg {
             position: absolute;
             top: 0;
@@ -26,6 +30,10 @@
         justify-content: flex-start;
         position: relative;
         z-index: 2;
+
+        @include mobile {
+            width: 80px;
+        }
     }
 
     /* Wisetao */

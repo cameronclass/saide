@@ -86,3 +86,12 @@ const readMoreEls = document.querySelectorAll(".js-read-smore");
 
 // Init
 ReadSmore(readMoreEls).init();
+
+window.addEventListener("scroll", function () {
+  var pageMenuBlock = document.querySelector(".page-menu__block");
+  if (window.scrollY > 200) {
+    pageMenuBlock.classList.add("active");
+  } else {
+    pageMenuBlock.classList.remove("active");
+  }
+});

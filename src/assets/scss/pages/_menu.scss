@@ -21,9 +21,17 @@
         display: flex;
         width: 100%;
         height: 100%;
-        margin-top: 250px;
+        margin-top: 150px;
         position: absolute;
         max-width: 320px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 300ms ease;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     &__dot {
@@ -257,14 +265,34 @@
         position: relative;
         z-index: 2;
 
+        @include mobile {
+            width: 100%;
+            height: 200px;
+            box-shadow: 0px 0px 200px 200px #0D0F14;
+            background: #0D0F14;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
         &_img {
             width: 108px;
+
+            @include mobile {
+                width: 77px;
+            }
         }
 
         &_text {
             font-weight: 300;
             font-size: 14px;
             margin-top: 4px;
+
+            @include mobile {
+                font-size: 11px;
+            }
         }
     }
 
@@ -274,6 +302,11 @@
         justify-content: center;
         align-items: center;
 
+        @include mobile {
+            width: 100%;
+            text-align: center;
+        }
+
         &_line {
             position: absolute;
             top: 50%;
@@ -282,6 +315,10 @@
             width: 1px;
             z-index: 1;
             height: 600px;
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &_1,
@@ -293,6 +330,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @include mobile {
+                display: none;
+            }
         }
 
         &_1 {
@@ -301,6 +342,18 @@
             border-radius: 50%;
             background-color: #1e232c;
             box-shadow: 0 0 150px 150px #1e232c;
+
+            @include mobile {
+                display: block;
+                width: 360px;
+                height: 360px;
+                transform: rotate(90deg);
+                transform-origin: top;
+                position: absolute;
+                z-index: 3;
+                background-color: transparent;
+                box-shadow: none;
+            }
 
             .svg-left {
 
@@ -327,16 +380,28 @@
         &_3 {
             width: 280px;
 
+            @include mobile {
+                display: block;
+                width: 190px;
+            }
         }
 
         &_4 {
             width: 260px;
 
+            @include mobile {
+                display: block;
+                width: 180px;
+            }
         }
 
         &_5 {
             width: 240px;
 
+            @include mobile {
+                display: block;
+                width: 170px;
+            }
         }
     }
 
@@ -492,6 +557,11 @@
         font-size: 30px;
         font-weight: 700;
 
+        @include mobile {
+            width: 100%;
+            left: 0;
+            bottom: -40px;
+        }
     }
 
     &__to {
@@ -501,6 +571,11 @@
         font-size: 30px;
         font-weight: 700;
 
+        @include mobile {
+            width: 100%;
+            right: 0;
+            top: -40px;
+        }
 
     }
 }
@@ -520,9 +595,8 @@
         height: 100%;
         gap: 30px;
 
-        @include laptop {
+        @include mobile {
             flex-direction: column;
-            height: auto;
         }
     }
 
@@ -533,9 +607,8 @@
         width: 100%;
         max-width: 180px;
 
-        @include laptop {
+        @include mobile {
             max-width: 100%;
-            justify-content: center;
         }
 
 
@@ -545,11 +618,9 @@
             align-items: flex-end;
             gap: 10px;
 
-            @include laptop {
-                justify-content: space-evenly;
-                flex-direction: row;
+            @include mobile {
                 width: 100%;
-                gap: 10px;
+                align-items: flex-start
             }
         }
 
@@ -596,6 +667,10 @@
             width: 3px;
             height: 100%;
             background: linear-gradient(#F0912300, #F09123 10%, #F09123 90%, #F0912300);
+
+            @include mobile {
+                display: none;
+            }
         }
     }
 
