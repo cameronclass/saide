@@ -5377,7 +5377,7 @@ button {
   flex-wrap: wrap; }
 
 .content-page__page {
-  width: 75%;
+  width: 80%;
   max-width: 1200px;
   margin-bottom: 50px;
   position: relative;
@@ -5692,6 +5692,79 @@ button {
       width: 11px; }
   .service-card:hover {
     color: white; }
+
+/* Timeline */
+.timeline {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+.timeline-content {
+  padding: 20px;
+  color: white;
+  padding: 20px;
+  transition: 0.4s ease;
+  overflow-wrap: break-word !important;
+  margin-bottom: 20px; }
+
+.timeline-component {
+  margin: 0px 20px 20px 20px; }
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr; }
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #F27121, #F27121, #F27121);
+    width: 3px;
+    height: 100%; }
+  .main-middle {
+    opacity: 0; }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #F27121, #F27121);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); } }
+
+/* Second */
+.timeline-second {
+  width: 100%;
+  margin: auto; }
+  .timeline-second p {
+    border-color: #F09123;
+    margin: 0;
+    padding: 30px;
+    position: relative;
+    border: 1px solid #F09123;
+    border-radius: 15px; }
+  .timeline-second p:nth-child(even) {
+    border-left: 1px solid transparent;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-left: 15px;
+    border-right: 2px solid #F09123; }
+  .timeline-second p:nth-child(odd) {
+    border-right: 1px solid transparent;
+    border-left: 2px solid #F09123;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: 15px; }
+  .timeline-second p:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0; }
+  .timeline-second p:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: none; }
 
 /* Sections for all pages */
 .header {
