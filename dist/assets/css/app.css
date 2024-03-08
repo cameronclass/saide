@@ -5693,78 +5693,75 @@ button {
   .service-card:hover {
     color: white; }
 
-/* Timeline */
-.timeline {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
-
-.timeline-content {
-  padding: 20px;
-  color: white;
-  padding: 20px;
-  transition: 0.4s ease;
-  overflow-wrap: break-word !important;
-  margin-bottom: 20px; }
-
-.timeline-component {
-  margin: 0px 20px 20px 20px; }
-
-@media screen and (min-width: 768px) {
-  .timeline {
-    display: grid;
-    grid-template-columns: 1fr 3px 1fr; }
-  .timeline-middle {
-    position: relative;
-    background-image: linear-gradient(45deg, #F27121, #F27121, #F27121);
-    width: 3px;
-    height: 100%; }
-  .main-middle {
-    opacity: 0; }
-  .timeline-circle {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #F27121, #F27121, #F27121);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); } }
-
-/* Second */
+/* Timeline Container */
 .timeline-second {
-  width: 100%;
-  margin: auto; }
-  .timeline-second p {
-    border-color: #F09123;
-    margin: 0;
-    padding: 30px;
-    position: relative;
-    border: 1px solid #F09123;
-    border-radius: 15px; }
-  .timeline-second p:nth-child(even) {
-    border-left: 1px solid transparent;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: 15px;
-    border-right: 2px solid #F09123; }
-  .timeline-second p:nth-child(odd) {
-    border-right: 1px solid transparent;
-    border-left: 2px solid #F09123;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-right: 15px; }
-  .timeline-second p:first-child {
-    border-top: 0;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0; }
-  .timeline-second p:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom: none; }
+  background: var(--primary-color);
+  margin: 20px auto;
+  padding: 20px; }
+  .timeline-second__card {
+    position: relative; }
+    .timeline-second__card:nth-child(odd) {
+      padding: 30px 50px; }
+      .timeline-second__card:nth-child(odd) .timeline-second__img {
+        left: -90px; }
+    .timeline-second__card:nth-child(even) {
+      padding: 30px 50px; }
+      .timeline-second__card:nth-child(even) .timeline-second__img {
+        left: inherit;
+        right: -90px; }
+    .timeline-second__card::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      border: solid #F09123; }
+    .timeline-second__card:nth-child(odd)::before {
+      left: 0px;
+      top: -2px;
+      bottom: -2px;
+      border-width: 2px 0 2px 2px;
+      border-radius: 20px 0 0 20px; }
+    .timeline-second__card:nth-child(even)::before {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-width: 2px 2px 2px 0;
+      border-radius: 0 20px 20px 0; }
+    .timeline-second__card:first-child::before {
+      border-top: 0;
+      border-top-left-radius: 0; }
+    .timeline-second__card:last-child:nth-child(odd)::before {
+      border-bottom: 0;
+      border-bottom-left-radius: 0; }
+    .timeline-second__card:last-child:nth-child(even)::before {
+      border-bottom: 0;
+      border-bottom-right-radius: 0; }
+    .timeline-second__card:nth-child(even) > .info > .title {
+      text-align: right; }
+    .timeline-second__card:nth-child(odd) > .info > .title::before {
+      left: -45px; }
+    .timeline-second__card:nth-child(even) > .info > .title::before {
+      right: -45px; }
+  .timeline-second__info {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative; }
+  .timeline-second__title {
+    color: white; }
+  .timeline-second__img {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F09123;
+    border-radius: 50%;
+    padding: 20px; }
+    .timeline-second__img_item {
+      height: 40px;
+      width: 40px;
+      object-fit: contain; }
 
 /* Sections for all pages */
 .header {
@@ -7765,7 +7762,7 @@ button {
 .tabs-card {
   border-top: 1px solid white;
   display: flex;
-  align-items: center; }
+  align-items: flex-start; }
   .tabs-card__img {
     width: 41%; }
     .tabs-card__img_item {
