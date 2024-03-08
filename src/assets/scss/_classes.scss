@@ -268,6 +268,115 @@
 
 
 /* Timeline Container */
+.timeline-first {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 0;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background: $yellow;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+    }
+
+    &__container {
+        padding: 15px 30px;
+        position: relative;
+        background: inherit;
+        width: 50%;
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            left: 50%;
+
+            &::after {
+                left: -8px;
+            }
+
+            &::before {
+                left: 8px;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: calc(50% - 8px);
+            right: -8px;
+            background: #ffffff;
+            border: 2px solid $yellow;
+            border-radius: 16px;
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            top: calc(50% - 1px);
+            right: 8px;
+            background: $yellow;
+            z-index: 1;
+        }
+    }
+
+
+    &__icon {
+        position: absolute;
+        display: inline-block;
+        padding: 10px;
+        top: calc(50% - 27px);
+        background: $yellow;
+        border: 2px solid $yellow;
+        border-radius: 40px;
+        text-align: center;
+        font-size: 18px;
+        z-index: 1;
+
+        &_item {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+    }
+
+    &__container.left &__icon {
+        right: 45px;
+    }
+
+    &__container.right &__icon {
+        left: 45px;
+    }
+
+    &__content {
+        padding: 15px 80px 15px 15px;
+        border: 1px solid #646c78;
+        background: linear-gradient(131.87deg, #202937 -4.798%, #10151e 96.772%);
+        position: relative;
+        border-radius: 15px;
+    }
+
+    &__container.right &__content {
+        padding: 15px 15px 15px 80px;
+        border-radius: 15px;
+    }
+
+}
+
+
 .timeline-second {
     background: var(--primary-color);
     margin: 20px auto;

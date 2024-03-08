@@ -5694,6 +5694,82 @@ button {
     color: white; }
 
 /* Timeline Container */
+.timeline-first {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0; }
+  .timeline-first::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #F09123;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px; }
+  .timeline-first__container {
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+    width: 50%; }
+    .timeline-first__container.left {
+      left: 0; }
+    .timeline-first__container.right {
+      left: 50%; }
+      .timeline-first__container.right::after {
+        left: -8px; }
+      .timeline-first__container.right::before {
+        left: 8px; }
+    .timeline-first__container::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: calc(50% - 8px);
+      right: -8px;
+      background: #ffffff;
+      border: 2px solid #F09123;
+      border-radius: 16px;
+      z-index: 1; }
+    .timeline-first__container::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      top: calc(50% - 1px);
+      right: 8px;
+      background: #F09123;
+      z-index: 1; }
+  .timeline-first__icon {
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    top: calc(50% - 27px);
+    background: #F09123;
+    border: 2px solid #F09123;
+    border-radius: 40px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1; }
+    .timeline-first__icon_item {
+      width: 30px;
+      height: 30px;
+      object-fit: contain; }
+  .timeline-first__container.left .timeline-first__icon {
+    right: 45px; }
+  .timeline-first__container.right .timeline-first__icon {
+    left: 45px; }
+  .timeline-first__content {
+    padding: 15px 80px 15px 15px;
+    border: 1px solid #646c78;
+    background: linear-gradient(131.87deg, #202937 -4.798%, #10151e 96.772%);
+    position: relative;
+    border-radius: 15px; }
+  .timeline-first__container.right .timeline-first__content {
+    padding: 15px 15px 15px 80px;
+    border-radius: 15px; }
+
 .timeline-second {
   background: var(--primary-color);
   margin: 20px auto;
