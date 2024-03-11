@@ -81,10 +81,8 @@ caseBlock.forEach((item) => {
 // Init JS
 const ReadSmore = window.readSmore;
 
-// target all read more elements
 const readMoreEls = document.querySelectorAll(".js-read-smore");
 
-// Init
 ReadSmore(readMoreEls).init();
 
 window.addEventListener("scroll", function () {
