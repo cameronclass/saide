@@ -25,3 +25,13 @@ new Swiper(".gallery-block__swiper .swiper", {
     prevEl: ".gallery-block__swiper .swiper-button-prev",
   },
 });
+
+new Swiper(".photo-studio .swiper", {
+  slidesPerView: 3,
+  loop: true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".photo-studio .swiper-button-next",
+    prevEl: ".photo-studio .swiper-button-prev",
+  },
+});
