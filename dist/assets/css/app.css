@@ -8092,4 +8092,23 @@ button {
   align-items: center;
   margin: 20px auto; }
 
+.quote-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  position: relative; }
+  .quote-block::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(#F0912300 0%, #F09123 20%, #F09123 80%, #F0912300);
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .quote-block__icon {
+    width: 14px;
+    height: 14px;
+    object-fit: contain; }
+
 /* Sliders */
