@@ -590,6 +590,8 @@
 
     @include mobile {
         background: transparent;
+        height: 100vh;
+        align-items: center;
     }
 
     &__block {
@@ -601,6 +603,7 @@
 
         @include mobile {
             flex-direction: column;
+            gap: 0;
         }
     }
 
@@ -612,8 +615,11 @@
         max-width: 180px;
 
         @include mobile {
-            max-width: 100%;
-            height: 80%;
+            max-width: 90%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 5%;
         }
 
 
@@ -664,7 +670,7 @@
                     }
                 }
 
-                
+
             }
 
             @include mobile {
@@ -715,6 +721,14 @@
     &__second {
         width: 100%;
         max-width: 1200px;
+
+        @include mobile {
+            max-width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
 
     &-item {
@@ -724,17 +738,17 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 20px;
+        height: 100%;
+        background: linear-gradient(131.87deg, #202937 -6.869%, #10151e 91.72%);
 
         &.active {
             display: flex;
 
-            @include mobile {
-                position: absolute;
-                top: 0;
-                left: 5%;
-                width: 100%;
-                max-width: 90%;
-                margin: 0 auto;
+            .main-menu-item__cards {
+                left: 0;
+                height: 100%;
+                max-width: 100%;
+                padding: 20px;
             }
         }
 
@@ -751,6 +765,18 @@
 
             @include mobile {
                 grid-template-columns: 1fr 1fr;
+                margin-top: auto;
+                margin-bottom: auto;
+
+
+                position: absolute;
+                top: 0;
+                left: 105%;
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto;
+                z-index: 3;
+                transition: 300ms ease;
             }
         }
 
@@ -846,6 +872,18 @@
             display: grid;
             gap: 15px;
             grid-template-columns: repeat(6, 1fr);
+
+            @include mobile {
+                position: absolute;
+                top: 0;
+                left: 105%;
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto;
+                z-index: 2;
+                transition: 300ms ease;
+                grid-template-columns: repeat(2, 1fr);
+            }
 
             &_block {
                 width: calc(200% + 15px);

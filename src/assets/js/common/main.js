@@ -93,3 +93,7 @@ window.addEventListener("scroll", function () {
     pageMenuBlock.classList.remove("active");
   }
 });
+
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});
