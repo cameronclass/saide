@@ -13,3 +13,47 @@
         background-color: darken($color: $yellow, $amount: 25);
     }
 }
+
+.btn-primary {
+    display: flex;
+    background-color: $yellow;
+    padding: 10px 55px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    transition: 300ms ease;
+
+    &:hover {
+        background-color: darken($color: $yellow, $amount: 15);
+    }
+}
+
+
+
+.main-btn {
+    border-radius: 10px;
+    color: white;
+    background: $yellow;
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 13px;
+    margin: 10px 0;
+    text-align: center;
+
+    &:hover {
+        color: white;
+        background-color: darken($color: $yellow, $amount: 10);
+    }
+
+    &._big {
+        padding: 7px 30px;
+        font-size: 16px;
+    }
+
+    &._white {
+        background-color: #fff;
+        color: black;
+        font-weight: 700;
+    }
+}

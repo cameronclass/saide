@@ -94,6 +94,16 @@ window.addEventListener("scroll", function () {
   }
 });
 
-Fancybox.bind("[data-fancybox]", {
-  // Your custom options
+Fancybox.bind("[data-fancybox]", {});
+
+let caclButton = document.querySelector(".js-calc-open");
+let calcPanel = document.querySelector(".calc-panel-block");
+let calcPanelClose = document.querySelector(".js-calc-close");
+
+caclButton.addEventListener("click", function () {
+  calcPanel.classList.toggle("active");
+});
+
+calcPanelClose.addEventListener("click", function () {
+  calcPanel.classList.remove("active");
 });

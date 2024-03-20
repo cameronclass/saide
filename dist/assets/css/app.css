@@ -6399,6 +6399,38 @@ html.with-fancybox body.hide-scrollbar {
     color: white;
     background-color: #8a4e09; }
 
+.btn-primary {
+  display: flex;
+  background-color: #F09123;
+  padding: 10px 55px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  transition: 300ms ease; }
+  .btn-primary:hover {
+    background-color: #ba6a0d; }
+
+.main-btn {
+  border-radius: 10px;
+  color: white;
+  background: #F09123;
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 13px;
+  margin: 10px 0;
+  text-align: center; }
+  .main-btn:hover {
+    color: white;
+    background-color: #d2770e; }
+  .main-btn._big {
+    padding: 7px 30px;
+    font-size: 16px; }
+  .main-btn._white {
+    background-color: #fff;
+    color: black;
+    font-weight: 700; }
+
 html,
 body {
   font-family: "Roboto Condensed", sans-serif;
@@ -6458,18 +6490,6 @@ button {
     outline: none;
     border: none; }
 
-.btn-primary {
-  display: flex;
-  background-color: #F09123;
-  padding: 10px 55px;
-  border-radius: 50px;
-  color: white;
-  font-weight: 600;
-  font-size: 17px;
-  transition: 300ms ease; }
-  .btn-primary:hover {
-    background-color: #ba6a0d; }
-
 .main-input {
   border-radius: 10px;
   background: #2F3743;
@@ -6480,22 +6500,6 @@ button {
   .main-input::placeholder {
     color: #646c78;
     opacity: 1; }
-
-.main-btn {
-  border-radius: 10px;
-  color: white;
-  background: #F09123;
-  width: 100%;
-  padding: 6px 10px;
-  font-size: 13px;
-  margin: 10px 0;
-  text-align: center; }
-  .main-btn:hover {
-    color: white;
-    background-color: #d2770e; }
-  .main-btn._big {
-    padding: 7px 30px;
-    font-size: 16px; }
 
 /* Containers */
 .container {
@@ -9308,5 +9312,95 @@ button {
 .fancy-link {
   display: flex;
   width: 100%; }
+
+.calc-panel-block {
+  border-radius: 72px 0 0 0;
+  border: 1px solid #F09123;
+  background: #0D0F14;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 350px;
+  z-index: 999;
+  height: 100vh;
+  padding: 60px 35px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms ease; }
+  .calc-panel-block.active {
+    visibility: visible;
+    opacity: 1; }
+  .calc-panel-block::-webkit-scrollbar {
+    width: 2px; }
+  .calc-panel-block::-webkit-scrollbar-track {
+    box-shadow: none;
+    background: #0D0F14;
+    border-radius: 2px; }
+  .calc-panel-block::-webkit-scrollbar-thumb {
+    background: #F09123;
+    border-radius: 2px; }
+  .calc-panel-block__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2; }
+    .calc-panel-block__title._orange {
+      background-color: #F09123;
+      padding: 10px;
+      border-radius: 10px; }
+  .calc-panel-block__subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.3; }
+  .calc-panel-block__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px; }
+  .calc-panel-block__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px; }
+  .calc-panel-block__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 4.8px 0px white;
+    padding: 6px; }
+    .calc-panel-block__btn_icon {
+      width: auto;
+      height: 20px; }
+    .calc-panel-block__btn._telegram {
+      border-color: #0088CC;
+      box-shadow: 0px 0px 4.8px 0px #0088CC; }
+    .calc-panel-block__btn._whatsapp {
+      border-color: #25D366;
+      box-shadow: 0px 0px 4.8px 0px #25D366; }
+    .calc-panel-block__btn._vk {
+      border-color: #0077FF;
+      box-shadow: 0px 0px 4.8px 0px #0077FF; }
+    .calc-panel-block__btn:hover {
+      border-color: white;
+      color: white;
+      box-shadow: 0px 0px 4.8px 0px white; }
+
+.js-calc-close {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  display: flex; }
+  .js-calc-close svg {
+    fill: white; }
 
 /* Sliders */
