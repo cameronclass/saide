@@ -100,10 +100,11 @@ let caclButton = document.querySelector(".js-calc-open");
 let calcPanel = document.querySelector(".calc-panel-block");
 let calcPanelClose = document.querySelector(".js-calc-close");
 
-caclButton.addEventListener("click", function () {
-  calcPanel.classList.toggle("active");
-});
-
-calcPanelClose.addEventListener("click", function () {
-  calcPanel.classList.remove("active");
-});
+if (caclButton)
+  caclButton.addEventListener("click", function () {
+    calcPanel.classList.toggle("active");
+  });
+if (calcPanelClose)
+  calcPanelClose.addEventListener("click", function () {
+    calcPanel.classList.remove("active");
+  });
