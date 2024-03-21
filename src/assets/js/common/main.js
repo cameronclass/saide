@@ -96,15 +96,20 @@ window.addEventListener("scroll", function () {
 
 Fancybox.bind("[data-fancybox]", {});
 
-let caclButton = document.querySelector(".js-calc-open");
-let calcPanel = document.querySelector(".calc-panel-block");
-let calcPanelClose = document.querySelector(".js-calc-close");
+let askButton = document.querySelectorAll(".js-ask-open");
+let askPanel = document.querySelector(".ask-panel");
+let askPanelClose = document.querySelector(".js-ask-close");
 
-if (caclButton)
-  caclButton.addEventListener("click", function () {
-    calcPanel.classList.toggle("active");
+if (askButton)
+  askButton.forEach((item) => {
+    item.addEventListener("click", () => {
+      askPanel.classList.toggle("active");
+    });
   });
-if (calcPanelClose)
-  calcPanelClose.addEventListener("click", function () {
-    calcPanel.classList.remove("active");
+
+if (askPanelClose)
+  askPanelClose.addEventListener("click", function () {
+    askPanel.classList.remove("active");
   });
+
+Splitting();

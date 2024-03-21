@@ -1,6 +1,7 @@
 @@include("libs/swiper.js")
 @@include("libs/readmore.js")
 @@include("libs/fancybox.js")
+@@include("libs/splitting.js")
 
 document.addEventListener("DOMContentLoaded", () => {
 
