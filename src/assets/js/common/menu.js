@@ -10,6 +10,26 @@ const mainMenuJs = document.querySelector(".js-main-menu");
 const leftMenuJs = document.querySelector(".js-left-menu");
 const rightMenuJS = document.querySelector(".js-right-menu");
 
+const mobileFirstLayerLinks = document.querySelectorAll(
+  ".js-right-menu .main-menu__main_link"
+);
+const rightMenuSecondLayer = document.querySelector(
+  ".js-right-menu .main-menu__second"
+);
+const rightMenuSecondLayerBack = document.querySelector(
+  ".js-right-menu .mobile-back-1"
+);
+
+const mobileFirstLayerLinksLeft = document.querySelectorAll(
+  ".js-left-menu .main-menu__main_link"
+);
+const leftMenuSecondLayer = document.querySelector(
+  ".js-left-menu .main-menu__second"
+);
+const leftMenuSecondLayerBack = document.querySelector(
+  ".js-left-menu .mobile-back-1"
+);
+
 if (mainSelectLinksRight)
   mainSelectLinksRight.forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -34,8 +54,36 @@ if (jsGoIndex)
       mainMenuJs.classList.add("active");
       leftMenuJs.classList.remove("active");
       rightMenuJS.classList.remove("active");
+      rightMenuSecondLayer.classList.remove("active");
+      leftMenuSecondLayer.classList.remove("active");
     });
   });
+
+//
+if (mobileFirstLayerLinks)
+  mobileFirstLayerLinks.forEach((button) => {
+    button.addEventListener("click", () => {
+      rightMenuSecondLayer.classList.add("active");
+    });
+  });
+
+if (rightMenuSecondLayerBack)
+  rightMenuSecondLayerBack.addEventListener("click", () => {
+    rightMenuSecondLayer.classList.remove("active");
+  });
+
+if (mobileFirstLayerLinksLeft)
+  mobileFirstLayerLinksLeft.forEach((button) => {
+    button.addEventListener("click", () => {
+      leftMenuSecondLayer.classList.add("active");
+    });
+  });
+
+if (leftMenuSecondLayerBack)
+  leftMenuSecondLayerBack.addEventListener("click", () => {
+    leftMenuSecondLayer.classList.remove("active");
+  });
+//
 
 /* Tablet */
 const mainSelectFrom = document.querySelector(".main-select__from");
