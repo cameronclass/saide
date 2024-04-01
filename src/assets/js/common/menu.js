@@ -83,6 +83,55 @@ if (leftMenuSecondLayerBack)
   leftMenuSecondLayerBack.addEventListener("click", () => {
     leftMenuSecondLayer.classList.remove("active");
   });
+
+//
+let mobileBack1 = document.querySelectorAll(".mobile-back-1");
+let mobileBack2 = document.querySelectorAll(".mobile-back-2");
+let dropContentElements = document.querySelectorAll(
+  ".main-menu-item__dropdown_block"
+);
+
+function updateMobileBack2() {
+  let hasActiveClass = false;
+
+  dropContentElements.forEach(function (element) {
+    if (element.classList.contains("active")) {
+      hasActiveClass = true;
+    }
+  });
+
+  if (hasActiveClass) {
+    mobileBack2.forEach((item) => {
+      item.classList.add("active");
+    });
+    mobileBack1.forEach((item) => {
+      item.classList.add("active");
+    });
+  } else {
+    mobileBack2.forEach((item) => {
+      item.classList.remove("active");
+    });
+    mobileBack1.forEach((item) => {
+      item.classList.remove("active");
+    });
+  }
+}
+
+// Обработчик события для элементов с классом .main-menu
+document.querySelectorAll(".main-menu").forEach((item) => {
+  item.addEventListener("click", function () {
+    updateMobileBack2();
+  });
+});
+
+mobileBack2.forEach((item) => {
+  item.addEventListener("click", () => {
+    dropContentElements.forEach((drop) => {
+      drop.classList.remove("active");
+    });
+  });
+});
+
 //
 
 /* Tablet */

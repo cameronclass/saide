@@ -3,7 +3,6 @@ body {
     font-family: $font;
     background-color: $dark-blue;
     color: white;
-    overflow-x: hidden;
 
     &::-webkit-scrollbar {
         display: none;
@@ -121,9 +120,9 @@ button {
 
 .content-bg {
     background: #0D0F14;
-    overflow: hidden;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .content-over {
@@ -145,6 +144,8 @@ button {
         margin-bottom: 50px;
         position: relative;
         z-index: 6;
+
+        @include tablet
     }
 
     &__menu {

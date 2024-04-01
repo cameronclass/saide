@@ -30,15 +30,14 @@
 
     &-service {
         display: flex;
-        align-items: flex-start;
         border: 1px solid rgb(240, 145, 35);
         border-radius: 15px;
         overflow: hidden;
         background: linear-gradient(130.76deg, rgb(25, 32, 44) -6.341%, rgb(11, 15, 21) 108.234%);
 
         &__img {
-            width: 160px;
-            height: 160px;
+            width: 185px;
+            height: auto;
             object-fit: cover;
         }
 
@@ -179,6 +178,44 @@
                     color: black;
                 }
             }
+        }
+    }
+
+    &-bordered-card {
+        display: flex;
+        align-items: flex-start;
+        border: 1px solid $yellow;
+        border-radius: 10px;
+        padding: 20px;
+        gap: 20px;
+        height: 100%;
+
+        &__icon {
+            display: flex;
+
+            img {
+                width: 70px;
+                height: 70px;
+                object-fit: contain;
+            }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__title {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        &__text {
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 0.02em;
         }
     }
 }
