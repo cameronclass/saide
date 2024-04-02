@@ -7623,6 +7623,10 @@ button {
   .js-left-menu .main-menu-item__cards {
     grid-template-columns: repeat(5, 1fr); } }
 
+@media screen and (max-width: 767px) {
+  .js-left-menu .main-menu-item__cards {
+    grid-template-columns: repeat(2, 1fr); } }
+
 .main-bg {
   width: 100%;
   background: linear-gradient(180deg, #1F252E 0%, rgba(31, 37, 46, 0.9) 66.15%);
