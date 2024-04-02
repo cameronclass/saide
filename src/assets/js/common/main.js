@@ -85,15 +85,6 @@ const readMoreEls = document.querySelectorAll(".js-read-smore");
 
 ReadSmore(readMoreEls).init();
 
-window.addEventListener("scroll", function () {
-  var pageMenuBlock = document.querySelector(".page-menu__block");
-  if (window.scrollY > 200) {
-    pageMenuBlock.classList.add("active");
-  } else {
-    pageMenuBlock.classList.remove("active");
-  }
-});
-
 Fancybox.bind("[data-fancybox]", {});
 
 let askButton = document.querySelectorAll(".js-ask-open");

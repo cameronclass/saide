@@ -15,6 +15,10 @@
     &__logo {
         width: 110px;
         margin: 24px 20px 0;
+
+        @include tablet {
+            width: 70px;
+        }
     }
 
     &__block {
@@ -27,6 +31,10 @@
         visibility: hidden;
         opacity: 0;
         transition: 300ms ease;
+
+        @include tablet {
+            transition: 100ms ease;
+        }
 
         &.active {
             visibility: visible;
@@ -202,7 +210,8 @@
         }
     }
 
-    &:hover {
+    &:hover,
+    &.active {
         border: 1px solid $yellow;
         border-bottom: none;
         background: linear-gradient(180deg, #1F252E 50%, #0D0F14);
@@ -1121,5 +1130,18 @@
             }
         }
 
+    }
+}
+
+
+.mobile-menu-open {
+    display: none;
+
+    @include tablet {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        z-index: 10;
     }
 }

@@ -304,3 +304,34 @@ if (dataInLevelButton)
       });
     });
   });
+
+if (window.innerWidth > 768) {
+  window.addEventListener("scroll", function () {
+    let pageMenu = document.querySelector(".page-menu");
+    let pageMenuBlock = document.querySelector(".page-menu__block");
+    if (window.scrollY > 200) {
+      pageMenuBlock.classList.add("active");
+    } else {
+      pageMenuBlock.classList.remove("active");
+      pageMenu.classList.remove("active");
+    }
+  });
+}
+
+document
+  .querySelector(".js-menu-hamburger")
+  .addEventListener("click", function () {
+    // Добавляем класс is-active к элементу с классом .js-menu-hamburger
+    this.classList.toggle("is-active");
+
+    // Добавляем класс .active к элементам .page-menu и .page-menu__block
+    let pageMenu = document.querySelector(".page-menu");
+    if (pageMenu) {
+      pageMenu.classList.toggle("active");
+    }
+
+    let pageMenuBlock = document.querySelector(".page-menu__block");
+    if (pageMenuBlock) {
+      pageMenuBlock.classList.toggle("active");
+    }
+  });

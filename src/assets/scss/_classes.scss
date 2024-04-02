@@ -15,6 +15,10 @@
         background-image: url(../../assets/images/line-vertical.svg);
         background-repeat: repeat;
     }
+
+    @include tablet {
+        display: none;
+    }
 }
 
 .group-title {
@@ -26,10 +30,15 @@
 }
 
 .advantages {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin-bottom: 20px;
+
+    @include netbook {
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     &-card {
         color: $yellow;
@@ -40,7 +49,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 23.5%;
+        width: 100%;
         height: 125px;
 
         &__block {
@@ -68,14 +77,21 @@
 
 .certificates {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
 
+    @include netbook {
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
     &__card {
-        width: 23.5%;
+        width: 100%;
         height: 250px;
         border-radius: 15px;
         border: 1px solid $yellow;
@@ -83,6 +99,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        /* @include tablet {
+            width: 100%;
+            margin-bottom: 10px;
+        } */
     }
 }
 
@@ -94,6 +115,10 @@
 
     &__title {
 
+        @include tablet {
+            text-align: center;
+        }
+
 
         &_text {
             display: flex;
@@ -104,6 +129,13 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             line-height: 1.1;
+
+            @include tablet {
+                width: 100%;
+                flex-direction: column;
+                font-size: 24px;
+                gap: 10px;
+            }
         }
 
         &_first {}
@@ -112,6 +144,10 @@
             font-size: 68px;
             position: relative;
             top: -6px;
+
+            @include tablet {
+                display: none;
+            }
         }
 
         &_last {}
@@ -121,6 +157,15 @@
         font-size: 19px;
         font-weight: 400;
         margin-bottom: 20px;
+
+        @include tablet {
+            position: relative;
+            left: -20px;
+            width: calc(100% + 40px);
+            margin-top: 10px;
+            padding: 10px 0;
+            background-color: #0D0F1450;
+        }
     }
 
     &__form {
@@ -130,12 +175,22 @@
             font-size: 13px;
             line-height: 1.1;
             margin-bottom: 10px;
+
+            @include tablet {
+                text-align: center;
+            }
         }
 
         &_block {
             display: flex;
             align-items: center;
             gap: 15px;
+
+            @include tablet {
+                flex-direction: column;
+                margin-top: 20px;
+                gap: 10px;
+            }
         }
     }
 
@@ -145,12 +200,21 @@
             font-size: 13px;
             line-height: 1.1;
             margin-bottom: 10px;
+
+            @include tablet {
+                text-align: center;
+            }
         }
 
         &_block {
             display: flex;
             align-items: center;
             gap: 15px;
+
+            @include tablet {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
 
         &_link {
@@ -160,6 +224,11 @@
             border-radius: 10px;
             border: 1px solid white;
             box-shadow: 0px 0px 4.3px 0px white;
+            text-align: center;
+
+            @include tablet {
+                width: 100%;
+            }
 
             &.link-vk {
                 border-color: #07F;

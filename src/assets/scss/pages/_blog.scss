@@ -30,6 +30,11 @@
         gap: 5px;
         position: relative;
 
+        @include tablet {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
         &_list {
             display: flex;
             flex-wrap: wrap;
@@ -38,6 +43,10 @@
             &_link {
                 font-weight: 400;
                 font-size: 14px;
+            }
+
+            @include tablet {
+                gap: 5px 15px;
             }
         }
 
@@ -50,6 +59,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            background-color: #0c0e14;
 
             &_link {
                 font-weight: 400;
@@ -180,9 +190,17 @@
         background: linear-gradient(106deg, #283344 -4.68%, #0B0F15 130.26%);
         height: 220px;
 
+        @include tablet {
+            height: auto;
+        }
+
         &__img {
             width: 50%;
             position: relative;
+
+            @include tablet {
+                width: 30%;
+            }
 
             &_pic {
                 height: 100%;
@@ -200,6 +218,11 @@
         &__content {
             width: 50%;
             padding: 30px;
+
+            @include tablet {
+                width: 70%;
+                padding: 10px;
+            }
         }
 
         &__tags {
@@ -221,6 +244,10 @@
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
+
+            @include tablet {
+                margin-top: 10px;
+            }
         }
 
         &__date {
@@ -234,6 +261,11 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
+
+            @include tablet {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
         }
     }
 }
@@ -268,6 +300,10 @@
         transition: 10ms ease;
         margin-bottom: 10px;
 
+        @include tablet {
+            display: none;
+        }
+
         &_icon {
             width: 10px;
             transition: 10ms ease;
@@ -286,6 +322,10 @@
         flex-direction: column;
         align-items: flex-start;
         margin-top: 40px;
+
+        @include tablet {
+            margin-top: 100px;
+        }
 
         &_img {
             width: 100%;
