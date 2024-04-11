@@ -6112,8 +6112,7 @@ button {
 .content-bg {
   background: #0D0F14;
   position: relative;
-  z-index: 1;
-  overflow: hidden; }
+  z-index: 1; }
 
 .content-over {
   position: relative;
@@ -6531,15 +6530,24 @@ button {
     bottom: 0;
     left: 50%;
     margin-left: -1px; }
+    @media screen and (max-width: 767px) {
+      .timeline-first::after {
+        display: none; } }
   .timeline-first__container {
     padding: 15px 30px;
     position: relative;
     background: inherit;
     width: 50%; }
+    @media screen and (max-width: 767px) {
+      .timeline-first__container {
+        width: 100%; } }
     .timeline-first__container.left {
       left: 0; }
     .timeline-first__container.right {
       left: 50%; }
+      @media screen and (max-width: 767px) {
+        .timeline-first__container.right {
+          left: 0; } }
       .timeline-first__container.right::after {
         left: -8px; }
       .timeline-first__container.right::before {
@@ -6555,6 +6563,9 @@ button {
       border: 2px solid #F09123;
       border-radius: 16px;
       z-index: 1; }
+      @media screen and (max-width: 767px) {
+        .timeline-first__container::after {
+          display: none; } }
     .timeline-first__container::before {
       content: '';
       position: absolute;
@@ -6564,6 +6575,9 @@ button {
       right: 8px;
       background: #F09123;
       z-index: 1; }
+      @media screen and (max-width: 767px) {
+        .timeline-first__container::before {
+          display: none; } }
   .timeline-first__icon {
     position: absolute;
     display: inline-block;
@@ -6581,33 +6595,60 @@ button {
       object-fit: contain; }
   .timeline-first__container.left .timeline-first__icon {
     right: 45px; }
+    @media screen and (max-width: 767px) {
+      .timeline-first__container.left .timeline-first__icon {
+        right: 4px; } }
   .timeline-first__container.right .timeline-first__icon {
     left: 45px; }
+    @media screen and (max-width: 767px) {
+      .timeline-first__container.right .timeline-first__icon {
+        left: 4px; } }
   .timeline-first__content {
     padding: 15px 80px 15px 15px;
     border: 1px solid #646c78;
     background: linear-gradient(131.87deg, #202937 -4.798%, #10151e 96.772%);
     position: relative;
     border-radius: 15px; }
+    @media screen and (max-width: 767px) {
+      .timeline-first__content {
+        padding: 15px 40px 15px 15px; } }
   .timeline-first__container.right .timeline-first__content {
     padding: 15px 15px 15px 80px;
     border-radius: 15px; }
+    @media screen and (max-width: 767px) {
+      .timeline-first__container.right .timeline-first__content {
+        padding: 15px 15px 15px 40px; } }
 
 .timeline-second {
   background: var(--primary-color);
   margin: 20px auto;
   padding: 20px; }
+  @media screen and (max-width: 767px) {
+    .timeline-second {
+      padding: 0; } }
   .timeline-second__card {
     position: relative; }
     .timeline-second__card:nth-child(odd) {
       padding: 30px 50px; }
+      @media screen and (max-width: 767px) {
+        .timeline-second__card:nth-child(odd) {
+          padding: 30px; } }
       .timeline-second__card:nth-child(odd) .timeline-second__img {
         left: -90px; }
+        @media screen and (max-width: 767px) {
+          .timeline-second__card:nth-child(odd) .timeline-second__img {
+            left: -49px; } }
     .timeline-second__card:nth-child(even) {
       padding: 30px 50px; }
+      @media screen and (max-width: 767px) {
+        .timeline-second__card:nth-child(even) {
+          padding: 30px; } }
       .timeline-second__card:nth-child(even) .timeline-second__img {
         left: inherit;
         right: -90px; }
+        @media screen and (max-width: 767px) {
+          .timeline-second__card:nth-child(even) .timeline-second__img {
+            right: -49px; } }
     .timeline-second__card::before {
       content: "";
       position: absolute;
@@ -6657,22 +6698,28 @@ button {
     background-color: #F09123;
     border-radius: 50%;
     padding: 20px; }
+    @media screen and (max-width: 767px) {
+      .timeline-second__img {
+        padding: 10px; } }
     .timeline-second__img_item {
       height: 40px;
       width: 40px;
       object-fit: contain; }
+      @media screen and (max-width: 767px) {
+        .timeline-second__img_item {
+          width: 20px;
+          height: 20px; } }
 
 .translate-card {
   width: 100%;
   padding: 20px;
+  padding-bottom: 30px;
   position: relative;
   overflow: hidden;
   border: 1px solid #646c78;
   border-radius: 15px;
   background: linear-gradient(131.87deg, #202937 -4.798%, #10151e 96.772%);
-  height: 300px;
-  margin-top: 30px;
-  margin-bottom: 30px; }
+  height: auto; }
   .translate-card._bordered {
     border: 1px solid #F09123; }
   .translate-card__title {
@@ -7728,11 +7775,12 @@ button {
     font-size: 16px;
     font-weight: 400; }
   .reviews__item_block {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-top: 20px; }
     @media screen and (max-width: 767px) {
       .reviews__item_block {
+        display: flex;
         flex-direction: column; } }
   .reviews__item_category {
     display: flex;
@@ -7775,7 +7823,8 @@ button {
       width: 9px; }
   .reviews__item_author {
     font-size: 18px;
-    font-weight: 700; }
+    font-weight: 700;
+    text-align: right; }
     @media screen and (max-width: 767px) {
       .reviews__item_author {
         position: absolute;
@@ -8731,10 +8780,16 @@ button {
     border-radius: 15px;
     overflow: hidden;
     background: linear-gradient(130.76deg, #19202c -6.341%, #0b0f15 108.234%); }
+    @media screen and (max-width: 767px) {
+      .marketing-service {
+        flex-direction: column; } }
     .marketing-service__img {
       width: 185px;
       height: auto;
       object-fit: cover; }
+      @media screen and (max-width: 767px) {
+        .marketing-service__img {
+          width: 100%; } }
     .marketing-service__content {
       display: flex;
       flex-direction: column;
@@ -8965,7 +9020,12 @@ button {
 .translate-cards {
   display: flex;
   justify-content: space-between;
-  gap: 30px; }
+  gap: 30px;
+  margin-top: 30px; }
+  @media screen and (max-width: 767px) {
+    .translate-cards {
+      flex-direction: column;
+      gap: 15px; } }
 
 /* Gallery */
 .gallery-block__img {

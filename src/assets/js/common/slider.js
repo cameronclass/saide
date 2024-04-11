@@ -34,4 +34,14 @@ new Swiper(".photo-studio .swiper", {
     nextEl: ".photo-studio .swiper-button-next",
     prevEl: ".photo-studio .swiper-button-prev",
   },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
 });
