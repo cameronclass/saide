@@ -92,6 +92,10 @@
         position: sticky;
         top: 50px;
 
+        @include tablet {
+            height: auto;
+        }
+
         &::-webkit-scrollbar {
             width: 3px;
         }

@@ -305,7 +305,7 @@ if (dataInLevelButton)
     });
   });
 
-if (window.innerWidth > 768) {
+/* if (window.innerWidth > 768) {
   window.addEventListener("scroll", function () {
     let pageMenu = document.querySelector(".page-menu");
     let pageMenuBlock = document.querySelector(".page-menu__block");
@@ -316,11 +316,12 @@ if (window.innerWidth > 768) {
       pageMenu.classList.remove("active");
     }
   });
-}
+} */
 
-document
-  .querySelector(".js-menu-hamburger")
-  .addEventListener("click", function () {
+let jsMenuHamburger = document.querySelector(".js-menu-hamburger");
+
+if (jsMenuHamburger)
+  jsMenuHamburger.addEventListener("click", function () {
     // Добавляем класс is-active к элементу с классом .js-menu-hamburger
     this.classList.toggle("is-active");
 

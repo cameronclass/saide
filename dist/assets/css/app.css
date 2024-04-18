@@ -7001,6 +7001,9 @@ button {
     height: 50vw;
     position: sticky;
     top: 50px; }
+    @media screen and (max-width: 767px) {
+      .page-menu__menu {
+        height: auto; } }
     .page-menu__menu::-webkit-scrollbar {
       width: 3px; }
     .page-menu__menu::-webkit-scrollbar-track {
