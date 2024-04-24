@@ -320,19 +320,52 @@ if (dataInLevelButton)
 
 let jsMenuHamburger = document.querySelector(".js-menu-hamburger");
 
-if (jsMenuHamburger)
+// Функция для проверки размера экрана и управления классами
+function toggleMenuClasses() {
+  // Получаем элементы .page-menu и .page-menu__block
+  let pageMenu = document.querySelector(".page-menu");
+  let pageMenuBlock = document.querySelector(".page-menu__block");
+
+  // Если ширина экрана меньше 768 пикселей
+  if (window.innerWidth < 768) {
+    // Убираем класс .active у элементов .page-menu и .page-menu__block
+    if (pageMenu) {
+      pageMenu.classList.remove("active");
+    }
+
+    if (pageMenuBlock) {
+      pageMenuBlock.classList.remove("active");
+    } else {
+      pageMenuBlock.classList.add("active");
+    }
+  }
+}
+
+// Вызываем функцию при загрузке страницы и при изменении размера окна
+toggleMenuClasses();
+window.addEventListener("resize", toggleMenuClasses);
+
+if (jsMenuHamburger) {
   jsMenuHamburger.addEventListener("click", function () {
     // Добавляем класс is-active к элементу с классом .js-menu-hamburger
     this.classList.toggle("is-active");
 
-    // Добавляем класс .active к элементам .page-menu и .page-menu__block
+    // Получаем элементы .page-menu и .page-menu__block
     let pageMenu = document.querySelector(".page-menu");
+    let pageMenuBlock = document.querySelector(".page-menu__block");
+
+    // Добавляем или убираем класс .active у элемента .page-menu
     if (pageMenu) {
       pageMenu.classList.toggle("active");
     }
 
-    let pageMenuBlock = document.querySelector(".page-menu__block");
-    if (pageMenuBlock) {
-      pageMenuBlock.classList.toggle("active");
+    // Если элемент .page-menu существует и имеет класс active
+    if (pageMenu && pageMenu.classList.contains("active")) {
+      // Добавляем класс .active к элементу .page-menu__block
+      pageMenuBlock.classList.add("active");
+    } else {
+      // Убираем класс .active у элемента .page-menu__block
+      pageMenuBlock.classList.remove("active");
     }
   });
+}

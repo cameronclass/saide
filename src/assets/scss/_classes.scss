@@ -1,7 +1,7 @@
 .lines {
     width: 100%;
     max-width: 1367px;
-    height: 10000px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 50%;
@@ -99,11 +99,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
 
-        /* @include tablet {
-            width: 100%;
-            margin-bottom: 10px;
-        } */
+        &_img {
+            object-fit: cover;
+            height: 100%;
+        }
     }
 }
 
@@ -740,4 +741,10 @@
             left: 0;
         }
     }
+}
+
+.blog-inside-panel__elements {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
