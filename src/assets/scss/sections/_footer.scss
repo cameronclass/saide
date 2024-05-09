@@ -1,9 +1,10 @@
 .footer {
-    padding-top: 20px;
+    padding-top: 80px;
     padding-bottom: 80px;
     position: relative;
     z-index: 5;
     background: linear-gradient(180deg, rgba(13, 15, 20, 0.00) 0%, #0D0F14 10.42%, #0D0F14 100%);
+    overflow: hidden;
 
     @include tablet {
         padding-bottom: 50px;
@@ -99,6 +100,37 @@
         &_link {
             width: 48px;
             height: 48px;
+        }
+    }
+
+    /* bg */
+    &-bg {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        /* height: 800px; */
+        overflow: hidden;
+        z-index: -1;
+        opacity: 0.5;
+
+        &__img {
+            transform: rotate(180deg);
+        }
+
+        &__gradient1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(0deg, rgba(13, 15, 20, 0.00) 0%, #0D0F14 99.42%, #0D0F14 100%);
+        }
+
+        &__gradient2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: linear-gradient(180deg, #0d0f14 0.02%, rgba(31, 37, 46, 0.00) 100%);
         }
     }
 }
