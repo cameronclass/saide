@@ -7233,6 +7233,12 @@ button {
       height: 100%;
       z-index: 1;
       background: linear-gradient(180deg, #0d0f14 0.02%, rgba(31, 37, 46, 0) 100%); }
+    .footer-bg__gradient3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(13, 15, 20, 0) 0%, #0D0F14 99.42%, #0D0F14 100%); }
 
 /* Pages */
 /* Menu */
