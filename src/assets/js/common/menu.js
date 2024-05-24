@@ -117,7 +117,6 @@ function updateMobileBack2() {
   }
 }
 
-// Обработчик события для элементов с классом .main-menu
 document.querySelectorAll(".main-menu").forEach((item) => {
   item.addEventListener("click", function () {
     updateMobileBack2();
@@ -151,8 +150,6 @@ if (mainSelectTo)
     rightMenuJS.classList.add("active");
   });
 
-/* let */
-
 /* Второй уровень */
 function updateMenuState() {
   let hashMenu = window.location.hash.substring(1);
@@ -167,12 +164,17 @@ function updateMenuState() {
     }
   });
 
-  contentsMenu.forEach(function (content) {
+  contentsMenu.forEach((content) => {
     let dataMenuContent = content.getAttribute("data-menu-content");
-    if (hashMenu === dataMenuContent) {
-      content.classList.add("active");
-    } else {
-      content.classList.remove("active");
+    if (
+      window.location.pathname === "/" ||
+      window.location.pathname.split("-")[0] === "/bitrix_include_areas"
+    ) {
+      if (hashMenu === dataMenuContent) {
+        content.classList.add("active");
+      } else {
+        content.classList.remove("active");
+      }
     }
   });
 }
@@ -210,23 +212,18 @@ function updateDropState() {
   });
 }
 
-updateDropState(); // Вызываем функцию один раз, чтобы установить начальное состояние
+updateDropState();
 
-// Функция для удаления класса при изменении адресной строки
 function removeClassOnPopstate(className) {
   window.addEventListener("popstate", function () {
-    // Получаем все элементы, к которым нужно применить удаление класса
     let elementsData = document.querySelectorAll("[data-drop-content]");
 
-    // Перебираем найденные элементы
     elementsData.forEach(function (element) {
-      // Удаляем класс
       element.classList.remove("active");
     });
   });
 }
 
-// Пример использования функции
 removeClassOnPopstate();
 
 /* Внутреннее меню */

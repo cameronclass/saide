@@ -647,8 +647,8 @@
     }
 
     &__icon {
-        width: 120px;
-        height: 90px;
+        width: 100px;
+        height: 70px;
         position: absolute;
         top: 0;
         right: 0;
@@ -671,7 +671,7 @@
     &__lists {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
         margin-top: 30px;
     }
 
@@ -682,8 +682,9 @@
 
 
         &_circle {
-            width: 10px;
-            height: 10px;
+            max-width: 10px;
+            min-height: 10px;
+            min-width: 10px;
             border-radius: 50%;
             border: 2px solid white;
         }

@@ -104,3 +104,19 @@ if (askPanelClose)
   });
 
 Splitting();
+
+const cookieBtn = document.querySelector(".block-cookie__btn");
+const cookieBlock = document.querySelector(".block-cookie");
+
+if (cookieBlock)
+  if (localStorage.getItem("cookiesAccepted")) {
+    cookieBlock.classList.remove("active");
+  } else {
+    cookieBlock.classList.add("active");
+  }
+
+if (cookieBtn)
+  cookieBtn.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieBlock.style.display = "none";
+  });

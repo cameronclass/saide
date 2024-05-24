@@ -142,3 +142,52 @@
         }
     }
 }
+
+.block-cookie {
+    background: $yellow;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+
+    &.active {
+        transition: 300ms ease;
+        visibility: visible;
+        opacity: 1;
+    }
+
+
+    &__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__title {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    &__btn {
+        padding: 10px 50px !important;
+    }
+}
