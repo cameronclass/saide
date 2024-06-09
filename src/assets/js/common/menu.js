@@ -155,12 +155,18 @@ function updateMenuState() {
   let hashMenu = window.location.hash.substring(1);
   let buttonsMenu = document.querySelectorAll("[data-menu]");
   let contentsMenu = document.querySelectorAll("[data-menu-content]");
-  buttonsMenu.forEach(function (button) {
+
+  buttonsMenu.forEach((button) => {
     let dataMenu = button.getAttribute("data-menu");
-    if (hashMenu === dataMenu) {
-      button.classList.add("active");
-    } else {
-      button.classList.remove("active");
+    if (
+      window.location.pathname === "/" ||
+      window.location.pathname.split("-")[0] === "/bitrix_include_areas"
+    ) {
+      if (hashMenu === dataMenu) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+      }
     }
   });
 

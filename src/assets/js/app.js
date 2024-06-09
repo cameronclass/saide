@@ -2,6 +2,7 @@
 @@include("libs/readmore.js")
 @@include("libs/fancybox.js")
 @@include("libs/splitting.js")
+@@include("libs/aos.js")
 
 document.addEventListener("DOMContentLoaded", () => {
 

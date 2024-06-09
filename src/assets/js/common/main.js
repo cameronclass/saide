@@ -1,12 +1,13 @@
 /* accordion */
-const accordionItem = document.getElementsByClassName("accordion-js__item");
-const accordionBtn = document.getElementsByClassName("accordion-js__head");
+const accordionItems = document.querySelectorAll(".accordion-js__item");
+/* const accordionBtns = document.querySelectorAll(".accordion-js__head"); */
 
-for (let i = 0; i < accordionBtn.length; i++) {
-  accordionBtn[i].addEventListener("click", function () {
-    accordionItem[i].classList.toggle("active");
+if (accordionItems)
+  accordionItems.forEach((item) => {
+    item.addEventListener("click", (item) => {
+      item.classList.toggle("active");
+    });
   });
-}
 
 const reviewMoreBtn = document.querySelectorAll(".marketing-review__more");
 const reviewMoreText = document.querySelector(".marketing-review__text");
@@ -120,3 +121,8 @@ if (cookieBtn)
     localStorage.setItem("cookiesAccepted", "true");
     cookieBlock.style.display = "none";
   });
+
+/* Анимация */
+AOS.init({
+  duration: 300, // длительность анимации в миллисекундах
+});
