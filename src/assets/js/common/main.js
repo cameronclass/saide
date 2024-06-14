@@ -124,5 +124,9 @@ if (cookieBtn)
 
 /* Анимация */
 AOS.init({
-  duration: 300, // длительность анимации в миллисекундах
+  duration: 700,
+  anchorPlacement: "top-center",
+  once: true,
+  mirror: true,
+  delay: 200,
 });

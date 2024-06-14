@@ -6964,23 +6964,37 @@ button {
   width: 100%; }
 
 .ask-panel {
-  border-radius: 72px 0 0 0;
-  border: 1px solid #F09123;
-  background: #0D0F14;
   position: fixed;
-  right: 0;
+  left: 0;
   top: 0;
-  width: 350px;
   z-index: 999;
-  height: 100vh;
-  padding: 40px 30px 30px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  overflow-y: auto;
+  width: 100%;
+  height: 101vh;
   visibility: hidden;
   opacity: 0;
-  transition: 300ms ease; }
+  transition: 300ms ease;
+  display: flex;
+  justify-content: flex-end; }
+  .ask-panel__bg {
+    width: 100%;
+    height: 101vh;
+    background: #0d0f14d4;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .ask-panel__content {
+    position: relative;
+    z-index: 1;
+    border-radius: 72px 0 0 0;
+    border: 1px solid #F09123;
+    background: #0D0F14;
+    width: 350px;
+    height: 100vh;
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto; }
   .ask-panel.active {
     visibility: visible;
     opacity: 1; }
