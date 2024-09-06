@@ -124,9 +124,69 @@ if (cookieBtn)
 
 /* Анимация */
 AOS.init({
-  duration: 700,
+  duration: 600,
   anchorPlacement: "top-center",
   once: true,
   mirror: true,
-  delay: 200,
+});
+
+const askPanelForm = document.querySelector(".ask-panel__form");
+
+if (askPanelForm)
+  askPanelForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const submitPanel = document.querySelector(".ask-panel__submit");
+    const resultPanel = document.querySelector(".ask-panel__result");
+
+    submitPanel.classList.toggle("d-none");
+    resultPanel.classList.toggle("d-none");
+  });
+
+const phoneInputs = document.querySelectorAll(".phone-number");
+
+phoneInputs.forEach((phoneInput) => {
+  phoneInput.addEventListener("input", function () {
+    let value = phoneInput.value.replace(/\D/g, "");
+    let formattedValue = "";
+
+    if (value.startsWith("7")) {
+      if (value.length > 11) value = value.substring(0, 11);
+      formattedValue = "+7";
+      if (value.length > 1) formattedValue += ` (${value.substring(1, 4)}`;
+      if (value.length > 4) formattedValue += `) ${value.substring(4, 7)}`;
+      if (value.length > 7) formattedValue += ` ${value.substring(7, 9)}`;
+      if (value.length > 9) formattedValue += ` ${value.substring(9, 11)}`;
+    } else if (value.startsWith("86")) {
+      if (value.length > 13) value = value.substring(0, 13);
+      formattedValue = "+86";
+      if (value.length > 2) formattedValue += ` ${value.substring(2, 5)}`;
+      if (value.length > 5) formattedValue += ` ${value.substring(5, 9)}`;
+      if (value.length > 9) formattedValue += ` ${value.substring(9, 13)}`;
+    } else {
+      if (value.length > 11) value = value.substring(0, 11);
+      formattedValue = "+7";
+      if (value.length > 1) formattedValue += ` (${value.substring(1, 4)}`;
+      if (value.length > 4) formattedValue += `) ${value.substring(4, 7)}`;
+      if (value.length > 7) formattedValue += ` ${value.substring(7, 9)}`;
+      if (value.length > 9) formattedValue += ` ${value.substring(9, 11)}`;
+    }
+
+    phoneInput.value = formattedValue;
+
+    // Allow clearing input completely
+    if (value === "") {
+      phoneInput.value = "";
+    }
+  });
+
+  // Handle clearing the input by backspacing
+  phoneInput.addEventListener("keydown", function (event) {
+    if (
+      event.key === "Backspace" &&
+      phoneInput.value.replace(/\D/g, "").length === 1
+    ) {
+      phoneInput.value = "";
+    }
+  });
 });

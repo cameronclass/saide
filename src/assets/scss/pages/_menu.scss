@@ -254,7 +254,68 @@
         }
     }
 
-    &:hover,
+    @media (hover: hover) and (pointer: fine) {
+
+        &:hover,
+        &.active {
+            border: 1px solid $yellow;
+            border-bottom: none;
+            background: linear-gradient(180deg, #1F252E 50%, #0D0F14);
+            z-index: 10;
+            width: 320px;
+
+
+            .page-menu__menu {
+                overflow-y: auto;
+                width: 100%;
+                padding: 50px 20px 5px;
+            }
+
+            .page-menu__menu_item {
+                display: flex;
+                transform: none;
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .page-menu__menu_drop.active {
+                display: flex;
+            }
+
+            .page-menu__menu_drop_link {
+                display: block;
+            }
+
+            .page-menu__inside_block.active {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            .page-menu__inside {
+                display: flex;
+            }
+
+            .page-menu__menu_item.active {
+                flex-direction: column;
+                align-items: flex-start;
+                min-width: auto;
+            }
+
+            .page-menu__menu_link::after {
+                display: none;
+            }
+
+            .page-menu__menu_drop_link.active::after {
+                display: inline-block;
+            }
+
+            .page-menu__menu_category {
+                display: flex;
+            }
+
+        }
+    }
+
     &.active {
         border: 1px solid $yellow;
         border-bottom: none;
@@ -1197,5 +1258,17 @@
         top: 20px;
         right: 10px;
         z-index: 10;
+    }
+}
+
+.menu-back-btn {
+    position: absolute;
+    top: -40px;
+
+    display: flex;
+    gap: 10px;
+
+    @include tablet {
+        display: none;
     }
 }

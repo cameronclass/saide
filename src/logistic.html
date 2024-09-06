@@ -135,6 +135,99 @@ title: Logistic
                         </div>
                     </div>
 
+                    <div class="logistic-check">
+                        <h3 class="logistic-check__title group-title">Отследить заказ</h3>
+                        <div class="logistic-check__block">
+                            <form class="logistic-check__form">
+                                <input type="text" class="logistic-check__form_text" placeholder="Введите номер заказа">
+                                <button class="logistic-check__form_btn main-btn">Отследить</button>
+                            </form>
+                            <div class="logistic-check__info">
+                                <div class="logistic-check__item">
+                                    <div class="logistic-check__item_title">Получатель:</div>
+                                    <div class="logistic-check__item_text">Вася Пупкин</div>
+                                </div>
+                                <div class="logistic-check__item">
+                                    <div class="logistic-check__item_title">Конечная точка прибытия:</div>
+                                    <div class="logistic-check__item_text">Москва</div>
+                                </div>
+                                <div class="logistic-check__item">
+                                    <div class="logistic-check__item_title">Ориентировочная дата прибытия:</div>
+                                    <div class="logistic-check__item_text">24.08.2024</div>
+                                </div>
+                                <div class="logistic-check__item">
+                                    <div class="logistic-check__item_title">Способ доставки:</div>
+                                    <div class="logistic-check__item_text">Авиа</div>
+                                </div>
+                                <div class="logistic-check__item">
+                                    <div class="logistic-check__item_title">Статус:</div>
+                                    <div class="logistic-check__item_text _paid">Оплачено</div>
+                                    <!-- _paid _unpaid классы для обозначение статуса заказа -->
+                                </div>
+                                <div class="logistic-check__item">
+                                    <div class="logistic-check__item_title">Объем:</div>
+                                    <div class="logistic-check__item_text">20 <span>м3</span></div>
+                                </div>
+                                <div class="logistic-check__item">
+                                    <div class="logistic-check__item_title">Вес:</div>
+                                    <div class="logistic-check__item_text">20 kg</div>
+                                </div>
+                            </div>
+                            <div class="logistic-check__status">
+                                <div class="logistic-check__status_item">
+                                    <span class="logistic-check__status_item_dot">
+                                        <span class="_dot"></span>
+                                    </span>
+                                    <span class="logistic-check__status_item_text">Отправлен, Шенжень (20.08.2024)</span>
+                                </div>
+                                <div class="logistic-check__status_item _active">
+                                    <span class="logistic-check__status_item_dot">
+                                        <span class="_dot"></span>
+                                    </span>
+                                    <span class="logistic-check__status_item_text">В пути в сортировочный центр, Бангкок (22.08.2024)</span>
+                                </div>
+                                <!-- Скрытые элементы -->
+                                <div class="logistic-check__status_item hidden">
+                                    <span class="logistic-check__status_item_dot">
+                                        <span class="_dot"></span>
+                                    </span>
+                                    <span class="logistic-check__status_item_text">На пути к заказчику (25.08.2024)</span>
+                                </div>
+                                <div class="logistic-check__status_item hidden">
+                                    <span class="logistic-check__status_item_dot">
+                                        <span class="_dot"></span>
+                                    </span>
+                                    <span class="logistic-check__status_item_text">Доставлено (28.08.2024)</span>
+                                </div>
+                                <button class="logistic-check__status_more">
+                                    <span>еще</span>
+                                    <svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L5.5 6L10 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script>
+                        if (document.querySelector('.logistic-check__status_more')) {
+                            document.querySelector('.logistic-check__status_more').addEventListener('click', function () {
+                                const hiddenItems = document.querySelectorAll('.logistic-check__status_item.hidden');
+                                hiddenItems.forEach(item => {
+                                    item.classList.toggle('show');
+                                });
+
+                                // Меняем текст кнопки в зависимости от состояния
+                                const isVisible = hiddenItems[0].classList.contains('show');
+                                this.querySelector('span').textContent = isVisible ? 'скрыть' : 'еще';
+
+                                // Тоглим класс active для кнопки
+                                this.classList.toggle('_active');
+                            });
+                        }
+
+                    </script>
+
                     <div class="logistic-blog">
                         <div class="logistic-blog__block">
                             <div class="logistic-blog__card">
@@ -167,6 +260,76 @@ title: Logistic
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="logistic-additional block-services">
+                        <div class="block-services__wrap">
+                            <h3 class="logistic-check__title group-title">Дополнительные услуги</h3>
+                            <div class="block-services__body">
+                                <article class="service-item">
+                                    <h4 class="service-item__name logistic-shipping__card_title">Название дополнительной услуги компании</h4>
+                                    <p class="service-item__description logistic-shipping__card_text">
+                                        И нет сомнений, что ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть заблокированы в рамках своих собственных рациональных ограничений.
+                                    </p>
+                                    <a href="/services/dopolnitelnye-uslugi/nazvanie-dopolnitelnoy-uslugi-kompanii/" class="service-item__btn logistic-shipping__card_link">
+                                        <svg class="logistic-shipping__card_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#E8E8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>ПОДРОБНЕЕ</span>
+                                    </a>
+                                </article>
+                                <article class="service-item">
+                                    <h4 class="service-item__name logistic-shipping__card_title">Название дополнительной услуги компании</h4>
+                                    <p class="service-item__description logistic-shipping__card_text">
+                                        И нет сомнений, что ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть заблокированы в рамках своих собственных рациональных ограничений.
+                                    </p>
+                                    <a href="/services/dopolnitelnye-uslugi/nazvanie-dopolnitelnoy-uslugi-kompanii/" class="service-item__btn logistic-shipping__card_link">
+                                        <svg class="logistic-shipping__card_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#E8E8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>ПОДРОБНЕЕ</span>
+                                    </a>
+                                </article>
+                                <article class="service-item">
+                                    <h4 class="service-item__name logistic-shipping__card_title">Название дополнительной услуги компании</h4>
+                                    <p class="service-item__description logistic-shipping__card_text">
+                                        И нет сомнений, что ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть заблокированы в рамках своих собственных рациональных ограничений.
+                                    </p>
+                                    <a href="/services/dopolnitelnye-uslugi/nazvanie-dopolnitelnoy-uslugi-kompanii/" class="service-item__btn logistic-shipping__card_link">
+                                        <svg class="logistic-shipping__card_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#E8E8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>ПОДРОБНЕЕ</span>
+                                    </a>
+                                </article>
+                                <article class="service-item">
+                                    <h4 class="service-item__name logistic-shipping__card_title">Название дополнительной услуги компании</h4>
+                                    <p class="service-item__description logistic-shipping__card_text">
+                                        И нет сомнений, что ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть заблокированы в рамках своих собственных рациональных ограничений.
+                                    </p>
+                                    <a href="/services/dopolnitelnye-uslugi/nazvanie-dopolnitelnoy-uslugi-kompanii/" class="service-item__btn logistic-shipping__card_link">
+                                        <svg class="logistic-shipping__card_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#E8E8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>ПОДРОБНЕЕ</span>
+                                    </a>
+                                </article>
+                                <article class="service-item">
+                                    <h4 class="service-item__name logistic-shipping__card_title">Название дополнительной услуги компании</h4>
+                                    <p class="service-item__description logistic-shipping__card_text">
+                                        И нет сомнений, что ключевые особенности структуры проекта набирают популярность среди определенных слоев населения, а значит, должны быть заблокированы в рамках своих собственных рациональных ограничений.
+                                    </p>
+                                    <a href="/services/dopolnitelnye-uslugi/nazvanie-dopolnitelnoy-uslugi-kompanii/" class="service-item__btn logistic-shipping__card_link">
+                                        <svg class="logistic-shipping__card_link_icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7 7H17M17 7V17M17 7L7 17" stroke="#E8E8E8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>ПОДРОБНЕЕ</span>
+                                    </a>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div class="partners">
                         <h3 class="group-title">С НАМИ СОТРУДНИЧАЮТ</h3>
@@ -230,3 +393,89 @@ title: Logistic
         </div>
     </div>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+
+<script>
+    jQuery(document).ready(function ($) {
+
+        if (!('sm_controller' in window)) {
+            window.sm_controller = new ScrollMagic.Controller();
+        }
+
+        var services_block = document.querySelector('.block-services');
+        var scrollable_block = document.querySelector('.block-services__body');
+        if (services_block && scrollable_block) {
+            var hws = window.innerWidth / 2;
+            var scroll_length = scrollable_block.scrollWidth - window.innerWidth + 50;
+            var scroll_height = window.innerHeight + scroll_length;
+            services_block.style.height = scroll_height + 'px';
+
+            function shift_slider() {
+                var top = services_block.getBoundingClientRect().top;
+                var shift = Math.round(top);
+                var hl = window.innerHeight - hws;
+                var ll = -scroll_height + hws;
+                if (shift > hl) {
+                    shift = hl;
+                }
+                if (shift < ll) {
+                    shift = ll;
+                }
+                scrollable_block.style.transform = 'translate3d(' + shift + 'px, 0, 0)';
+            }
+
+            function calc_slider() {
+                scroll_length = scrollable_block.scrollWidth - window.innerWidth + 50;
+                scroll_height = window.innerHeight + scroll_length;
+                services_block.style.height = scroll_height + 'px';
+                shift_slider();
+            };
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 991) {
+                    calc_slider();
+                    shift_slider();
+                }
+                else {
+                    $(services_block).attr('style', '');
+                    $(scrollable_block).attr('style', '');
+                }
+            });
+
+            window.addEventListener('orientationchange', function () {
+                if (window.innerWidth > 991) {
+                    calc_slider();
+                    shift_slider();
+                }
+                else {
+                    $(services_block).attr('style', '');
+                    $(scrollable_block).attr('style', '');
+                }
+            });
+
+            document.addEventListener('scroll', function () {
+                if (window.innerWidth > 991) {
+                    shift_slider();
+                }
+                else {
+                    $(services_block).attr('style', '');
+                    $(scrollable_block).attr('style', '');
+                }
+            });
+
+            if (window.innerWidth > 991) {
+                calc_slider();
+                setTimeout(calc_slider, 500);
+                shift_slider();
+            }
+            else {
+                $(services_block).attr('style', '');
+                $(scrollable_block).attr('style', '');
+            }
+
+        }
+    });
+</script>

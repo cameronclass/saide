@@ -308,18 +308,6 @@ if (dataInLevelButton)
     });
   });
 
-/* if (window.innerWidth > 768) {
-  window.addEventListener("scroll", function () {
-    let pageMenu = document.querySelector(".page-menu");
-    let pageMenuBlock = document.querySelector(".page-menu__block");
-    if (window.scrollY > 200) {
-      pageMenuBlock.classList.add("active");
-    } else {
-      pageMenuBlock.classList.remove("active");
-      pageMenu.classList.remove("active");
-    }
-  });
-} */
 
 let jsMenuHamburger = document.querySelector(".js-menu-hamburger");
 
@@ -372,3 +360,35 @@ if (jsMenuHamburger) {
     }
   });
 }
+
+// Находим все ссылки на странице
+const allLinksA = document.querySelectorAll("a");
+
+// Добавляем обработчик событий для каждой ссылки
+allLinksA.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    // Если href равен "#", предотвращаем дефолтное поведение
+    if (link.getAttribute("href") === "#") {
+      event.preventDefault();
+    }
+  });
+});
+
+
+const pageMenuLinks = document.querySelectorAll('.page-menu__menu_link');
+
+pageMenuLinks.forEach((link) => {
+  link.addEventListener("click", function (event) {
+
+    this.classList.toggle("_active");
+
+    const pageMenu = document.querySelector(".page-menu");
+
+    if (document.querySelector(".page-menu__menu_link._active")) {
+      pageMenu.classList.add("active");
+    } else {
+      pageMenu.classList.remove("active");
+    }
+  });
+});
+
